@@ -1,0 +1,29 @@
+.previouly-section-wrapper {
+    /* background-color: white; */
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+}
+
+.previouly-section-wrapper .home_heading {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.previously-section {
+    /* background-color: white; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.explore-the-past {
+    width: 80%;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 500;
+}
