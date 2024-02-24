@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { Button } from "../styles/Button";
+import Timer from "../timer";
 
 const HeroSection = ({ name, image }) => {
     return (<Wrapper>
@@ -14,10 +15,12 @@ const HeroSection = ({ name, image }) => {
                     {name}
                 </h1>
                 <h3>"12th March - 14th March"</h3>
+                <Timer/>
                 <p className='hero-para'>"Ignite Your Passion for Innovation:Join Us for a Spectacular Fusion of Technology and Talent!"</p>
                 <Button className='btn eventpage-btn'>
                     <NavLink to='/event'>Register Now</NavLink>
                 </Button>
+
             </div>
 
             <div className="section-hero-image">
