@@ -6,8 +6,10 @@ import About from './About';
 import Signup from './Signup';
 import Gallery from './Gallery';
 import Header from './Components/Header';
+import GoToTop from './Components/GoToTop';
 import { GlobalStyle } from "./GlobalStyle";
 import Footer from './Components/Footer';
+import Error from './Error';
 import { ThemeProvider } from 'styled-components';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -36,6 +38,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
+      <GoToTop />
       <BrowserRouter>
         <Header />
         <Routes>
@@ -46,7 +49,9 @@ const App = () => {
           <Route path='/signup' element={<Signup />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/gallery' element={<Gallery />} />
+          <Route path='/*' element={<Error />} />
         </Routes>
+
         <Footer />
       </BrowserRouter>
     </ThemeProvider>
