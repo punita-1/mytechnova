@@ -1,10 +1,11 @@
-
+import React from 'react'
+import SwiperComponent from './Myswiper'
 
 const Gallery = () => {
   return (
-    <div>
-      gallery
-    </div>
+    <>
+    <SwiperComponent/>
+    </>
   )
 }
 
