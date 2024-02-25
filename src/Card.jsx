@@ -1,17 +1,21 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
 
-const EventCard = ({ event }) => {
+const Card = ({ image, title, description, handleRegisterClick }) => {
     return (
-        <div className="event-card">
-            <img src={event.image} alt={event.title} className="event-image" />
-            <h3 className="event-title">{event.title}</h3>
-            <Link to={`/events/${event.id}`}>
-                <button className="details-button">Details</button>
-            </Link>
-
+        <div className="card" style={{ width: '18rem' }}>
+            <img src={image} className="card-img-top" alt={title} />
+            <div className="card-body">
+                <h5 className="card-title">{title}</h5>
+                <p className="card-text">{description}</p>
+                <button
+                    className="btn btn-primary"
+                    onClick={handleRegisterClick}
+                >
+                    Register
+                </button>
+            </div>
         </div>
     );
 };
 
-export default EventCard;
+export default Card;

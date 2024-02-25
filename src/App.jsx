@@ -1,10 +1,9 @@
 import Home from './Home';
 import Contact from './Contact';
-import Events from './Events';
-import EventDetails from './Eventdetails';
 import About from './About';
 import Signup from './Signup';
 import Gallery from './Gallery';
+import Event from './Events';
 import Header from './Components/Header';
 import GoToTop from './Components/GoToTop';
 import { GlobalStyle } from "./GlobalStyle";
@@ -43,8 +42,7 @@ const App = () => {
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/events/:eventId" element={<EventDetails />} />
+          <Route path='/event' element={<Event />} />
           <Route path='/about' element={<About />} />
           <Route path='/signup' element={<Signup />} />
           <Route path='/contact' element={<Contact />} />
