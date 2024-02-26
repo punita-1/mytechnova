@@ -4,6 +4,7 @@ import About from './About';
 import Signup from './Signup';
 import Gallery from './Gallery';
 import Event from './Events';
+import Register_form from './Register_form';
 import Header from './Components/Header';
 import GoToTop from './Components/GoToTop';
 import { GlobalStyle } from "./GlobalStyle";
@@ -47,6 +48,7 @@ const App = () => {
           <Route path='/signup' element={<Signup />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/gallery' element={<Gallery />} />
+          <Route path='/registerform' element={<Register_form />} />
           <Route path='/*' element={<Error />} />
         </Routes>
 

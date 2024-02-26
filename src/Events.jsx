@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Event.css'
+import { NavLink } from 'react-router-dom';
 import CardGroup from './Cardgroup';
 
 const Event = () => {
@@ -823,7 +824,7 @@ const Event = () => {
       id: 22,
       image: 'https://via.placeholder.com/150',
       title: 'Chase The Bid',
-      description:`
+      description: `
        
       "Chase The Bid" is a mock IPL auction where teams display entrepreneurial skills by managing budgets, 
       strategically selecting players, negotiating deals, and assessing risks. It mirrors real IPL auctions, 
@@ -2251,7 +2252,7 @@ const Event = () => {
         events={events.slice(15, 18)}
         handleRegisterClick={handleRegisterClick}
       />
-       <CardGroup
+      <CardGroup
         heading="DEPARTMENT OF BIO MEDICAL ENGINEERING(BME) #MEDITRONICA "
         events={events.slice(18, 21)}
         handleRegisterClick={handleRegisterClick}
@@ -2306,7 +2307,7 @@ const Event = () => {
         events={events.slice(46, 49)}
         handleRegisterClick={handleRegisterClick}
       />
-       <CardGroup
+      <CardGroup
         heading="CENTRALIZED EVENTS"
         events={events.slice(49, 52)}
         handleRegisterClick={handleRegisterClick}
@@ -2330,7 +2331,12 @@ const Event = () => {
             <div className="popup-text">
               <pre>{selectedEvent.description}</pre>
             </div>
-            <button className="btn btn-primary">Register Now</button>
+            <button className="btn btn-primary"><NavLink
+              className="navbar-link"
+              to="/registerform">
+              Register Now
+            </NavLink></button>
+
             <button className="btn btn-secondary" onClick={() => setShowPopup(false)}>
               Close
             </button>

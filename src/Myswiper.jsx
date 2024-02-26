@@ -12,6 +12,7 @@ const MySwiper = ({ images, openModal }) => {
     <div className="swiper-container">
       <Swiper
         effect={'coverflow'}
+        loop={true}
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={'auto'}
@@ -55,16 +56,48 @@ export default function App() {
 
   // Define images for each Swiper
   const images1 = [
-    'https://swiperjs.com/demos/images/nature-1.jpg',
-    'https://swiperjs.com/demos/images/nature-2.jpg',
-    'https://swiperjs.com/demos/images/nature-3.jpg',
+    'public/images/technova_gallery/logos/technova_rope.jpg',
+    'public/images/technova_gallery/Vc_starting/starting.jpg',
+    'public/images/technova_gallery/Vc_starting/vc_project_chkecking.jpg',
+    'public/images/technova_gallery/Vc_starting/starting.jpg',
     // Add more images as needed
   ];
 
   const images2 = [
-    'https://swiperjs.com/demos/images/nature-4.jpg',
-    'https://swiperjs.com/demos/images/nature-5.jpg',
-    'https://swiperjs.com/demos/images/nature-6.jpg',
+    'public/images/technova_gallery/logos/thermocol_techno.jpg',
+    'public/images/technova_gallery/welcomes/flower_welcome.jpg',
+    'public/images/technova_gallery/welcomes/welcome_2.jpg',
+    'public/images/technova_gallery/welcomes/welcome_thanks.jpg',
+    'public/images/technova_gallery/welcomes/welcome_type.jpg',
+    'public/images/technova_gallery/welcomes/welcome5.jpg',
+    'public/images/technova_gallery/welcomes/welcome6.jpg',
+    // Add more images as needed
+  ];
+
+  const images3 = [
+    'public/images/technova_gallery/events/cards.jpg',
+    'public/images/technova_gallery/events/hand_sensor.jpg',
+    'public/images/technova_gallery/events/presentation_cse.jpg',
+    'public/images/technova_gallery/events/Random.jpg',
+    'public/images/technova_gallery/events/robo_soccer.jpg',
+    'public/images/technova_gallery/events/robo_soccer2.jpg',
+    'public/images/technova_gallery/events/thinkbots1.jpg',
+    'public/images/technova_gallery/events/thinkbots2.jpg',
+    // Add more images as needed
+  ];
+
+  const images4 = [
+    'public/images/technova_gallery/prize/price2.jpg',
+    'public/images/technova_gallery/prize/Prize1.jpg',
+    'public/images/technova_gallery/prize/prize3.jpg',
+    'public/images/technova_gallery/prize/prize4.jpg',
+    // Add more images as needed
+  ];
+  const images5 = [
+    'public/images/technova_gallery/group_pics/gp_pic3.jpg',
+    'public/images/technova_gallery/group_pics/gp_pic4.jpg',
+    'public/images/technova_gallery/group_pics/group_photo.jpg',
+    'public/images/technova_gallery/group_pics/group_pic2.jpg',
     // Add more images as needed
   ];
 
@@ -73,6 +106,9 @@ export default function App() {
       {/* Stack Swiper components */}
       <MySwiper images={images1} openModal={openModal} />
       <MySwiper images={images2} openModal={openModal} />
+      <MySwiper images={images3} openModal={openModal} />
+      <MySwiper images={images4} openModal={openModal} />
+      <MySwiper images={images5} openModal={openModal} />
 
       {/* Modal */}
       {modalOpen && (
