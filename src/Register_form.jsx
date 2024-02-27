@@ -1,9 +1,14 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 
 const Register_form = () => {
+  const { id } = useParams();
   return (
     <div>
-      my register form
+      <div>
+        my register form
+      </div>
+      <div>{id}</div>
     </div>
   )
 }
