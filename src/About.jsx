@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import "./About.css"
+import "./stylesheets/About.css"
 import { NavLink } from "react-router-dom"
 import { Button } from "./styles/Button"
 const About = () => {

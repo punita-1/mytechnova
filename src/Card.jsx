@@ -2,13 +2,13 @@ import React from 'react';
 
 const Card = ({ image, title, description, handleRegisterClick }) => {
     return (
-        <div className="card" style={{ width: '18rem' }}>
+        <div className="col-12 col-md-6 col-lg-3 my-5 card shadow mx-2 p-0">
             <img src={image} className="card-img-top" alt={title} />
             <div className="card-body">
-                <h5 className="card-title">{title}</h5>
+                <h3 className="card-title mt-2">{title}</h3>
                 <p className="card-text">{description}</p>
                 <button
-                    className="btn btn-primary"
+                    className="btn btn-primary btn-lg"
                     onClick={handleRegisterClick}
                 >
                     Register

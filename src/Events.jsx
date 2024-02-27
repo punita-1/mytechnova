@@ -2328,16 +2328,16 @@ const Event = () => {
         <div className="popup">
           <div className="popup-content">
             <h5>{selectedEvent.title}</h5>
-            <div className="popup-text">
+            <div className="popup-text mb-3">
               <pre>{selectedEvent.description}</pre>
             </div>
-            <button className="btn btn-primary"><NavLink
-              className="navbar-link"
-              to="/registerform">
+            <NavLink
+              className="btn btn-primary me-2 text-light btn-lg"
+              to={"/registerform/"+selectedEvent.id}>
               Register Now
-            </NavLink></button>
+            </NavLink>
 
-            <button className="btn btn-secondary" onClick={() => setShowPopup(false)}>
+            <button className="btn btn-secondary btn-lg" onClick={() => setShowPopup(false)}>
               Close
             </button>
           </div>
