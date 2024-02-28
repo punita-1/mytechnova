@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./signup.css"
 
 const Signup = () => {
-  const [signin, setSignin] = useState(true);
+  const [signin, setSignin] = useState(false);
   const [values, setValues] = useState({
     name: "",
     rollnumber: null,

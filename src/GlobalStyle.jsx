@@ -103,7 +103,6 @@ li {
     }
 
     input, textarea{
-    max-width: 50rem;
     color: ${({ theme }) => theme.colors.black};
     padding: 1.6rem 2.4rem;
     border: 1px solid ${({ theme }) => theme.colors.border};
