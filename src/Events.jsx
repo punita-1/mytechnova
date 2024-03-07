@@ -12,6 +12,8 @@ const Event = () => {
       id: 1,
       image: 'https://via.placeholder.com/150',
       title: 'Projectile Precision Challenge',
+      min: '1',
+      max: '2',
       description: `
       
       Welcome to the Projectile Precision Challenge, where creativity meets precision in a 
@@ -65,6 +67,8 @@ const Event = () => {
       id: 2,
       image: 'https://via.placeholder.com/150',
       title: 'Scale Seekers ',
+      min: '1',
+      max: '2',
       description: ` 
       
       Welcome to Scale Seekers, where precision meets creativity in a thrilling two-round challenge! Scale 
@@ -114,14 +118,18 @@ const Event = () => {
     {
       id: 3,
       image: 'https://via.placeholder.com/150',
-      title: 'DESIGN & SUSTAIN',
+      title: 'Design & Sustain',
+      min: '1',
+      max: '4',
       description: `
       
       Design and Sustain invites participants to showcase their ingenuity in two exciting categories: ice cream 
       stick bridge design and energy-efficient building design. Participants have the option to choose one or 
       both categories, offering a platform to explore their creativity and engineering skills. Whether it's 
       crafting a sturdy bridge model or envisioning a sustainable building design.
+      
       Team Size: 1-4
+      
       Category 1:
       In this challenge, teams build ice cream stick bridges to withstand maximum weight. After designing, 
       bridges face the weight-bearing test. The team with the strongest bridge wins. Get ready for a thrilling 
@@ -159,7 +167,9 @@ const Event = () => {
     {
       id: 4,
       image: 'https://via.placeholder.com/150',
-      title: 'HAHA HASH HUNT',
+      title: 'Haha Hash Hunt',
+      min: '1',
+      max: '5',
       description: `
       
       Welcome to the Projectile Precision Challenge, where creativity meets precision in a thrilling two-round 
@@ -212,6 +222,8 @@ const Event = () => {
       id: 5,
       image: 'https://via.placeholder.com/150',
       title: 'Techtri Wizadry',
+      min: '1',
+      max: '1',
       description: `
 
       Typing Challenge Rules
@@ -295,7 +307,9 @@ const Event = () => {
     {
       id: 6,
       image: 'https://via.placeholder.com/150',
-      title: 'MIND BUZZ CARNIVAL',
+      title: 'Mind Buzz Carnival',
+      min: '3',
+      max: '4',
       description: `
 
       Mind Buzz Carnival is an exciting and inclusive competition designed to test participants' knowledge 
@@ -362,7 +376,9 @@ const Event = () => {
     {
       id: 7,
       image: 'https://via.placeholder.com/150',
-      title: 'NEURON NAVIGATOR',
+      title: 'Neuron Navigator',
+      min: '2',
+      max: '2',
       description: `
       
       List Of Organisers
@@ -406,7 +422,9 @@ const Event = () => {
     {
       id: 8,
       image: 'https://via.placeholder.com/150',
-      title: 'BIODECODE ADVENTURE',
+      title: 'Biodecode Adventure',
+      min: '1',
+      max: '1',
       description: `
       
       BioDecode Adventure: Embark on an exhilarating Biotech Discovery Quest where participants follow clues 
@@ -471,7 +489,9 @@ const Event = () => {
     {
       id: 9,
       image: 'https://via.placeholder.com/150',
-      title: 'INNOVATION ODYSSEY CHALLENGE',
+      title: 'Innovation Odyssey Challenge',
+      min: '2',
+      max: '2',
       description: `
 
       RULES
@@ -507,7 +527,9 @@ const Event = () => {
     {
       id: 10,
       image: 'https://via.placeholder.com/150',
-      title: 'TECH TITANS TRIVIA',
+      title: 'Tech Titans Trivia',
+      min: '1',
+      max: '1',
       description: `
       
       RULES
@@ -524,7 +546,9 @@ const Event = () => {
     {
       id: 11,
       image: 'https://via.placeholder.com/150',
-      title: 'SYNERGY CREW',
+      title: 'Synergy Crew',
+      min: '3',
+      max: '3',
       description: `
       
       Each team will have three members.
@@ -557,7 +581,9 @@ const Event = () => {
     {
       id: 12,
       image: 'https://via.placeholder.com/150',
-      title: 'AD-MAD SHOW',
+      title: 'Ad-Mad Show',
+      min: '3',
+      max: '3',
       description: `
 
       Bring out the creativity inside you and make an outstanding advertisement of your own. Be it hilarious or 
@@ -580,7 +606,9 @@ const Event = () => {
     {
       id: 13,
       image: 'https://via.placeholder.com/150',
-      title: 'BIZ- ENTRA',
+      title: 'Biz- Entra',
+      min: '2',
+      max: '2',
       description: `
 
       Business Plan Competition 
@@ -618,6 +646,8 @@ const Event = () => {
       id: 14,
       image: 'https://via.placeholder.com/150',
       title: 'Student of The Year',
+      min: '1',
+      max: '1',
       description: `
 
       ROUND 1: APTITUDE TEST
@@ -650,6 +680,8 @@ const Event = () => {
       id: 15,
       image: 'https://via.placeholder.com/150',
       title: `Let's Discuss`,
+      min: '1',
+      max: '1',
       description: `
 
       ROUND 1: EXTEMPORE
@@ -676,7 +708,9 @@ const Event = () => {
     {
       id: 16,
       image: 'https://via.placeholder.com/150',
-      title: 'AGRITECH QUIZ',
+      title: 'Agritech Quiz ',
+      min: '3',
+      max: '3',
       description: `
        
       TEAM COMPRISES OF 3 CANDIDATES ONLY.
@@ -696,7 +730,9 @@ const Event = () => {
     {
       id: 17,
       image: 'https://via.placeholder.com/150',
-      title: 'TALENT MANIA',
+      title: 'Talent Mania',
+      min: '3',
+      max: '3',
       description: `
 
       TEAM COMPRISES OF THREE CANDIDATES ONLY.
@@ -727,6 +763,8 @@ const Event = () => {
       id: 18,
       image: 'https://via.placeholder.com/150',
       title: 'GREEN CANVAS',
+      min: '1',
+      max: '1',
       description: `
       
       Green Canvas: Painting a Sustainable Future
@@ -737,6 +775,8 @@ const Event = () => {
       id: 19,
       image: 'https://via.placeholder.com/150',
       title: 'POSTER MAKING COMPETITION',
+      min: '1',
+      max: '2',
       description: `
 
       1. The theme should be the main focus of the poster and should include any of the following:
@@ -776,6 +816,8 @@ const Event = () => {
       id: 20,
       image: 'https://via.placeholder.com/150',
       title: 'B-Quiz',
+      min: '1',
+      max: '2',
       description: `
 
       1. Team comprises of 3 candidates only. 
@@ -799,6 +841,8 @@ const Event = () => {
       id: 21,
       image: 'https://via.placeholder.com/150',
       title: 'Dream project Power point presentation',
+      min: '1',
+      max: '2',
       description: `
 
       1. Qualifying criteria will include three rounds:
@@ -824,6 +868,8 @@ const Event = () => {
       id: 22,
       image: 'https://via.placeholder.com/150',
       title: 'Chase The Bid',
+      min: '1',
+      max: '2',
       description: `
        
       "Chase The Bid" is a mock IPL auction where teams display entrepreneurial skills by managing budgets, 
@@ -872,6 +918,8 @@ const Event = () => {
       id: 23,
       image: 'https://via.placeholder.com/150',
       title: 'InnoVent Sprint',
+      min: '1',
+      max: '2',
       description: `
 
       "InnoVent Sprint" is an entrepreneurship event where teams of 3 to 5 members compete in challenges that 
@@ -914,6 +962,8 @@ const Event = () => {
       id: 24,
       image: 'https://via.placeholder.com/150',
       title: 'Tech- Marathon',
+      min: '1',
+      max: '2',
       description: `
 
       Tech Marathon is a treasure hunt game where participants follow clues to find a hidden treasure. It's 
@@ -947,6 +997,8 @@ const Event = () => {
       id: 25,
       image: 'https://via.placeholder.com/150',
       title: 'Circuit Circus',
+      min: '1',
+      max: '1',
       description: `
                         
       "Join us for an electrifying journey into the realm of electrical engineering at our event! Where we will 
@@ -1011,6 +1063,8 @@ const Event = () => {
       id: 26,
       image: 'https://via.placeholder.com/150',
       title: 'Tech-Zep',
+      min: '1',
+      max: '1',
       description: `
 
       Get ready for a whirlwind tour of cutting edge advancements in electrical engineering. Tech-Zep is a 
@@ -1062,6 +1116,8 @@ const Event = () => {
       id: 27,
       image: 'https://via.placeholder.com/150',
       title: 'RoboSoccer',
+      min: '2',
+      max: '2',
       description: `
       
       Rulebook
@@ -1121,6 +1177,8 @@ const Event = () => {
       id: 28,
       image: 'https://via.placeholder.com/150',
       title: 'Cozmo Race',
+      min: '1',
+      max: '1',
       description: `
       
       Rulebook
@@ -1186,6 +1244,8 @@ const Event = () => {
       id: 29,
       image: 'https://via.placeholder.com/150',
       title: 'Knowledge Knockout Quiz',
+      min: '2',
+      max: '2',
       description: `
 
       Quiz - two rounds.
@@ -1205,6 +1265,8 @@ const Event = () => {
       id: 30,
       image: 'https://via.placeholder.com/150',
       title: 'Get Recognized for Your Personality (GRYP)',
+      min: '1',
+      max: '1',
       description: `
 
       20 participants, first-come-first-served basis; list of selected candidates shall be displayed on 
@@ -1221,6 +1283,8 @@ const Event = () => {
       id: 31,
       image: 'https://via.placeholder.com/150',
       title: 'Creative Canvas',
+      min: '1',
+      max: '1',
       description: `
 
       Theme: Social Issues OR Environmental Issues.
@@ -1238,6 +1302,8 @@ const Event = () => {
       id: 32,
       image: 'https://via.placeholder.com/150',
       title: 'Escape Room Challenge',
+      min: '2',
+      max: '2',
       description: `
 
       Welcome to Escape Room Challenge where precision meets creativity in a thrilling three-round challenge! 
@@ -1312,6 +1378,8 @@ const Event = () => {
       id: 33,
       image: 'https://via.placeholder.com/150',
       title: 'CIRCUITHON',
+      min: '2',
+      max: '2',
       description: `
 
       Welcome to Circuithon where precision meets creativity in a thrilling two-round challenge! The 
@@ -1360,6 +1428,8 @@ const Event = () => {
       id: 34,
       image: 'https://via.placeholder.com/150',
       title: 'Two days skills development workshop on Embedded System',
+      min: '1',
+      max: '1',
       description: `
 
       Welcome to our Two days skill development workshop on Embedded Systems! In this hands-on session, we'll 
@@ -1394,6 +1464,8 @@ const Event = () => {
       id: 35,
       image: 'https://via.placeholder.com/150',
       title: 'Poster Making',
+      min: '1',
+      max: '1',
       description: `
 
       The objective behind organisation of poster making competition is to bring out the creative expression of 
@@ -1438,6 +1510,8 @@ const Event = () => {
       id: 36,
       image: 'https://via.placeholder.com/150',
       title: 'Debate',
+      min: '2',
+      max: '2',
       description: `
 
       There will be a team of two, the affirmative (has to speak in the favour) and the negative (has to speak 
@@ -1488,6 +1562,8 @@ const Event = () => {
       id: 37,
       image: 'https://via.placeholder.com/150',
       title: 'Quiz',
+      min: '2',
+      max: '4',
       description: ` 
 
       Teams will be either of 2 members or 4 depending on the number of participants
@@ -1534,6 +1610,8 @@ const Event = () => {
       id: 38,
       image: 'https://via.placeholder.com/150',
       title: 'Aerovate',
+      min: '2',
+      max: '4',
       description: `
 
       Aerovate: The Flight Challenge- This name combines "Aero," referencing aeronautics, with "Elevate," 
@@ -1597,6 +1675,8 @@ const Event = () => {
       id: 39,
       image: 'https://via.placeholder.com/150',
       title: 'ElectraCraft',
+      min: '2',
+      max: '4',
       description: `
 
       ElectraCraft combines "Electra" for electricity and "craft" for skilled creation, embodying the 
@@ -1666,6 +1746,8 @@ const Event = () => {
       id: 40,
       image: 'https://via.placeholder.com/150',
       title: 'TechnoTrek: The Technical Escape',
+      min: '2',
+      max: '4',
       description: `
 
       Introduction:
@@ -1718,6 +1800,8 @@ const Event = () => {
       id: 41,
       image: 'https://via.placeholder.com/150',
       title: 'THINK FUTURE',
+      min: '2',
+      max: '2',
       description: `
       
       RULES:
@@ -1741,6 +1825,8 @@ const Event = () => {
       id: 42,
       image: 'https://via.placeholder.com/150',
       title: 'WEB MASTER',
+      min: '1',
+      max: '3',
       description: `
 
       Rules:
@@ -1774,6 +1860,8 @@ const Event = () => {
       id: 43,
       image: 'https://via.placeholder.com/150',
       title: 'TECHNICAL TREASURE HUNT',
+      min: '1',
+      max: '1',
       description: `
  
       RULES:
@@ -1794,6 +1882,8 @@ const Event = () => {
       id: 44,
       image: 'https://via.placeholder.com/150',
       title: 'Stick Structure Showdown',
+      min: '3',
+      max: '5',
       description: `
 
       Description: 
@@ -1852,6 +1942,8 @@ const Event = () => {
       id: 45,
       image: 'https://via.placeholder.com/150',
       title: 'Behind The Bars',
+      min: '1',
+      max: '2',
       description: ` 
       
       Description: 
@@ -1905,6 +1997,8 @@ const Event = () => {
       id: 46,
       image: 'https://via.placeholder.com/150',
       title: 'Gearhead Odyssey ',
+      min: '4',
+      max: '4',
       description: `
 
       Description: 
@@ -1981,6 +2075,8 @@ const Event = () => {
       id: 47,
       image: 'https://via.placeholder.com/150',
       title: 'Rasayan Magic',
+      min: '3',
+      max: '3',
       description: `
 
       Rules and regulations:
@@ -1997,6 +2093,8 @@ const Event = () => {
       id: 48,
       image: 'https://via.placeholder.com/150',
       title: 'Science Quiz',
+      min: '1',
+      max: '3',
       description: `
 
       Rules and regulations:
@@ -2012,6 +2110,8 @@ const Event = () => {
       id: 49,
       image: 'https://via.placeholder.com/150',
       title: 'Mystical Chemistry',
+      min: '2',
+      max: '2',
       description: `
 
       Rules and regulations:
@@ -2029,6 +2129,8 @@ const Event = () => {
       id: 50,
       image: 'https://via.placeholder.com/150',
       title: 'PROJRCT EXPO',
+      min: '1',
+      max: '5',
       description: `
 
       PROJECT EXPO: 
@@ -2040,6 +2142,8 @@ const Event = () => {
       id: 51,
       image: 'https://via.placeholder.com/150',
       title: 'HOBBY EXPO',
+      min: '1',
+      max: '1',
       description: `
 
       HOBBY EXPO:
@@ -2052,6 +2156,8 @@ const Event = () => {
       id: 52,
       image: 'https://via.placeholder.com/150',
       title: 'POSTER PRESENTATION',
+      min: '1',
+      max: '1',
       description: `
       
       POSTER PRESENTATION:
@@ -2063,24 +2169,32 @@ const Event = () => {
       id: 53,
       image: 'https://via.placeholder.com/150',
       title: 'JALI DESIGN',
+      min: '1',
+      max: '1',
       description: 'NONE YET',
     },
     {
       id: 54,
       image: 'https://via.placeholder.com/150',
       title: 'DOME FIBER STRUCTURE',
+      min: '1',
+      max: '1',
       description: 'NONE YET',
     },
     {
       id: 55,
       image: 'https://via.placeholder.com/150',
       title: 'MOSAIC ART',
+      min: '1',
+      max: '1',
       description: 'NONE YET',
     },
     {
       id: 56,
       image: 'https://via.placeholder.com/150',
       title: 'QR SCAVENGER HUNT',
+      min: '2',
+      max: '4',
       description: `
 
       A QR (Quick Response Scavenger Hunt event is with a technical twist, where participants use QR codes to 
@@ -2150,6 +2264,8 @@ const Event = () => {
       id: 57,
       image: 'https://via.placeholder.com/150',
       title: 'TECHTONIC BUZZ',
+      min: '4',
+      max: '4',
       description: `
 
       TechTonic Buzz isn't just a quiz; it's a seismic shift in the world of technology challenges. Prepare to 
@@ -2215,36 +2331,30 @@ const Event = () => {
   };
 
   return (
+
     <div>
-      <h1 >Events</h1>
+
+
+      <br />
+      <div style={{ alignItems: 'center', textAlign: 'center' }}> <h1><b>EVENTS</b></h1></div>
+      <br />
+      <br />
+
+      <h2><b>CENTRALIZED EVENTS</b></h2>
       <CardGroup
-        heading="CIVIL DEPARTMENT #NIRMAN"
-        events={events.slice(0, 3)}
+        heading="Unite & Ignite: Events for All Students"
+        events={events.slice(49, 52)}
         handleRegisterClick={handleRegisterClick}
       />
+      <h2><b>DEPARTMENT EVENTS</b></h2>
       <CardGroup
-        heading="OPEN SOURCE DEVELOPERS COMMUNITY #DCRUSTODC"
-        events={events.slice(3, 5)}
-        handleRegisterClick={handleRegisterClick}
-      />
-      <CardGroup
-        heading="BIOTECHNOLOGY DEPARTMENT #ENGENISIS"
+        heading="Biotechnology department #ENGENISIS"
         events={events.slice(5, 8)}
-        handleRegisterClick={handleRegisterClick}
-      />
-      <CardGroup
-        heading="SAVERA"
-        events={events.slice(8, 10)}
         handleRegisterClick={handleRegisterClick}
       />
       <CardGroup
         heading="Department of Management Studies(MBA) #ZENITH "
         events={events.slice(10, 13)}
-        handleRegisterClick={handleRegisterClick}
-      />
-      <CardGroup
-        heading="LISOC (LITERARY SOCIETY) "
-        events={events.slice(13, 15)}
         handleRegisterClick={handleRegisterClick}
       />
       <CardGroup
@@ -2258,18 +2368,8 @@ const Event = () => {
         handleRegisterClick={handleRegisterClick}
       />
       <CardGroup
-        heading="E-Cell"
-        events={events.slice(21, 23)}
-        handleRegisterClick={handleRegisterClick}
-      />
-      <CardGroup
         heading="Department of Electrical Engineering"
         events={events.slice(23, 26)}
-        handleRegisterClick={handleRegisterClick}
-      />
-      <CardGroup
-        heading="Thinkbots"
-        events={events.slice(26, 28)}
         handleRegisterClick={handleRegisterClick}
       />
       <CardGroup
@@ -2308,18 +2408,44 @@ const Event = () => {
         handleRegisterClick={handleRegisterClick}
       />
       <CardGroup
-        heading="CENTRALIZED EVENTS"
-        events={events.slice(49, 52)}
-        handleRegisterClick={handleRegisterClick}
-      />
-      <CardGroup
         heading="Department OF ARCHITECHTURE"
         events={events.slice(52, 55)}
         handleRegisterClick={handleRegisterClick}
       />
       <CardGroup
+        heading="CIVIL DEPARTMENT #NIRMAN"
+        events={events.slice(0, 3)}
+        handleRegisterClick={handleRegisterClick}
+      />
+      <h2>SOCIETY EVENTS</h2>
+      <CardGroup
         heading="SUNSHINE"
         events={events.slice(55, 57)}
+        handleRegisterClick={handleRegisterClick}
+      />
+      <CardGroup
+        heading="E-Cell"
+        events={events.slice(21, 23)}
+        handleRegisterClick={handleRegisterClick}
+      />
+      <CardGroup
+        heading="LISOC (LITERARY SOCIETY) "
+        events={events.slice(13, 15)}
+        handleRegisterClick={handleRegisterClick}
+      />
+      <CardGroup
+        heading="SAVERA"
+        events={events.slice(8, 10)}
+        handleRegisterClick={handleRegisterClick}
+      />
+      <CardGroup
+        heading="Thinkbots"
+        events={events.slice(26, 28)}
+        handleRegisterClick={handleRegisterClick}
+      />
+      <CardGroup
+        heading="OPEN SOURCE DEVELOPERS COMMUNITY #DCRUSTODC"
+        events={events.slice(3, 5)}
         handleRegisterClick={handleRegisterClick}
       />
 
@@ -2333,7 +2459,7 @@ const Event = () => {
             </div>
             <NavLink
               className="btn btn-primary me-2 text-light btn-lg"
-              to={"/registerform/"+selectedEvent.id}>
+              to={"/registerform/" + selectedEvent.id}>
               Register Now
             </NavLink>
 

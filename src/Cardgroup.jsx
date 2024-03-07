@@ -11,6 +11,8 @@ const CardGroup = ({ heading, events, handleRegisterClick }) => {
             key={event.id}
             image={event.image}
             title={event.title}
+            min={event.min}
+            max={event.max}
             handleRegisterClick={() => handleRegisterClick(event)}
           />
         ))}
