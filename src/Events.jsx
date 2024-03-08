@@ -3,9 +3,19 @@ import './Event.css'
 import { NavLink } from 'react-router-dom';
 import CardGroup from './Cardgroup';
 
+import SearchBar from './SearchBar';
+
 const Event = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
+  
+  const [searchResults, setSearchResults] = useState([]);
+
+  const handleSearch = (query) => {
+    // Perform search logic here
+    // Then set the search results
+    setSearchResults(/* search results */);
+  };
 
   const events = [
     {
@@ -2334,9 +2344,17 @@ const Event = () => {
 
     <div>
 
+      <SearchBar onSearch={handleSearch} />
+      {/* Display search results here */}
+      {searchResults.map((result) => (
+        <p key={result}>{result}</p>
+      ))}
 
       <br />
-      <div style={{ alignItems: 'center', textAlign: 'center' }}> <h1><b>EVENTS</b></h1></div>
+
+      <div style={{ alignItems: 'center', textAlign: 'center' }}> <h1><b>EVENTS</b></h1>
+
+      </div>
       <br />
       <br />
 
