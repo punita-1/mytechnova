@@ -8,15 +8,18 @@ import SearchBar from './SearchBar';
 const Event = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
-
-  const [searchResults, setSearchResults] = useState([]);
+  const [searchResults, setSearchResults] = useState(events);
 
   const handleSearch = (query) => {
-    // Perform search logic here
-    // Then set the search results
-    setSearchResults(/* search results */);
+    if (!query) {
+      setSearchResults(events);
+    } else {
+      const results = searchResults.filter((event)=> event.category.toLowerCase().includes(query.toLowerCase()) || event.title.toLowerCase().includes(query.toLowerCase()));
+      console.log(results);
+      setSearchResults(results);
+    }
   };
-  
+
   const handleRegisterClick = (event) => {
     setSelectedEvent(event);
     setShowPopup(true);
@@ -27,10 +30,6 @@ const Event = () => {
     <div>
 
       <SearchBar onSearch={handleSearch} />
-      {/* Display search results here */}
-      {searchResults.map((result) => (
-        <p key={result}>{result}</p>
-      ))}
 
       <br />
 
@@ -43,109 +42,109 @@ const Event = () => {
       <h2><b>CENTRALIZED EVENTS</b></h2>
       <CardGroup
         heading="Unite & Ignite: Events for All Students"
-        events={events.slice(49, 52)}
+        events={searchResults.filter((ev)=>ev.category==="centralized")}
         handleRegisterClick={handleRegisterClick}
       />
       <h2><b>DEPARTMENT EVENTS</b></h2>
       <CardGroup
         heading="Biotechnology department #ENGENISIS"
-        events={events.slice(5, 8)}
+        events={searchResults.filter((ev)=>ev.category==="biotechnology")}
         handleRegisterClick={handleRegisterClick}
       />
       <CardGroup
         heading="Department of Management Studies(MBA) #ZENITH "
-        events={events.slice(10, 13)}
+        events={searchResults.filter((ev)=>ev.category==="management")}
         handleRegisterClick={handleRegisterClick}
       />
       <CardGroup
         heading="DEPARTMENT OF AGRICULTURE ENGINEERING #CEEES "
-        events={events.slice(15, 18)}
+        events={searchResults.filter((ev)=>ev.category==="agriculture")}
         handleRegisterClick={handleRegisterClick}
       />
       <CardGroup
         heading="DEPARTMENT OF BIO MEDICAL ENGINEERING(BME) #MEDITRONICA "
-        events={events.slice(18, 21)}
+        events={searchResults.filter((ev)=>ev.category==="biomedical")}
         handleRegisterClick={handleRegisterClick}
       />
       <CardGroup
         heading="Department of Electrical Engineering"
-        events={events.slice(23, 26)}
+        events={searchResults.filter((ev)=>ev.category==="electrical")}
         handleRegisterClick={handleRegisterClick}
       />
       <CardGroup
         heading="Department of Chemical Engineering #MANTHAN"
-        events={events.slice(28, 31)}
+        events={searchResults.filter((ev)=>ev.category==="chemical")}
         handleRegisterClick={handleRegisterClick}
       />
       <CardGroup
         heading="DEPARTMENT OF ELECTRONICS AND COMMUNICATION ENGINEERING #INTEC"
-        events={events.slice(31, 34)}
+        events={searchResults.filter((ev)=>ev.category==="electronics")}
         handleRegisterClick={handleRegisterClick}
       />
       <CardGroup
         heading="DEPARTMENT OF Mathematics #MATHEMAGICIANS"
-        events={events.slice(34, 37)}
+        events={searchResults.filter((ev)=>ev.category==="mathematics")}
         handleRegisterClick={handleRegisterClick}
       />
       <CardGroup
         heading="DEPARTMENT OF PHYSICS #RAMAN"
-        events={events.slice(37, 40)}
+        events={searchResults.filter((ev)=>ev.category==="physics")}
         handleRegisterClick={handleRegisterClick}
       />
       <CardGroup
         heading="Department of COMPUTER SCIENCE ENGINEERING(CSE) #COSMOS"
-        events={events.slice(40, 43)}
+        events={searchResults.filter((ev)=>ev.category==="computer")}
         handleRegisterClick={handleRegisterClick}
       />
       <CardGroup
         heading="Department OF MECHANICAL ENGINEERING(MED) #SOMEC"
-        events={events.slice(43, 46)}
+        events={searchResults.filter((ev)=>ev.category==="Mechanical")}
         handleRegisterClick={handleRegisterClick}
       />
       <CardGroup
         heading="Department OF CHEMISTRY #RASAYANAM"
-        events={events.slice(46, 49)}
+        events={searchResults.filter((ev)=>ev.category==="chemistry")}
         handleRegisterClick={handleRegisterClick}
       />
       <CardGroup
         heading="Department OF ARCHITECHTURE"
-        events={events.slice(52, 55)}
+        events={searchResults.filter((ev)=>ev.category==="architecture")}
         handleRegisterClick={handleRegisterClick}
       />
       <CardGroup
         heading="CIVIL DEPARTMENT #NIRMAN"
-        events={events.slice(0, 3)}
+        events={searchResults.filter((ev)=>ev.category==="civil")}
         handleRegisterClick={handleRegisterClick}
       />
       <h2>SOCIETY EVENTS</h2>
       <CardGroup
         heading="SUNSHINE"
-        events={events.slice(55, 57)}
+        events={searchResults.filter((ev)=>ev.category==="sunshine")}
         handleRegisterClick={handleRegisterClick}
       />
       <CardGroup
         heading="E-Cell"
-        events={events.slice(21, 23)}
+        events={searchResults.filter((ev)=>ev.category==="e-cell")}
         handleRegisterClick={handleRegisterClick}
       />
       <CardGroup
         heading="LISOC (LITERARY SOCIETY) "
-        events={events.slice(13, 15)}
+        events={searchResults.filter((ev)=>ev.category==="lisoc")}
         handleRegisterClick={handleRegisterClick}
       />
       <CardGroup
         heading="SAVERA"
-        events={events.slice(8, 10)}
+        events={searchResults.filter((ev)=>ev.category==="savera")}
         handleRegisterClick={handleRegisterClick}
       />
       <CardGroup
         heading="Thinkbots"
-        events={events.slice(26, 28)}
+        events={searchResults.filter((ev)=>ev.category==="Thinkbots")}
         handleRegisterClick={handleRegisterClick}
       />
       <CardGroup
         heading="OPEN SOURCE DEVELOPERS COMMUNITY #DCRUSTODC"
-        events={events.slice(3, 5)}
+        events={searchResults.filter((ev)=>ev.category==="dcrustodc")}
         handleRegisterClick={handleRegisterClick}
       />
 

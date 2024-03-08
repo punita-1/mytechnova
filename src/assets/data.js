@@ -550,7 +550,7 @@ const Events = [
     title: 'Synergy Crew',
     min: '3',
     max: '3',
-    category:'management study',
+    category:'management',
     description: `
     
     Each team will have three members.
@@ -586,7 +586,7 @@ const Events = [
     title: 'Ad-Mad Show',
     min: '3',
     max: '3',
-    category:'management study',
+    category:'management',
     description: `
 
     Bring out the creativity inside you and make an outstanding advertisement of your own. Be it hilarious or 
@@ -612,7 +612,7 @@ const Events = [
     title: 'Biz- Entra',
     min: '2',
     max: '2',
-    category:'management study',
+    category:'management',
     description: `
 
     Business Plan Competition 
@@ -1326,7 +1326,7 @@ const Events = [
     title: 'Escape Room Challenge',
     min: '2',
     max: '2',
-    category:'electronics and communication',
+    category:'electronics',
     description: `
 
     Welcome to Escape Room Challenge where precision meets creativity in a thrilling three-round challenge! 
@@ -1403,7 +1403,7 @@ const Events = [
     title: 'CIRCUITHON',
     min: '2',
     max: '2',
-    category:'electronics and communication',
+    category:'electronics',
     description: `
 
     Welcome to Circuithon where precision meets creativity in a thrilling two-round challenge! The 
@@ -1454,7 +1454,7 @@ const Events = [
     title: 'Two days skills development workshop on Embedded System',
     min: '1',
     max: '1',
-    category:'electronics and communication',
+    category:'electronics',
     description: `
 
     Welcome to our Two days skill development workshop on Embedded Systems! In this hands-on session, we'll 
@@ -1833,7 +1833,7 @@ const Events = [
     title: 'THINK FUTURE',
     min: '2',
     max: '2',
-    category:'computer science',
+    category:'computer',
     description: `
     
     RULES:
@@ -1859,7 +1859,7 @@ const Events = [
     title: 'WEB MASTER',
     min: '1',
     max: '3',
-    category:'computer science',
+    category:'computer',
     description: `
 
     Rules:
@@ -1895,7 +1895,7 @@ const Events = [
     title: 'TECHNICAL TREASURE HUNT',
     min: '1',
     max: '1',
-    category:'computer science',
+    category:'computer',
     description: `
 
     RULES:
@@ -2214,7 +2214,7 @@ const Events = [
     title: 'JALI DESIGN',
     min: '1',
     max: '1',
-    category:'achitecture',
+    category:'architecture',
     description: 'NONE YET',
   },
   {
@@ -2223,7 +2223,7 @@ const Events = [
     title: 'DOME FIBER STRUCTURE',
     min: '1',
     max: '1',
-    category:'achitecture',
+    category:'architecture',
     description: 'NONE YET',
   },
   {
@@ -2232,7 +2232,7 @@ const Events = [
     title: 'MOSAIC ART',
     min: '1',
     max: '1',
-    category:'achitecture',
+    category:'architecture',
     description: 'NONE YET',
   },
   {
