@@ -7,15 +7,20 @@ const Register_form = () => {
   // console.log(data);
   const { id } = useParams();
   const [memberCount, setMemberCount] = useState(2);
-  const [minCount, setMinCount] = useState(1);
-  const [maxCount, setMaxCount] = useState(4);
+  const minCount = data[id - 1].min;
+  const maxCount = data[id - 1].max;
   const [values, setValues] = useState({
     teamname: ""
   });
 
-  useEffect(()=> {
+  useEffect(() => {
     // handle minimum and max members count here
-  });
+    if (memberCount < minCount) {
+      setMemberCount((temp)=>memberCount + 1);
+    } else if (memberCount > maxCount) {
+      setMemberCount((temp)=>memberCount - 1);
+    }
+  }, [minCount, maxCount, memberCount]);
 
   const [member1, setMember1] = useState({
     name: "",
@@ -36,6 +41,12 @@ const Register_form = () => {
     sem: null
   });
   const [member4, setMember4] = useState({
+    name: "",
+    rollnum: null,
+    branch: "",
+    sem: null
+  });
+  const [member5, setMember5] = useState({
     name: "",
     rollnum: null,
     branch: "",
@@ -66,6 +77,12 @@ const Register_form = () => {
       case 4:
         setMember4({
           ...member4,
+          name: nameValue
+        })
+        break;
+      case 5:
+        setMember5({
+          ...member5,
           name: nameValue
         })
         break;
@@ -102,6 +119,12 @@ const Register_form = () => {
           rollnum: rollNumValue
         })
         break;
+      case 5:
+        setMember5({
+          ...member5,
+          rollnum: rollNumValue
+        })
+        break;
 
       default:
         break;
@@ -135,6 +158,12 @@ const Register_form = () => {
           branch: branchValue
         })
         break;
+      case 5:
+        setMember5({
+          ...member5,
+          branch: branchValue
+        })
+        break;
 
       default:
         break;
@@ -165,6 +194,12 @@ const Register_form = () => {
       case 4:
         setMember4({
           ...member4,
+          sem: semesterValue
+        })
+        break;
+      case 5:
+        setMember5({
+          ...member5,
           sem: semesterValue
         })
         break;
@@ -211,6 +246,7 @@ const Register_form = () => {
           <div className="text-center fs-1 text-primary mb-4 row">
             <div className="fs-3">TEAM REGISTRATION</div>
             <div className='text-uppercase my-3'>For event - {data[id - 1].title}</div>
+            <span className='fs-5'>Minimum team size - {minCount} / Maximimum Team Size - {maxCount}</span>
           </div>
           <form onSubmit={register} className="row justify-content-center align-items-center" >
             <div className="input-group mb-3 col-12">
@@ -302,9 +338,30 @@ const Register_form = () => {
                   </div>
                 </div>
               </div>
+              <div className={memberCount > 4 ? 'row w-100 my-4' : 'd-none'}>
+                <div className='col-4 pe-2 text-end fs-3 my-auto fw-bold'>Member 5: </div>
+                <div className='col-8'>
+                  <div className="input-group mb-3 w-100">
+                    <span className="input-group-text fs-2" id="basic-addon2"><i className="bi bi-person-fill"></i></span>
+                    <input type="text" className="form-control fs-4" value={member5.name} onChange={(e) => memberNameHandler(e, 5)} placeholder="Full Name" aria-describedby="basic-addon2" />
+                  </div>
+                  <div className="input-group mb-3 w-100">
+                    <span className="input-group-text fs-2" id="basic-addon2"><i className="bi bi-person-lines-fill"></i></span>
+                    <input type="number" className="form-control fs-4" value={member5.rollnum} onChange={(e) => memberRollNumHandler(e, 5)} placeholder="Roll Number" aria-describedby="basic-addon2" />
+                  </div>
+                  <div className="input-group mb-3 w-100">
+                    <span className="input-group-text fs-2" id="basic-addon2"><i className="bi bi-journals"></i></span>
+                    <input type="text" className="form-control fs-4" value={member5.branch} onChange={(e) => memberBranchHandler(e, 5)} placeholder="Course & Branch" aria-describedby="basic-addon2" />
+                  </div>
+                  <div className="input-group mb-3 w-100">
+                    <span className="input-group-text fs-2" id="basic-addon2"><i className="bi bi-journal"></i></span>
+                    <input type="number" className="form-control fs-4" value={member5.sem} onChange={(e) => memberSemesterHandler(e, 5)} placeholder="Semester" aria-describedby="basic-addon2" />
+                  </div>
+                </div>
+              </div>
               <div className='w-100 row'>
-                <button className='btn btn-lg btn-success col-4 mx-auto' onClick={addMemberHandler}>ADD MEMBER</button>
-                <button className='btn btn-lg btn-danger col-4 mx-auto' onClick={removeMemberHandler}>REMOVE MEMBER</button>
+                <button className={memberCount>=maxCount?'d-none btn btn-lg btn-success col-4 mx-auto':'btn btn-lg btn-success col-4 mx-auto'} onClick={addMemberHandler}>ADD MEMBER</button>
+                <button className={memberCount<=minCount?'d-none btn btn-lg btn-danger col-4 mx-auto':'btn btn-lg btn-danger col-4 mx-auto'} onClick={removeMemberHandler}>REMOVE MEMBER</button>
               </div>
             </div>
             <button onClick={register} className="btn btn-primary btn-lg mt-4 fs-3">Register Team</button>
