@@ -12,7 +12,7 @@ const SearchBar = ({ onSearch }) => {
     <form onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Search..."
+        placeholder="SEARCH..."
         value={query}
         onChange={(event) => setQuery(event.target.value)}
       />
