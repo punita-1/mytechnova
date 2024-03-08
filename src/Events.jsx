@@ -3,7 +3,6 @@ import './Event.css'
 import { NavLink } from 'react-router-dom';
 import CardGroup from './Cardgroup';
 import events from "./assets/data"
-
 import SearchBar from './SearchBar';
 
 const Event = () => {
