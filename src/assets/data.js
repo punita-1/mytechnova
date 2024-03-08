@@ -5,6 +5,7 @@ const Events = [
     title: 'Projectile Precision Challenge',
     min: '1',
     max: '2',
+    category:'civil',
     description: `
     
     Welcome to the Projectile Precision Challenge, where creativity meets precision in a 
@@ -60,6 +61,7 @@ const Events = [
     title: 'Scale Seekers ',
     min: '1',
     max: '2',
+    category:'civil',
     description: ` 
     
     Welcome to Scale Seekers, where precision meets creativity in a thrilling two-round challenge! Scale 
@@ -112,6 +114,7 @@ const Events = [
     title: 'Design & Sustain',
     min: '1',
     max: '4',
+    category:'civil',
     description: `
     
     Design and Sustain invites participants to showcase their ingenuity in two exciting categories: ice cream 
@@ -161,6 +164,7 @@ const Events = [
     title: 'Haha Hash Hunt',
     min: '1',
     max: '5',
+    category:'dcrustodc',
     description: `
     
     Welcome to the Projectile Precision Challenge, where creativity meets precision in a thrilling two-round 
@@ -215,6 +219,7 @@ const Events = [
     title: 'Techtri Wizadry',
     min: '1',
     max: '1',
+    category:'dcrustodc',
     description: `
 
     Typing Challenge Rules
@@ -301,6 +306,7 @@ const Events = [
     title: 'Mind Buzz Carnival',
     min: '3',
     max: '4',
+    category:'biotechnology',
     description: `
 
     Mind Buzz Carnival is an exciting and inclusive competition designed to test participants' knowledge 
@@ -370,6 +376,7 @@ const Events = [
     title: 'Neuron Navigator',
     min: '2',
     max: '2',
+    category:'biotechnology',
     description: `
     
     List Of Organisers
@@ -416,6 +423,7 @@ const Events = [
     title: 'Biodecode Adventure',
     min: '1',
     max: '1',
+    category:'biotechnology',
     description: `
     
     BioDecode Adventure: Embark on an exhilarating Biotech Discovery Quest where participants follow clues 
@@ -483,6 +491,7 @@ const Events = [
     title: 'Innovation Odyssey Challenge',
     min: '2',
     max: '2',
+    category:'savera',
     description: `
 
     RULES
@@ -521,6 +530,7 @@ const Events = [
     title: 'Tech Titans Trivia',
     min: '1',
     max: '1',
+    category:'savera',
     description: `
     
     RULES
@@ -540,6 +550,7 @@ const Events = [
     title: 'Synergy Crew',
     min: '3',
     max: '3',
+    category:'management study',
     description: `
     
     Each team will have three members.
@@ -575,6 +586,7 @@ const Events = [
     title: 'Ad-Mad Show',
     min: '3',
     max: '3',
+    category:'management study',
     description: `
 
     Bring out the creativity inside you and make an outstanding advertisement of your own. Be it hilarious or 
@@ -600,6 +612,7 @@ const Events = [
     title: 'Biz- Entra',
     min: '2',
     max: '2',
+    category:'management study',
     description: `
 
     Business Plan Competition 
@@ -639,6 +652,7 @@ const Events = [
     title: 'Student of The Year',
     min: '1',
     max: '1',
+    category:'lisoc',
     description: `
 
     ROUND 1: APTITUDE TEST
@@ -673,6 +687,7 @@ const Events = [
     title: `Let's Discuss`,
     min: '1',
     max: '1',
+    category:'lisoc',
     description: `
 
     ROUND 1: EXTEMPORE
@@ -702,6 +717,7 @@ const Events = [
     title: 'Agritech Quiz ',
     min: '3',
     max: '3',
+    category:'agriculture',
     description: `
      
     TEAM COMPRISES OF 3 CANDIDATES ONLY.
@@ -724,6 +740,7 @@ const Events = [
     title: 'public/images/events_profile_pic/agriculture.png', //done
     min: '3',
     max: '3',
+    category:'agriculture',
     description: `
 
     TEAM COMPRISES OF THREE CANDIDATES ONLY.
@@ -756,6 +773,7 @@ const Events = [
     title: 'GREEN CANVAS',
     min: '1',
     max: '1',
+    category:'agriculture',
     description: `
     
     Green Canvas: Painting a Sustainable Future
@@ -768,6 +786,7 @@ const Events = [
     title: 'POSTER MAKING COMPETITION',
     min: '1',
     max: '2',
+    category:'biomedical',
     description: `
 
     1. The theme should be the main focus of the poster and should include any of the following:
@@ -809,6 +828,7 @@ const Events = [
     title: 'B-Quiz',
     min: '1',
     max: '2',
+    category:'biomedical',
     description: `
 
     1. Team comprises of 3 candidates only. 
@@ -834,6 +854,7 @@ const Events = [
     title: 'Dream project Power point presentation',
     min: '1',
     max: '2',
+    category:'biomedical',
     description: `
 
     1. Qualifying criteria will include three rounds:
@@ -861,6 +882,7 @@ const Events = [
     title: 'Chase The Bid',
     min: '1',
     max: '2',
+    category:'e-cell',
     description: `
      
     "Chase The Bid" is a mock IPL auction where teams display entrepreneurial skills by managing budgets, 
@@ -911,6 +933,7 @@ const Events = [
     title: 'InnoVent Sprint',
     min: '1',
     max: '2',
+    category:'e-cell',
     description: `
 
     "InnoVent Sprint" is an entrepreneurship event where teams of 3 to 5 members compete in challenges that 
@@ -955,6 +978,7 @@ const Events = [
     title: 'Tech- Marathon',
     min: '1',
     max: '2',
+    category:'electrical',
     description: `
 
     Tech Marathon is a treasure hunt game where participants follow clues to find a hidden treasure. It's 
@@ -990,6 +1014,7 @@ const Events = [
     title: 'Circuit Circus',
     min: '1',
     max: '1',
+    category:'electrical',
     description: `
                       
     "Join us for an electrifying journey into the realm of electrical engineering at our event! Where we will 
@@ -1056,6 +1081,7 @@ const Events = [
     title: 'Tech-Zep',
     min: '1',
     max: '1',
+    category:'electrical',
     description: `
 
     Get ready for a whirlwind tour of cutting edge advancements in electrical engineering. Tech-Zep is a 
@@ -1109,6 +1135,7 @@ const Events = [
     title: 'RoboSoccer',
     min: '2',
     max: '2',
+    category:'Thinkbots',
     description: `
     
     Rulebook
@@ -1170,6 +1197,7 @@ const Events = [
     title: 'Cozmo Race',
     min: '1',
     max: '1',
+    category:'Thinkbots',
     description: `
     
     Rulebook
@@ -1237,6 +1265,7 @@ const Events = [
     title: 'Knowledge Knockout Quiz',
     min: '2',
     max: '2',
+    category:'chemical',
     description: `
 
     Quiz - two rounds.
@@ -1258,6 +1287,7 @@ const Events = [
     title: 'Get Recognized for Your Personality (GRYP)',
     min: '1',
     max: '1',
+    category:'chemical',
     description: `
 
     20 participants, first-come-first-served basis; list of selected candidates shall be displayed on 
@@ -1276,6 +1306,7 @@ const Events = [
     title: 'Creative Canvas',
     min: '1',
     max: '1',
+    category:'chemical',
     description: `
 
     Theme: Social Issues OR Environmental Issues.
@@ -1295,6 +1326,7 @@ const Events = [
     title: 'Escape Room Challenge',
     min: '2',
     max: '2',
+    category:'electronics and communication',
     description: `
 
     Welcome to Escape Room Challenge where precision meets creativity in a thrilling three-round challenge! 
@@ -1371,6 +1403,7 @@ const Events = [
     title: 'CIRCUITHON',
     min: '2',
     max: '2',
+    category:'electronics and communication',
     description: `
 
     Welcome to Circuithon where precision meets creativity in a thrilling two-round challenge! The 
@@ -1421,6 +1454,7 @@ const Events = [
     title: 'Two days skills development workshop on Embedded System',
     min: '1',
     max: '1',
+    category:'electronics and communication',
     description: `
 
     Welcome to our Two days skill development workshop on Embedded Systems! In this hands-on session, we'll 
@@ -1457,6 +1491,7 @@ const Events = [
     title: 'Poster Making',
     min: '1',
     max: '1',
+    category:'mathematics',
     description: `
 
     The objective behind organisation of poster making competition is to bring out the creative expression of 
@@ -1503,6 +1538,7 @@ const Events = [
     title: 'Debate',
     min: '2',
     max: '2',
+    category:'mathematics',
     description: `
 
     There will be a team of two, the affirmative (has to speak in the favour) and the negative (has to speak 
@@ -1555,6 +1591,7 @@ const Events = [
     title: 'Quiz',
     min: '2',
     max: '4',
+    category:'mathematics',
     description: ` 
 
     Teams will be either of 2 members or 4 depending on the number of participants
@@ -1603,6 +1640,7 @@ const Events = [
     title: 'Aerovate',
     min: '2',
     max: '4',
+    category:'physics',
     description: `
 
     Aerovate: The Flight Challenge- This name combines "Aero," referencing aeronautics, with "Elevate," 
@@ -1668,6 +1706,7 @@ const Events = [
     title: 'ElectraCraft',
     min: '2',
     max: '4',
+    category:'physics',
     description: `
 
     ElectraCraft combines "Electra" for electricity and "craft" for skilled creation, embodying the 
@@ -1739,6 +1778,7 @@ const Events = [
     title: 'TechnoTrek: The Technical Escape',
     min: '2',
     max: '4',
+    category:'physics',
     description: `
 
     Introduction:
@@ -1793,6 +1833,7 @@ const Events = [
     title: 'THINK FUTURE',
     min: '2',
     max: '2',
+    category:'computer science',
     description: `
     
     RULES:
@@ -1818,6 +1859,7 @@ const Events = [
     title: 'WEB MASTER',
     min: '1',
     max: '3',
+    category:'computer science',
     description: `
 
     Rules:
@@ -1853,6 +1895,7 @@ const Events = [
     title: 'TECHNICAL TREASURE HUNT',
     min: '1',
     max: '1',
+    category:'computer science',
     description: `
 
     RULES:
@@ -1875,6 +1918,7 @@ const Events = [
     title: 'Stick Structure Showdown',
     min: '3',
     max: '5',
+    category:'Mechanical',
     description: `
 
     Description: 
@@ -1935,6 +1979,7 @@ const Events = [
     title: 'Behind The Bars',
     min: '1',
     max: '2',
+    category:'Mechanical',
     description: ` 
     
     Description: 
@@ -1990,6 +2035,7 @@ const Events = [
     title: 'Gearhead Odyssey ',
     min: '4',
     max: '4',
+    category:'Mechanical',
     description: `
 
     Description: 
@@ -2068,6 +2114,7 @@ const Events = [
     title: 'Rasayan Magic',
     min: '3',
     max: '3',
+    category:'chemistry',
     description: `
 
     Rules and regulations:
@@ -2086,6 +2133,7 @@ const Events = [
     title: 'Science Quiz',
     min: '1',
     max: '3',
+    category:'chemistry',
     description: `
 
     Rules and regulations:
@@ -2103,6 +2151,7 @@ const Events = [
     title: 'Mystical Chemistry',
     min: '2',
     max: '2',
+    category:'chemistry',
     description: `
 
     Rules and regulations:
@@ -2122,6 +2171,7 @@ const Events = [
     title: 'PROJRCT EXPO',
     min: '1',
     max: '5',
+    category:'centralized',
     description: `
 
     PROJECT EXPO: 
@@ -2135,6 +2185,7 @@ const Events = [
     title: 'HOBBY EXPO',
     min: '1',
     max: '1',
+    category:'centralized',
     description: `
 
     HOBBY EXPO:
@@ -2149,6 +2200,7 @@ const Events = [
     title: 'POSTER PRESENTATION',
     min: '1',
     max: '1',
+    category:'centralized',
     description: `
     
     POSTER PRESENTATION:
@@ -2162,6 +2214,7 @@ const Events = [
     title: 'JALI DESIGN',
     min: '1',
     max: '1',
+    category:'achitecture',
     description: 'NONE YET',
   },
   {
@@ -2170,6 +2223,7 @@ const Events = [
     title: 'DOME FIBER STRUCTURE',
     min: '1',
     max: '1',
+    category:'achitecture',
     description: 'NONE YET',
   },
   {
@@ -2178,6 +2232,7 @@ const Events = [
     title: 'MOSAIC ART',
     min: '1',
     max: '1',
+    category:'achitecture',
     description: 'NONE YET',
   },
   {
@@ -2186,6 +2241,7 @@ const Events = [
     title: 'QR SCAVENGER HUNT',
     min: '2',
     max: '4',
+    category:'sunshine',
     description: `
 
     A QR (Quick Response Scavenger Hunt event is with a technical twist, where participants use QR codes to 
@@ -2257,6 +2313,7 @@ const Events = [
     title: 'TECHTONIC BUZZ',
     min: '4',
     max: '4',
+    category:'sunshine',
     description: `
 
     TechTonic Buzz isn't just a quiz; it's a seismic shift in the world of technology challenges. Prepare to 

@@ -17,13 +17,14 @@ const Event = () => {
     setSearchResults(/* search results */);
   };
 
-  const events = [
+  const Events = [
     {
       id: 1,
       image: 'public/images/events_profile_pic/civil_projectile.jpg', //done
       title: 'Projectile Precision Challenge',
       min: '1',
       max: '2',
+      category:'civil',
       description: `
       
       Welcome to the Projectile Precision Challenge, where creativity meets precision in a 
@@ -71,7 +72,7 @@ const Event = () => {
       5.Participants will have to bring their own laptops 
       
       `
-
+  
     },
     {
       id: 2,
@@ -79,13 +80,14 @@ const Event = () => {
       title: 'Scale Seekers ',
       min: '1',
       max: '2',
+      category:'civil',
       description: ` 
       
       Welcome to Scale Seekers, where precision meets creativity in a thrilling two-round challenge! Scale 
       Seekers promises a blend of mental acuity and hands-on creativity, offering participants a chance to 
       showcase their skills, compete for glory, and above all, have a blast in the process. Join us for an 
       unforgettable event where every measurement counts and every tower reaches for the sky!
-
+  
       Team Size: 1-2
       
       Round 1:
@@ -131,6 +133,7 @@ const Event = () => {
       title: 'Design & Sustain',
       min: '1',
       max: '4',
+      category:'civil',
       description: `
       
       Design and Sustain invites participants to showcase their ingenuity in two exciting categories: ice cream 
@@ -180,6 +183,7 @@ const Event = () => {
       title: 'Haha Hash Hunt',
       min: '1',
       max: '5',
+      category:'dcrustodc',
       description: `
       
       Welcome to the Projectile Precision Challenge, where creativity meets precision in a thrilling two-round 
@@ -210,7 +214,7 @@ const Event = () => {
          force.
       5. Scoring: Points are awarded based on the distance achieved by the paper airplane. The airplane that 
          travels the farthest distance from the starting point earns the team the highest score. 
-
+  
       Round 2:
       In this round, participants will take their creativity to the digital realm as they bring their paper aero 
       paper designs to life using AutoCAD, the leading software for computer-aided design (CAD).
@@ -218,7 +222,7 @@ const Event = () => {
       digital models using AutoCAD's powerful tools and features. From intricate wing designs to streamlined 
       fuselages, participants will meticulously recreate every detail of their paper aero papers with precision 
       and accuracy.
-
+  
       Rules:
       1.The teams will be given 30 minutes for the design.
       2.Taking outside help is prohibited.
@@ -234,8 +238,9 @@ const Event = () => {
       title: 'Techtri Wizadry',
       min: '1',
       max: '1',
+      category:'dcrustodc',
       description: `
-
+  
       Typing Challenge Rules
       
       # Overview:
@@ -260,7 +265,7 @@ const Event = () => {
       8.Fair Play:
       Participants are expected to maintain fair play and avoid using any external tools or aids during the 
       Typing Challenge.
-
+  
       #Instructions:
       Participants will be provided with the text to type.
       The challenge begins when the participant starts typing and ends when the specified time elapses.
@@ -320,8 +325,9 @@ const Event = () => {
       title: 'Mind Buzz Carnival',
       min: '3',
       max: '4',
+      category:'biotechnology',
       description: `
-
+  
       Mind Buzz Carnival is an exciting and inclusive competition designed to test participants' knowledge 
       across various scientific disciplines. The event consists of two captivating rounds - Vivid Visions and 
       Bingo Buzz - providing a platform for students from diverse engineering and science backgrounds.
@@ -389,13 +395,14 @@ const Event = () => {
       title: 'Neuron Navigator',
       min: '2',
       max: '2',
+      category:'biotechnology',
       description: `
       
       List Of Organisers
       1.Srishti
       2.Muskan
       3.Vanshika
-
+  
       Neuron Navigator is an extraordinary event where you Dive into a world of crafting sentences, and sharpen 
       your knowledge. Prepare to be captivated, challenged, and amazed as you unlock the secrets of cognitive 
       excellence. The event consists of 2 rounds - Bio Byte Breaker and Mind Magnets.
@@ -435,6 +442,7 @@ const Event = () => {
       title: 'Biodecode Adventure',
       min: '1',
       max: '1',
+      category:'biotechnology',
       description: `
       
       BioDecode Adventure: Embark on an exhilarating Biotech Discovery Quest where participants follow clues 
@@ -446,7 +454,7 @@ const Event = () => {
       1.Muskan
       2.Tanya
       3.Rahul
-
+  
       Participant Prerequisites and Eligibility:
       1. The event is open to all students from Engineering and Science departments.
       2. Participants have to perform individually in first round. The top 3 teams with the highest points in 
@@ -502,10 +510,11 @@ const Event = () => {
       title: 'Innovation Odyssey Challenge',
       min: '2',
       max: '2',
+      category:'savera',
       description: `
-
+  
       RULES
-
+  
       >> Overview:
       The Innovation Odyssey Challenge (model making) consists of collecting the different items and making 
       model using those items within a specified time frame.
@@ -540,13 +549,14 @@ const Event = () => {
       title: 'Tech Titans Trivia',
       min: '1',
       max: '1',
+      category:'savera',
       description: `
       
       RULES
       >>Prelims:
       There will be quiz(time limited) consisting of basic question, English word, puzzle solving. Student can 
       use pen and paper in this round.
-
+  
       >>Mains:
       The process will be same as prelims but there will be an increase in difficulty level of questions. No pen 
       and paper will be given in this round.
@@ -559,6 +569,7 @@ const Event = () => {
       title: 'Synergy Crew',
       min: '3',
       max: '3',
+      category:'management study',
       description: `
       
       Each team will have three members.
@@ -594,8 +605,9 @@ const Event = () => {
       title: 'Ad-Mad Show',
       min: '3',
       max: '3',
+      category:'management study',
       description: `
-
+  
       Bring out the creativity inside you and make an outstanding advertisement of your own. Be it hilarious or 
       sensitive, be it just your creativity and ad sense.
       
@@ -619,12 +631,13 @@ const Event = () => {
       title: 'Biz- Entra',
       min: '2',
       max: '2',
+      category:'management study',
       description: `
-
+  
       Business Plan Competition 
       Any Innovative idea that can be turned into business opportunity needs to presented in this event in form 
       of PowerPoint presentation 
-
+  
       Rules for Competition 
       1. Competition is open for teams comprising Graduate Post-Graduate Students.
       2. Each team should have 2 members of which one should be registered as team leader.	
@@ -658,8 +671,9 @@ const Event = () => {
       title: 'Student of The Year',
       min: '1',
       max: '1',
+      category:'lisoc',
       description: `
-
+  
       ROUND 1: APTITUDE TEST
       1. The test contains MCQ's (multiple choice questions).
       2. Each participant has to take the test individually.
@@ -674,11 +688,11 @@ const Event = () => {
       ROUND 3: TREASURE HUNT
       1. The participants selected from the previous (Talent Hunt) round are divided into two teams.
       2. The participants of the winning team move to the final round.
-
+  
       ROUND 4: PERSONAL INTERVIEW
       1. An interview is conducted in the final round. The interview will be taken by the assigned teacher.
       2. The participant who clears all the four rounds will be designated as the STUDENT OF THE YEAR.
-
+  
       RULES:
       1. No participant will be allowed entry in the mid of the event, only those who appeared for
       the round and got selected will be counted as qualified entries.
@@ -692,8 +706,9 @@ const Event = () => {
       title: `Let's Discuss`,
       min: '1',
       max: '1',
+      category:'lisoc',
       description: `
-
+  
       ROUND 1: EXTEMPORE
       1. The participant is given a topic to speak.
       2. A minute is provided to think and the participant has to speak for 2 minutes on the given topic.
@@ -721,6 +736,7 @@ const Event = () => {
       title: 'Agritech Quiz ',
       min: '3',
       max: '3',
+      category:'agriculture',
       description: `
        
       TEAM COMPRISES OF 3 CANDIDATES ONLY.
@@ -743,8 +759,9 @@ const Event = () => {
       title: 'public/images/events_profile_pic/agriculture.png', //done
       min: '3',
       max: '3',
+      category:'agriculture',
       description: `
-
+  
       TEAM COMPRISES OF THREE CANDIDATES ONLY.
       THERE WILL BE THREE ROUNDS.
       
@@ -775,6 +792,7 @@ const Event = () => {
       title: 'GREEN CANVAS',
       min: '1',
       max: '1',
+      category:'agriculture',
       description: `
       
       Green Canvas: Painting a Sustainable Future
@@ -787,8 +805,9 @@ const Event = () => {
       title: 'POSTER MAKING COMPETITION',
       min: '1',
       max: '2',
+      category:'biomedical',
       description: `
-
+  
       1. The theme should be the main focus of the poster and should include any of the following:
          Human organs. 
          Digital world and healthcare. 
@@ -828,8 +847,9 @@ const Event = () => {
       title: 'B-Quiz',
       min: '1',
       max: '2',
+      category:'biomedical',
       description: `
-
+  
       1. Team comprises of 3 candidates only. 
       2. Quiz will involve three rounds:
          Preliminary round 
@@ -853,8 +873,9 @@ const Event = () => {
       title: 'Dream project Power point presentation',
       min: '1',
       max: '2',
+      category:'biomedical',
       description: `
-
+  
       1. Qualifying criteria will include three rounds:
          Presentation 
          High order thinking skills evaluation 
@@ -880,6 +901,7 @@ const Event = () => {
       title: 'Chase The Bid',
       min: '1',
       max: '2',
+      category:'e-cell',
       description: `
        
       "Chase The Bid" is a mock IPL auction where teams display entrepreneurial skills by managing budgets, 
@@ -887,7 +909,7 @@ const Event = () => {
       challenging participants to make astute decisions within budget constraints, negotiate effectively, and 
       build competitive teams. The event fosters creativity, critical thinking, and collaboration, essential 
       for success in sports management and entrepreneurship.
-
+  
       Team size: 3-5
       
       Round 1:
@@ -903,7 +925,7 @@ const Event = () => {
       Round 2:
       In the second round , each team will be allocated a virtual budget of 85 crore to participate in the 
       auction.
-
+  
       Rules:
       1. Teams cannot exceed their allocated budget during the auction process.
       2. A pool of players will be provided for the auction, consisting of 120 players.
@@ -930,8 +952,9 @@ const Event = () => {
       title: 'InnoVent Sprint',
       min: '1',
       max: '2',
+      category:'e-cell',
       description: `
-
+  
       "InnoVent Sprint" is an entrepreneurship event where teams of 3 to 5 members compete in challenges that 
       simulate real-world scenarios. Through pen-and-paper exercises, a quiz round, and solving real-world 
       problems, participants showcase their entrepreneurial mindset, critical thinking, and ability to innovate 
@@ -974,8 +997,9 @@ const Event = () => {
       title: 'Tech- Marathon',
       min: '1',
       max: '2',
+      category:'electrical',
       description: `
-
+  
       Tech Marathon is a treasure hunt game where participants follow clues to find a hidden treasure. It's 
       like a real-life adventure filled with excitement and mystery. We are creating clues based on machines 
       and equipments present in our electrical labs, mechanical labs, chemical labs,workshop etc. The key is to 
@@ -983,7 +1007,7 @@ const Event = () => {
       
       Event Venue: Starting point at the back side of pizza book.
       Event Timing: Morning 10:30 Am to 12:30 Pm
-
+  
       Total team expected: 20
       Member in each team: 4
       
@@ -1009,6 +1033,7 @@ const Event = () => {
       title: 'Circuit Circus',
       min: '1',
       max: '1',
+      category:'electrical',
       description: `
                         
       "Join us for an electrifying journey into the realm of electrical engineering at our event! Where we will 
@@ -1035,7 +1060,7 @@ const Event = () => {
                              Round 1 :  CVR- 113
                              Round 2 : JCB - 312
                              Round 3 : CVR - 112
-
+  
       Event Timing: Morning 10 : 00 AM
       List of Organisers:
       1.Muskan
@@ -1075,8 +1100,9 @@ const Event = () => {
       title: 'Tech-Zep',
       min: '1',
       max: '1',
+      category:'electrical',
       description: `
-
+  
       Get ready for a whirlwind tour of cutting edge advancements in electrical engineering. Tech-Zep is a 
       technical event which include lightning-fast speaking event where participants will have just one minute 
       to share their insights,innovations and breakthoughts regarding their knowledge in electrical field.And a 
@@ -1103,7 +1129,7 @@ const Event = () => {
       3. Meghna
   
       Rules
-
+  
       Round 1:
       Each Participants will have exactly 1 minute to deliver their speech.
       Timing will be strictly enforced, no extra time will be given to any participants.
@@ -1128,6 +1154,7 @@ const Event = () => {
       title: 'RoboSoccer',
       min: '2',
       max: '2',
+      category:'Thinkbots',
       description: `
       
       Rulebook
@@ -1189,6 +1216,7 @@ const Event = () => {
       title: 'Cozmo Race',
       min: '1',
       max: '1',
+      category:'Thinkbots',
       description: `
       
       Rulebook
@@ -1256,13 +1284,14 @@ const Event = () => {
       title: 'Knowledge Knockout Quiz',
       min: '2',
       max: '2',
+      category:'chemical',
       description: `
-
+  
       Quiz - two rounds.
       
       Paper-pen (first) round of 30 (general knowledge and aptitude) questions and 30 minutes.
       Top 6 teams qualify for buzzer (second) round.
-
+  
       2 players per (self made) team.
       No negative marking in either quiz round.
       No gadgets allowed, if found - immediate disqualification.
@@ -1277,8 +1306,9 @@ const Event = () => {
       title: 'Get Recognized for Your Personality (GRYP)',
       min: '1',
       max: '1',
+      category:'chemical',
       description: `
-
+  
       20 participants, first-come-first-served basis; list of selected candidates shall be displayed on 
       department website a day before the event 
       (https://www.dcrustm.ac.in/department/deptDetails/chemical-engineering).
@@ -1295,8 +1325,9 @@ const Event = () => {
       title: 'Creative Canvas',
       min: '1',
       max: '1',
+      category:'chemical',
       description: `
-
+  
       Theme: Social Issues OR Environmental Issues.
       Individual entries only, first 25 entrants eligible; list shall be displayed on department website a day 
       before the event 
@@ -1314,20 +1345,21 @@ const Event = () => {
       title: 'Escape Room Challenge',
       min: '2',
       max: '2',
+      category:'electronics and communication',
       description: `
-
+  
       Welcome to Escape Room Challenge where precision meets creativity in a thrilling three-round challenge! 
       The objective of the competition is for each team to escape from the designated escape room within the 
       allotted time  offering participants a chance to showcase their skills, compete for glory, and above all, 
       have a blast in the process. Join us for an unforgettable event where every measurement counts and every 
       tower reaches for the sky!
-
+  
       Team Size: 2
       
       Round 1:
       Tech Trivia: In this round, the participants will answer multiple-choice questions covering a wide range 
       of technological topics and advancements in AI
-
+  
       Rules:
       1. Team Composition: Teams consist of two participants.
       2. No Electronic Gadgets allowed: Participants are not allowed to use any electronic gadgets such as 
@@ -1357,12 +1389,12 @@ const Event = () => {
          b. Teams are not allowed to use force, break or damage any objects in the room.
          c. The use of mobile phones, electronic devices, or any outside materials is strictly prohibited   
             during the challenge. 
-
+  
       3. Clues and Hints:
          a. Teams may request hints or clues from the game master during the challenge.
          b. Each team is allowed a maximum of 2 hints throughout the duration of the challenge.
          c. Teams must request hints verbally to the game master.
-
+  
       4. Winning Criteria:
          a.The winning team will be the one that successfully escapes from the room in the shortest amount of 
            time and uses least number of clues.
@@ -1390,14 +1422,15 @@ const Event = () => {
       title: 'CIRCUITHON',
       min: '2',
       max: '2',
+      category:'electronics and communication',
       description: `
-
+  
       Welcome to Circuithon where precision meets creativity in a thrilling two-round challenge! The 
       objective of the competition is for each team to escape from the designated escape room within the 
       allotted time Offering participants a chance to showcase their skills, compete for glory, and above all, 
       have a blast in the process. Join us for an unforgettable event where every measurement counts and every 
       tower reaches for the sky!
-
+  
       Team Size: 2
       Round 1:
       In this round, the participants will solve the circuit covering a wide range of technological topics and 
@@ -1420,7 +1453,7 @@ const Event = () => {
       find the fault within a set time limit, typically by using their problem-solving skills, creativity, and 
       teamwork. The challenge aims to promote collaboration, communication, critical thinking, and lateral 
       problem-solving abilities among participants while offering an exciting and memorable adventure.
-
+  
       Rules:
       1. Time: 30 minutes
       2. Rules:
@@ -1440,8 +1473,9 @@ const Event = () => {
       title: 'Two days skills development workshop on Embedded System',
       min: '1',
       max: '1',
+      category:'electronics and communication',
       description: `
-
+  
       Welcome to our Two days skill development workshop on Embedded Systems! In this hands-on session, we'll 
       dive into the fascinating world of embedded systems, exploring their importance, applications, and design 
       principles. Through practical demonstrations and interactive discussions, you'll gain insights into 
@@ -1476,13 +1510,14 @@ const Event = () => {
       title: 'Poster Making',
       min: '1',
       max: '1',
+      category:'mathematics',
       description: `
-
+  
       The objective behind organisation of poster making competition is to bring out the creative expression of 
       students and to gauge their knowledge and awareness of various trends. The aim of the Poster Making 
       Competition is not just to judge the students based on their creative aspects but also to trigger thought 
       process among the students towards recent trends.
-
+  
       Rules and Regulation for Poster Making Competition:
       Each Participant can post only one Poster.
       The poster must be made on the A3 size (11.7 * 16.5 inches) sheet with margins (0.5 inches) drawn with 
@@ -1491,7 +1526,7 @@ const Event = () => {
       objects, print-outs won’t be acceptable. It should be original and hand made.
       The Topic of poster and theme should be clearly mentioned at the Top Margin of the Poster.
       Participant should submit their poster with explanation of the topic and content of the poster to judges.
-
+  
       Judgement Criteria:      
       Judgment will be based on:
         Relevance to the theme.
@@ -1522,8 +1557,9 @@ const Event = () => {
       title: 'Debate',
       min: '2',
       max: '2',
+      category:'mathematics',
       description: `
-
+  
       There will be a team of two, the affirmative (has to speak in the favour) and the negative (has to speak 
       against).
       There shall be organizers  to control the proceedings.
@@ -1538,7 +1574,7 @@ const Event = () => {
       highest marks) and Second runner up (Candidate with third highest marks).
       
       Rules and Regulations for Debate competition 
-
+  
       Team Composition: The team will comprise of two people either boys, girls or a combination of both.
       Medium of expression: The medium of expression will be English only.
       Subject Announcement: The subject will be given to the participants 20 minutes prior the Debate for 
@@ -1549,7 +1585,7 @@ const Event = () => {
       must oppose the topic completely (whatever their private opinions may be).
       If a speaker makes a statement, they must be able to provide evidence or reasons to support the 
       statement. 
-
+  
       Facts presented in a debate must be accurate. 
       Decision of judges will be final and cannot be overruled by any means.
       
@@ -1574,8 +1610,9 @@ const Event = () => {
       title: 'Quiz',
       min: '2',
       max: '4',
+      category:'mathematics',
       description: ` 
-
+  
       Teams will be either of 2 members or 4 depending on the number of participants
       
       Round 1: GENERAL ROUND
@@ -1622,11 +1659,12 @@ const Event = () => {
       title: 'Aerovate',
       min: '2',
       max: '4',
+      category:'physics',
       description: `
-
+  
       Aerovate: The Flight Challenge- This name combines "Aero," referencing aeronautics, with "Elevate," 
       suggesting lifting off or achieving greater heights.
-
+  
       Introduction:
       The Airplane Design Competition is a thrilling event aimed at challenging the creativity, ingenuity, and 
       engineering skills of students. Hosted as part of the Technova University Technical Fest, this 
@@ -1634,7 +1672,7 @@ const Event = () => {
       paper, cardboard/thermocol sheets, and adhesive. Teams will compete against each other to build 
       aeroplanes that demonstrate durability, flight height, air time, and accuracy in hitting designated 
       targets.
-
+  
       Objective:
       The primary objective of the competition is to foster innovation and teamwork among students while 
       testing their ability to design and construct functional aeroplanes using limited resources. Participants 
@@ -1651,7 +1689,7 @@ const Event = () => {
       The construction period includes time for assembly and drying of adhesive; no additional time will be 
       allocated for drying. Techniques such as origami or other creative methods are permitted for aeroplane 
       construction.
-
+  
       Testing Criteria:
       1.Durability: The aeroplane should withstand handling and flight without significant damage.
       2.Flight Height: The aircraft's ability to achieve maximum altitude during flight will be measured.
@@ -1671,7 +1709,7 @@ const Event = () => {
       5.The decision of the judging panel will be final and binding.
       6.Any disputes or concerns during the competition should be brought to the attention of the organising 
       committee.
-
+  
       Conclusion:
       The Airplane Design Competition promises to be an exhilarating and educational experience for all 
       participants. It provides an opportunity for students to showcase their creativity, problem-solving 
@@ -1687,11 +1725,12 @@ const Event = () => {
       title: 'ElectraCraft',
       min: '2',
       max: '4',
+      category:'physics',
       description: `
-
+  
       ElectraCraft combines "Electra" for electricity and "craft" for skilled creation, embodying the 
       competition's focus on crafting imaginative structures from electronic components.
-
+  
       Introduction:
       Welcome to the electrifying world of innovation and creativity at Technova's newest competition: the 
       Electronics and Electrical Structure Building Challenge! In this dynamic event, participants will embark 
@@ -1700,9 +1739,9 @@ const Event = () => {
       for students to showcase their ingenuity by transforming wires, bulbs, ICs, resistors, LEDs, and a myriad 
       of other components into tangible works of art. From whimsical creatures to towering skyscrapers, the 
       possibilities are as limitless as the imagination itself.
-
+  
       Let your imagination spark, and let the creations illuminate the path to innovation!
-
+  
       Objective:
       The Electronics and Electrical Structure Building Challenge aims to foster creativity, teamwork, and 
       engineering skills among participants by tasking them with constructing recognizable structures using the 
@@ -1711,7 +1750,7 @@ const Event = () => {
       Competition Format:
       1. Team Composition: Teams must consist of a minimum of 2 and a maximum of 4 members. All team members 
          must be present during the component selection and structure-building phases.
-
+  
       2. Component Selection:
          - Each team will have access to a box containing a fixed quantity of electronic and electrical 
            components.
@@ -1758,8 +1797,9 @@ const Event = () => {
       title: 'TechnoTrek: The Technical Escape',
       min: '2',
       max: '4',
+      category:'physics',
       description: `
-
+  
       Introduction:
       TechnoTrek: The Technical Escape is a dynamic competition designed to put participants' technical skills, 
       problem-solving prowess, and teamwork to the ultimate test. Embedded within the Technova University 
@@ -1812,6 +1852,7 @@ const Event = () => {
       title: 'THINK FUTURE',
       min: '2',
       max: '2',
+      category:'computer science',
       description: `
       
       RULES:
@@ -1837,8 +1878,9 @@ const Event = () => {
       title: 'WEB MASTER',
       min: '1',
       max: '3',
+      category:'computer science',
       description: `
-
+  
       Rules:
       
       1. Maximum 3 members per group.
@@ -1872,8 +1914,9 @@ const Event = () => {
       title: 'TECHNICAL TREASURE HUNT',
       min: '1',
       max: '1',
+      category:'computer science',
       description: `
- 
+  
       RULES:
       
       1. There will be 2 rounds of quiz.
@@ -1894,8 +1937,9 @@ const Event = () => {
       title: 'Stick Structure Showdown',
       min: '3',
       max: '5',
+      category:'Mechanical',
       description: `
-
+  
       Description: 
       Welcome to Stick Structure Showdown, where creativity meets engineering 
       prowess! In this riveting competition, participants are tasked with crafting 
@@ -1912,7 +1956,7 @@ const Event = () => {
       Structure Showdown promises an electrifying showcase of skill and 
       determination, where each bridge tells a tale of creativity, resilience, and the 
       relentless pursuit of engineering excellence. 
-
+  
       Rules: 
       Team Composition: Each team consists of 3 to 5 members. 
       Making & Presentation: Each team would be provided with materials with 
@@ -1928,12 +1972,12 @@ const Event = () => {
       Time Limit: Each team would be given 3 hours to make their model. They can 
       ask for 1 hour extra with some point deduction for every 10 minutes past 3 
       hours.
-
+  
       Decision of the Judges: The decision of the judging panel is final and binding. 
       
       Engaging: The ability of the prototype to appeal and captivate general 
       audience. 
-
+  
       Number of teams: 10 
       Guidelines: 
        Competition mode is offline and students from all the 
@@ -1954,6 +1998,7 @@ const Event = () => {
       title: 'Behind The Bars',
       min: '1',
       max: '2',
+      category:'Mechanical',
       description: ` 
       
       Description: 
@@ -2009,8 +2054,9 @@ const Event = () => {
       title: 'Gearhead Odyssey ',
       min: '4',
       max: '4',
+      category:'Mechanical',
       description: `
-
+  
       Description: 
       Welcome to Gearhead Odyssey, where teams engage in a spirited competition, 
       showcasing their understanding of automotive history, mechanics, and 
@@ -2025,7 +2071,7 @@ const Event = () => {
       against friends or fellow enthusiasts to see who reigns supreme as the ultimate 
       automobile aficionado. Get ready to shift into high gear and embark on an 
       unforgettable journey with our quiz!” 
-
+  
       Rules: 
       Team composition: Each team consists of 4 members 
       
@@ -2087,8 +2133,9 @@ const Event = () => {
       title: 'Rasayan Magic',
       min: '3',
       max: '3',
+      category:'chemistry',
       description: `
-
+  
       Rules and regulations:
       There should be team of three members.
       The participants are required to have experience of handling chemicals and apparatus properly.
@@ -2105,8 +2152,9 @@ const Event = () => {
       title: 'Science Quiz',
       min: '1',
       max: '3',
+      category:'chemistry',
       description: `
-
+  
       Rules and regulations:
       There should be team of maximum 03 members.
       Questions will be from General Science (Physics, Chemistry, Biology).
@@ -2122,8 +2170,9 @@ const Event = () => {
       title: 'Mystical Chemistry',
       min: '2',
       max: '2',
+      category:'chemistry',
       description: `
-
+  
       Rules and regulations:
       There should be team of TWO members.
       The event includes three tasks: LAVA LAMP, SUGAR RAINBOW and QUIZ.
@@ -2141,8 +2190,9 @@ const Event = () => {
       title: 'PROJRCT EXPO',
       min: '1',
       max: '5',
+      category:'centralized',
       description: `
-
+  
       PROJECT EXPO: 
       Branch wise for all Branches of Engineering, Architecture, and Sciences
       
@@ -2154,8 +2204,9 @@ const Event = () => {
       title: 'HOBBY EXPO',
       min: '1',
       max: '1',
+      category:'centralized',
       description: `
-
+  
       HOBBY EXPO:
       a) Exhibition
       b) Craftsman
@@ -2168,6 +2219,7 @@ const Event = () => {
       title: 'POSTER PRESENTATION',
       min: '1',
       max: '1',
+      category:'centralized',
       description: `
       
       POSTER PRESENTATION:
@@ -2181,6 +2233,7 @@ const Event = () => {
       title: 'JALI DESIGN',
       min: '1',
       max: '1',
+      category:'achitecture',
       description: 'NONE YET',
     },
     {
@@ -2189,6 +2242,7 @@ const Event = () => {
       title: 'DOME FIBER STRUCTURE',
       min: '1',
       max: '1',
+      category:'achitecture',
       description: 'NONE YET',
     },
     {
@@ -2197,6 +2251,7 @@ const Event = () => {
       title: 'MOSAIC ART',
       min: '1',
       max: '1',
+      category:'achitecture',
       description: 'NONE YET',
     },
     {
@@ -2205,8 +2260,9 @@ const Event = () => {
       title: 'QR SCAVENGER HUNT',
       min: '2',
       max: '4',
+      category:'sunshine',
       description: `
-
+  
       A QR (Quick Response Scavenger Hunt event is with a technical twist, where participants use QR codes to 
       access clues or tasks scattered throughout a designated area. Each QR code contains a link, information, 
       codes or puzzles to solve that leads participants to the next location or challenge. Participants use 
@@ -2276,14 +2332,15 @@ const Event = () => {
       title: 'TECHTONIC BUZZ',
       min: '4',
       max: '4',
+      category:'sunshine',
       description: `
-
+  
       TechTonic Buzz isn't just a quiz; it's a seismic shift in the world of technology challenges. Prepare to 
       ride the waves of excitement as you delve into the depths of technical knowledge across multiple rounds, 
       each more electrifying than the last. From coding complexities to hardware hijinks, this quiz will keep 
       you buzzing with anticipation as you compete for the title of TechTonic Buzz champion.
       People will have to enter this game in the group of 4.
-
+  
       The technical quiz will contain questions from computer science as well as electronics and communications.
       Round wise rules are mentioned below.
       
@@ -2332,7 +2389,7 @@ const Event = () => {
        
        `,
     },
-
+  
     // Add more events here
   ];
   const handleRegisterClick = (event) => {

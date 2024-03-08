@@ -13,6 +13,7 @@ const CardGroup = ({ heading, events, handleRegisterClick }) => {
             title={event.title}
             min={event.min}
             max={event.max}
+            catergory={event.catergory}
             handleRegisterClick={() => handleRegisterClick(event)}
           />
         ))}
