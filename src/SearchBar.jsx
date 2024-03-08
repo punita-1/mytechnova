@@ -8,6 +8,12 @@ const SearchBar = ({ onSearch }) => {
     onSearch(query);
   };
 
+  const handleClear = (event) => {
+    event.preventDefault();
+    setQuery("");
+    onSearch("");
+  };
+
   return (
     <form onSubmit={handleSubmit}>
       <input
@@ -16,7 +22,8 @@ const SearchBar = ({ onSearch }) => {
         value={query}
         onChange={(event) => setQuery(event.target.value)}
       />
-      <button type="submit">Search</button>
+      <button type="submit" className='btn btn-primary me-2'>Search</button>
+      <button onClick={handleClear} className='btn btn-primary me-2'>Clear</button>
     </form>
   );
 };
