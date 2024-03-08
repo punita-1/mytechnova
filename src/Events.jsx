@@ -8,7 +8,7 @@ import SearchBar from './SearchBar';
 const Event = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
-  
+
   const [searchResults, setSearchResults] = useState([]);
 
   const handleSearch = (query) => {
@@ -20,7 +20,7 @@ const Event = () => {
   const events = [
     {
       id: 1,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/civil_projectile.jpg', //done
       title: 'Projectile Precision Challenge',
       min: '1',
       max: '2',
@@ -75,7 +75,7 @@ const Event = () => {
     },
     {
       id: 2,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/civil_card1.jpg', //done
       title: 'Scale Seekers ',
       min: '1',
       max: '2',
@@ -127,7 +127,7 @@ const Event = () => {
     },
     {
       id: 3,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/civil2.jpg', //done
       title: 'Design & Sustain',
       min: '1',
       max: '4',
@@ -176,7 +176,7 @@ const Event = () => {
     },
     {
       id: 4,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/clocks.jpg',
       title: 'Haha Hash Hunt',
       min: '1',
       max: '5',
@@ -230,7 +230,7 @@ const Event = () => {
     },
     {
       id: 5,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/clocks.jpg', //done
       title: 'Techtri Wizadry',
       min: '1',
       max: '1',
@@ -431,7 +431,7 @@ const Event = () => {
     },
     {
       id: 8,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/dna.jpg', //done
       title: 'Biodecode Adventure',
       min: '1',
       max: '1',
@@ -536,7 +536,7 @@ const Event = () => {
     },
     {
       id: 10,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/quiz2_pic.jpg', //done
       title: 'Tech Titans Trivia',
       min: '1',
       max: '1',
@@ -654,7 +654,7 @@ const Event = () => {
     },
     {
       id: 14,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/student_of_year.jpg', //done
       title: 'Student of The Year',
       min: '1',
       max: '1',
@@ -688,7 +688,7 @@ const Event = () => {
     },
     {
       id: 15,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/lets_discuss.jpg', //done
       title: `Let's Discuss`,
       min: '1',
       max: '1',
@@ -740,7 +740,7 @@ const Event = () => {
     {
       id: 17,
       image: 'https://via.placeholder.com/150',
-      title: 'Talent Mania',
+      title: 'public/images/events_profile_pic/agriculture.png', //done
       min: '3',
       max: '3',
       description: `
@@ -771,7 +771,7 @@ const Event = () => {
     },
     {
       id: 18,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/agriculture-technology.jpg',    //done
       title: 'GREEN CANVAS',
       min: '1',
       max: '1',
@@ -783,7 +783,7 @@ const Event = () => {
     },
     {
       id: 19,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/art-posters.jpg', //done
       title: 'POSTER MAKING COMPETITION',
       min: '1',
       max: '2',
@@ -849,7 +849,7 @@ const Event = () => {
     },
     {
       id: 21,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/future-technologies-flat-flowchart-poster-vector.jpg', //done
       title: 'Dream project Power point presentation',
       min: '1',
       max: '2',
@@ -876,7 +876,7 @@ const Event = () => {
     },
     {
       id: 22,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/bid_ecell.jpg', //done
       title: 'Chase The Bid',
       min: '1',
       max: '2',
@@ -1005,7 +1005,7 @@ const Event = () => {
     },
     {
       id: 25,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/breadboard.jpeg', //done
       title: 'Circuit Circus',
       min: '1',
       max: '1',
@@ -1185,7 +1185,7 @@ const Event = () => {
     },
     {
       id: 28,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/car_with eyes.jpeg', //done
       title: 'Cozmo Race',
       min: '1',
       max: '1',
@@ -1252,7 +1252,7 @@ const Event = () => {
     },
     {
       id: 29,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/quiz3.jpg', //done
       title: 'Knowledge Knockout Quiz',
       min: '2',
       max: '2',
@@ -1386,7 +1386,7 @@ const Event = () => {
     },
     {
       id: 33,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/chips.jpg', //done
       title: 'CIRCUITHON',
       min: '2',
       max: '2',
@@ -1472,7 +1472,7 @@ const Event = () => {
     },
     {
       id: 35,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/poster1.png', //done
       title: 'Poster Making',
       min: '1',
       max: '1',
@@ -1518,7 +1518,7 @@ const Event = () => {
     },
     {
       id: 36,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/deabateF.jpg', //done
       title: 'Debate',
       min: '2',
       max: '2',
@@ -1570,7 +1570,7 @@ const Event = () => {
     },
     {
       id: 37,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/maths.jpeg', //done
       title: 'Quiz',
       min: '2',
       max: '4',
@@ -1618,7 +1618,7 @@ const Event = () => {
     },
     {
       id: 38,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/dark_blue.jpg', //done
       title: 'Aerovate',
       min: '2',
       max: '4',
@@ -1683,7 +1683,7 @@ const Event = () => {
     },
     {
       id: 39,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/car_project.jpg', //done
       title: 'ElectraCraft',
       min: '2',
       max: '4',
@@ -1754,7 +1754,7 @@ const Event = () => {
     },
     {
       id: 40,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/techno_trek.png', //done
       title: 'TechnoTrek: The Technical Escape',
       min: '2',
       max: '4',
@@ -1833,7 +1833,7 @@ const Event = () => {
     },
     {
       id: 42,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/codeing.jpeg', //done
       title: 'WEB MASTER',
       min: '1',
       max: '3',
@@ -1868,7 +1868,7 @@ const Event = () => {
     },
     {
       id: 43,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/conecting_brain.avif', //done
       title: 'TECHNICAL TREASURE HUNT',
       min: '1',
       max: '1',
@@ -1950,7 +1950,7 @@ const Event = () => {
     },
     {
       id: 45,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/detective.jpg', //done
       title: 'Behind The Bars',
       min: '1',
       max: '2',
@@ -2005,7 +2005,7 @@ const Event = () => {
     },
     {
       id: 46,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/quiz_time.jpg', //done
       title: 'Gearhead Odyssey ',
       min: '4',
       max: '4',
@@ -2101,7 +2101,7 @@ const Event = () => {
     },
     {
       id: 48,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/QUIZ-Image-01-01.png', //done
       title: 'Science Quiz',
       min: '1',
       max: '3',
@@ -2118,7 +2118,7 @@ const Event = () => {
     },
     {
       id: 49,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/chemicals.jpg', //done
       title: 'Mystical Chemistry',
       min: '2',
       max: '2',
@@ -2164,7 +2164,7 @@ const Event = () => {
     },
     {
       id: 52,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/poster_making_pic.png', //done
       title: 'POSTER PRESENTATION',
       min: '1',
       max: '1',
@@ -2201,7 +2201,7 @@ const Event = () => {
     },
     {
       id: 56,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/brain_cells.jpg', //done
       title: 'QR SCAVENGER HUNT',
       min: '2',
       max: '4',
@@ -2272,7 +2272,7 @@ const Event = () => {
     },
     {
       id: 57,
-      image: 'https://via.placeholder.com/150',
+      image: 'public/images/events_profile_pic/brain_blue _nos.jpg', //done
       title: 'TECHTONIC BUZZ',
       min: '4',
       max: '4',
