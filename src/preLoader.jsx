@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { preLoaderAnim } from "./main";
-import "./preLoader.css"
+import "./preLoader.css";
 
 const PreLoader = () => {
   useEffect(() => {
@@ -8,6 +8,7 @@ const PreLoader = () => {
   }, []);
   return (
     <div className="preloader">
+      <img src="public/images/technova_logo.png" alt="Logo" className="logo" />
       <div className="texts-container">
         <span>TECHNOVA,</span>
         <span>2024</span>
@@ -17,5 +18,4 @@ const PreLoader = () => {
 };
 
 export default PreLoader;
-
 
