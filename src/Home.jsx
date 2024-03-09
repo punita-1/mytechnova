@@ -71,7 +71,7 @@ const Home = () => {
       <AboutCard />
       <Previously />
       <div>
-        <h2 style={{ fontWeight: 'bold' }}>Events</h2>
+        <h2 style={{ fontWeight: 'bold',paddingTop:'60px' }}>Events</h2>
         <CardGroup
           heading="Unite & Ignite: Events for All Students"
           events={events.slice(0, 3)}

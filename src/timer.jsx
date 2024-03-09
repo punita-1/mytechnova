@@ -1,7 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './timer.css';
 
 const Timer = () => {
+  const daysRef = useRef(null);
+  const hoursRef = useRef(null);
+  const minutesRef = useRef(null);
+  const secondsRef = useRef(null);
+
   useEffect(() => {
     function startTimer() {
       const eventDate = new Date("04/5/2024").getTime();
@@ -15,10 +20,10 @@ const Timer = () => {
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById('days').innerText = days;
-        document.getElementById('hours').innerText = hours;
-        document.getElementById('minutes').innerText = minutes;
-        document.getElementById('seconds').innerText = seconds;
+        if (daysRef.current) daysRef.current.innerText = days;
+        if (hoursRef.current) hoursRef.current.innerText = hours;
+        if (minutesRef.current) minutesRef.current.innerText = minutes;
+        if (secondsRef.current) secondsRef.current.innerText = seconds;
       };
 
       updateClock();
@@ -32,19 +37,19 @@ const Timer = () => {
     <div className="timer-container">
       <div className="timer">
         <div className="timer-item">
-          <span id="days" className="timer-value"></span>
+          <span id="days" ref={daysRef} className="timer-value"></span>
           <span className="timer-label">Days</span>
         </div>
         <div className="timer-item">
-          <span id="hours" className="timer-value"></span>
+          <span id="hours" ref={hoursRef} className="timer-value"></span>
           <span className="timer-label">Hours</span>
         </div>
         <div className="timer-item">
-          <span id="minutes" className="timer-value"></span>
+          <span id="minutes" ref={minutesRef} className="timer-value"></span>
           <span className="timer-label">Minutes</span>
         </div>
         <div className="timer-item">
-          <span id="seconds" className="timer-value"></span>
+          <span id="seconds" ref={secondsRef} className="timer-value"></span>
           <span className="timer-label">Seconds</span>
         </div>
       </div>
