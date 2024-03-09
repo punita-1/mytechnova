@@ -1,0 +1,9 @@
+.myclassforthisdiv {
+    padding: 50px;
+  }
+  
+  @media (max-width: 768px) {
+    .myclassforthisdiv {
+      padding: 8;
+    }
+  }

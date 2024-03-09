@@ -21,6 +21,7 @@ export const Button = styled.button`
     box-shadow: ${({ theme }) => theme.colors.shadowSupport};
     border: 2px solid rgb(98 84 243);
     transform: scale(0.96);
+
   }
 
   a {

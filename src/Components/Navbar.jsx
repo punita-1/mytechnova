@@ -7,6 +7,7 @@ const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
   const Nav = styled.nav`
+  
   .navbar-list {
     display: flex;
     gap: 4.8rem;

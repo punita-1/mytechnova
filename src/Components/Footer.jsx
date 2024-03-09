@@ -48,13 +48,13 @@ const Footer = () => {
             <h3>Follow Up</h3>
             <div className="footer-social--icons">
               <div>
-              <ReactSocialIcon url="https://github.com" />
+                <ReactSocialIcon url="https://github.com" />
               </div>
               <div>
-              <ReactSocialIcon url="https://linkedin.com" />
+                <ReactSocialIcon url="https://linkedin.com" />
               </div>
               <div>
-              <ReactSocialIcon url="https://instagram.com" />
+                <ReactSocialIcon url="https://instagram.com" />
               </div>
             </div>
           </div>
@@ -62,17 +62,21 @@ const Footer = () => {
           {/* 4th column  */}
           <div className="footer-contact">
             <h3>Call Us</h3>
-            <h3>+91 0000000000</h3>
+            <h3>Punita Gaba <ReactSocialIcon url="https://www.linkedin.com/in/punitagaba/" style={{ height: 30, width: 30, marginLeft: '10px' }} /></h3>
+            <h3>name 2 <ReactSocialIcon url="https://linkedin.com" style={{ height: 30, width: 30, marginLeft: '10px' }} /></h3>
+            <h3>name 3 <ReactSocialIcon url="https://linkedin.com" style={{ height: 30, width: 30, marginLeft: '10px' }} /></h3>
+            <h3>name 4 <ReactSocialIcon url="https://linkedin.com" style={{ height: 30, width: 30, marginLeft: '10px' }} /></h3>
+            <h3>name 5 <ReactSocialIcon url="https://linkedin.com" style={{ height: 30, width: 30, marginLeft: '10px' }} /></h3>
           </div>
         </div>
         {/* bottom section  */}
-        <div style={{ textAlign:'center'}} className="footer-bottom--section">
+        <div style={{ textAlign: 'center' }} className="footer-bottom--section">
           <hr />
-            <p >
-              Copyright-Technova@{new Date().getFullYear()}
-            </p>
-            
-          
+          <p >
+            Copyright-Technova@{new Date().getFullYear()}
+          </p>
+
+
         </div>
       </footer>
 

@@ -4,7 +4,7 @@ import './timer.css';
 const Timer = () => {
   useEffect(() => {
     function startTimer() {
-      const eventDate = new Date("03/15/2024").getTime();
+      const eventDate = new Date("04/5/2024").getTime();
 
       const updateClock = () => {
         const currentTime = new Date().getTime();

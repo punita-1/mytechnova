@@ -15,7 +15,8 @@
     width: 100%;
   }
   .Crousel_img{
-    height: 250px !important;
+    height: 350px;
+    /* width: 250px; */
 }
 
 /* Add hover effect to the carousel images */
@@ -24,6 +25,11 @@
 }
 
 .carousel-wrapper:hover {
-  transform: scale(1.1); /* Increase size on hover */
+  transform: scale(1.05); /* Increase size on hover */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+@media screen and (max-width: 768px) {
+  .Crousel_img {
+    height: 250px;
+  }
 }

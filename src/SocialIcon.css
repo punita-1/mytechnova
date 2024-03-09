@@ -1,37 +1,74 @@
-.social-icon-wrapper{
-    /* background-color: white; */
-    /* padding: 50px; */
-    justify-content: center;
-    align-items: center;
-    padding: 70px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-.social-icon-heading{
-    font-size: 40px;
-    font-weight: 600;
-    color: black;
-    text-align: center;
-    line-height: 0.8;
+.social-icon-wrapper {
+  justify-content: center;
+  align-items: center;
+  padding: 70px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .social-icon-heading {
-    margin-bottom: 20px; /* Adjust the space between the heading and icons */
-  }
-.social-icon-heading span{
-    font-weight: 400;
-    font-size: 18px;
+  font-size: 40px;
+  font-weight: 600;
+  color: black;
+  text-align: center;
+  line-height: 0.8;
 }
 
-.my-social > *:not(:last-child) {
-    margin-right: 10px; /* Adjust the space between icons as needed */
-  }
+.social-icon-heading {
+  margin-bottom: 20px;
+  /* Adjust the space between the heading and icons */
+}
+
+.social-icon-heading span {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.my-social>*:not(:last-child) {
+  margin-right: 10px;
+  /* Adjust the space between icons as needed */
+}
 
 
-  
+
+.my-social {
+  display: flex;
+  justify-content: center;
+  /* Center icons horizontally */
+}
+
+@media (max-width: 768px) {
   .my-social {
-    display: flex;
-    justify-content: center; /* Center icons horizontally */
+    flex-direction: row;
+    justify-content: flex-start;
   }
-  
+
+  .my-social>*:not(:last-child) {
+    margin-right: 10px;
+    margin-bottom: 40px;
+    /* Adjust the space between icons as needed */
+  }
+
+  .social-icon-wrapper {
+    padding: 5px;
+  }
+
+  .social-icon-heading {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .social-icon-heading {
+    margin-bottom: 20px;
+    margin-top: 0px;
+  }
+
+  .social-icon-heading span {
+    font-weight: 400;
+    font-size: 15px;
+  }
+}

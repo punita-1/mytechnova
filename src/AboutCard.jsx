@@ -1,8 +1,9 @@
-// import "./AboutCard.css";
+import "./AboutCard.css";
+import { NavLink } from "react-router-dom";
 import React from "react";
 const AboutCard = () => {
   return (
-    <><div className="container grid grid-two-row">
+    <><div className="myclassforthisdiv container grid grid-two-row">
     <div>
       <h3>About Technova</h3>
       <div>
@@ -19,7 +20,8 @@ const AboutCard = () => {
         </p>
       </div>
       
-      <div>Explore the events</div>
+      <div><NavLink to='/event'>Explore the events</NavLink></div>
+        
     </div>
       <div>
         <h3>why join us</h3>
