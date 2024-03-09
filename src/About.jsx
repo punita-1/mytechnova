@@ -58,29 +58,29 @@ const About = () => {
           Technova events often include workshops, seminars, and talks where experts share insights and expertise, allowing participants to learn
           from each other and stay updated on the latest trends and developments.
         </p>
-        </div>
-        <div className='why_card'>
-          <h3>Socializing platforms:</h3>
-          <p className='show_description'>
-            Technova events bring together professionals, students, researchers, and enthusiasts from diverse backgrounds, facilitating networking
-            and collaboration that can lead to new partnerships and opportunities.
-          </p>
-
-        </div>
-
-        <div className='why_card'>
-          <h3>Inspiration:</h3>
-          <p className='show_description'>
-            Technova events inspire attendees to pursue careers in STEM (Science, Technology, Engineering, and Mathematics) fields by showcasing
-            the exciting possibilities and real-world applications of technology.
-          </p>
-
-        </div>
       </div>
-      
+      <div className='why_card'>
+        <h3>Socializing platforms:</h3>
+        <p className='show_description'>
+          Technova events bring together professionals, students, researchers, and enthusiasts from diverse backgrounds, facilitating networking
+          and collaboration that can lead to new partnerships and opportunities.
+        </p>
+
+      </div>
+
+      <div className='why_card'>
+        <h3>Inspiration:</h3>
+        <p className='show_description'>
+          Technova events inspire attendees to pursue careers in STEM (Science, Technology, Engineering, and Mathematics) fields by showcasing
+          the exciting possibilities and real-world applications of technology.
+        </p>
+
+      </div>
+    </div>
 
 
-    
+
+
 
   </Wrapper>;
   </>
