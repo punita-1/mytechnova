@@ -58,7 +58,7 @@
 // export default Contact;
 import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
-import img from 'C:/Users/punit/mytechnova2024project/public/images/Contactus_bg.jpg';
+import img from 'C:/Users/punit/mytechnova2024project/public/images/contactus.jpg';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -89,7 +89,7 @@ const Contact = () => {
     .container {
       margin-top: -3rem;
       text-align: center;
-      background-color: rgba(226, 218, 218, 0); /* Transparent background */
+      background-color: rgba(226, 218, 218, 0.7);
       border: 1px solid #0a58ca;
       border-radius: 15px;
       padding: 2rem;
