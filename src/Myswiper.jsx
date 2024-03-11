@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
+import 'swiper/css/autoplay'
 import './Swiperstyle.css';
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { EffectCoverflow, Autoplay} from 'swiper/modules';
 
 export default function App() {
   return (
@@ -12,26 +12,23 @@ export default function App() {
       <div className="swiper-container">
         <Swiper
           effect={'coverflow'}
-          // loop={true} // Enable looping
-          grabCursor={true}
-          // loop={true}
+          grabCursor={false}
           centeredSlides={true}
           slidesPerView={'auto'}
           coverflowEffect={{
-            // loop: true,
             rotate: 50,
             stretch: 0,
             depth: 100,
             modifier: 1,
-            slideShadows: true,
+            slideShadows: false,
           }}
-          pagination={true}
-          modules={[EffectCoverflow, Pagination]}
+          modules={[EffectCoverflow, Autoplay]}
           className="mySwiper"
           autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
+            delay: 2000,
+            disableOnInteraction: true,
           }}
+          
         >
           <SwiperSlide>
             <img src="public/images/technova_gallery/logos/technova_rope.jpg" />
@@ -58,6 +55,8 @@ export default function App() {
             <img src="public/images/dcrust_images/random.jpg" />
           </SwiperSlide>
         </Swiper>
+        <div className="swiper-button-prev"></div>
+        <div className="swiper-button-next"></div>
       </div>
       <div className="swiper-container">
         <Swiper
@@ -73,12 +72,11 @@ export default function App() {
             modifier: 1,
             slideShadows: true,
           }}
-          pagination={true}
-          modules={[EffectCoverflow, Pagination]}
+          modules={[EffectCoverflow, Autoplay]}
           className="mySwiper"
           autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
+            delay: 2000,
+            disableOnInteraction: true,
           }}
         >
           <SwiperSlide>
@@ -121,12 +119,11 @@ export default function App() {
             modifier: 1,
             slideShadows: true,
           }}
-          pagination={true}
-          modules={[EffectCoverflow, Pagination]}
+          modules={[EffectCoverflow, Autoplay]}
           className="mySwiper"
           autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
+            delay: 2000,
+            disableOnInteraction: true,
           }}
         >
           <SwiperSlide>
@@ -169,12 +166,11 @@ export default function App() {
             modifier: 1,
             slideShadows: true,
           }}
-          pagination={true}
-          modules={[EffectCoverflow, Pagination]}
+          modules={[EffectCoverflow, Autoplay]}
           className="mySwiper"
           autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
+            delay: 2000,
+            disableOnInteraction: true,
           }}
         >
           <SwiperSlide>
@@ -217,12 +213,11 @@ export default function App() {
             modifier: 1,
             slideShadows: true,
           }}
-          pagination={true}
-          modules={[EffectCoverflow, Pagination]}
+          modules={[EffectCoverflow, Autoplay]}
           className="mySwiper"
           autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
+            delay: 2000,
+            disableOnInteraction: true,
           }}
         >
           <SwiperSlide>
@@ -252,6 +247,7 @@ export default function App() {
 
         </Swiper>
       </div>
+     
     </>
   );
-}
+} 
