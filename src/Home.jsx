@@ -90,7 +90,7 @@ const Home = () => {
               <div className="popup-text">
                 <pre>{selectedEvent.description}</pre>
               </div>
-              <button className="btn btn-primary">Register Now</button>
+              <a href={`/registerform/`+selectedEvent.id}><button className="btn btn-primary">Register Now</button></a>
               <button className="btn btn-secondary" onClick={() => setShowPopup(false)}>
                 Close
               </button>

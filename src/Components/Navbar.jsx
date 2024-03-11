@@ -1,34 +1,37 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import { CgMenu, CgCloseR } from "react-icons/cg";
+import { CgMenu, CgCloseR } from 'react-icons/cg';
 
-const Navbar = () => {
-  const [openMenu, setOpenMenu] = useState(false);
+// Define styled components outside of the functional component
+const Nav = styled.nav`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white !important;
 
-  const Nav = styled.nav`
-  
   .navbar-list {
     display: flex;
-    gap: 4.8rem;
+    gap: 1.8rem;
+    margin: 0;
+    list-style: none;
 
     li {
-      list-style: none;
 
       .navbar-link {
-        &:link,
-        &:visited {
-          display: inline-block;
-          text-decoration: none;
-          font-size: 1.8rem;
-          text-transform: uppercase;
-          color: ${({ theme }) => theme.colors.black};
-          transition: color 0.3s linear;
-        }
+        text-align: center;
+        width: 70px;
+        padding: 2.2rem 0px 1.8rem;
+        display: inline-block;
+        text-decoration: none;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        color: ${({ theme }) => theme.colors.white};
+        transition: color 0.3s linear;
 
-        &:hover,
-        &:active {
-          color: ${({ theme }) => theme.colors.helper};
+        &.active {
+          color: ${({ theme }) => theme.colors.helper}; 
+          border-bottom: 6px solid ${({ theme }) => theme.colors.helper}; 
         }
       }
     }
@@ -41,11 +44,6 @@ const Navbar = () => {
       display: none;
     }
   }
-
-  .mobile-navbar-btn[name="close-outline"] {
-    display: none;
-  }
-
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     .mobile-navbar-btn {
       display: inline-block;
@@ -54,7 +52,7 @@ const Navbar = () => {
 
       .mobile-nav-icon {
         font-size: 4.2rem;
-        color: ${({ theme }) => theme.colors.black};
+        color: ${({ theme }) => theme.colors.white};
       }
     }
 
@@ -82,18 +80,18 @@ const Navbar = () => {
         .navbar-link {
           &:link,
           &:visited {
-            font-size: 4.2rem;
+            
+            font-size: 2rem;
           }
-
-          &:hover,
+          color: ${({theme}) => theme.colors.black};
           &:active {
-            color: ${({ theme }) => theme.colors.helper};
+            color: ${({ theme }) => theme.colors.helper} !important;
           }
         }
+
       }
     }
-
-    .active .mobile-nav-icon {
+     .active .mobile-nav-icon {
       display: none;
       font-size: 4.2rem;
       position: absolute;
@@ -114,61 +112,90 @@ const Navbar = () => {
       z-index: 999;
     }
   }
+
+  /* Add your media query styles here */
 `;
 
-return (
-  <Nav>
-    <div className={openMenu ? "menuIcon active" : "menuIcon"}>
-      <ul className="navbar-list">
-        <li><NavLink
-          className="navbar-link"
-          onClick={() => setOpenMenu(false)}
-          to="/">
-          Home
-        </NavLink></li>
-        <li> <NavLink
-          className="navbar-link"
-          onClick={() => setOpenMenu(false)}
-          to="/about">
-          About
-        </NavLink></li>
-        <li><NavLink
-          className="navbar-link"
-          onClick={() => setOpenMenu(false)}
-          to="/event">
-          Events
-        </NavLink></li>
-        <li><NavLink
-          className="navbar-link"
-          onClick={() => setOpenMenu(false)}
-          to="/gallery">
-          Gallery
-        </NavLink></li>
-        <li><NavLink
-          className="navbar-link"
-          onClick={() => setOpenMenu(false)}
-          to="/contact">
-          Contact
-        </NavLink></li>
-        <li><NavLink
-          className="navbar-link"
-          onClick={() => setOpenMenu(false)}
-          to="/signup">
-          Signup
-        </NavLink></li>
+const Navbar = () => {
+  const [openMenu, setOpenMenu] = useState(false);
 
-      </ul>
-   {/* //nav icon */}
-   <div className="mobile-navbar-btn">
+  const handleMenuToggle = () => {
+    setOpenMenu(!openMenu);
+  };
+
+  const handleNavLinkClick = () => {
+    setOpenMenu(false);
+  };
+
+  return (
+    <Nav>
+      <div className={openMenu ? 'menuIcon active' : 'menuIcon'}>
+        <ul className="navbar-list">
+          <li>
+            <NavLink
+              activeClassName="active" // Apply this class when the link is active
+              className="navbar-link"
+              onClick={handleNavLinkClick}
+              to="/">
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              activeClassName="active" // Apply this class when the link is active
+              className="navbar-link"
+              onClick={handleNavLinkClick}
+              to="/about">
+              About
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              activeClassName="active" // Apply this class when the link is active
+              className="navbar-link"
+              onClick={handleNavLinkClick}
+              to="/event">
+              Events
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              activeClassName="active" // Apply this class when the link is active
+              className="navbar-link"
+              onClick={handleNavLinkClick}
+              to="/gallery">
+              Gallery
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              activeClassName="active" // Apply this class when the link is active
+              className="navbar-link"
+              onClick={handleNavLinkClick}
+              to="/contact">
+              Contact
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              activeClassName="active" // Apply this class when the link is active
+              className="navbar-link"
+              onClick={handleNavLinkClick}
+              to="/signup">
+              Signup
+            </NavLink>
+          </li>
+        </ul>
+        <div className="mobile-navbar-btn">
           <CgMenu
             name="menu-outline"
             className="mobile-nav-icon"
-            onClick={() => setOpenMenu(true)}
+            onClick={handleMenuToggle}
           />
           <CgCloseR
             name="close-outline"
             className="close-outline mobile-nav-icon"
-            onClick={() => setOpenMenu(false)}
+            onClick={handleMenuToggle}
           />
         </div>
       </div>
