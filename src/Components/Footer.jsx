@@ -62,11 +62,11 @@ const Footer = () => {
           {/* 4th column  */}
           <div className="footer-contact">
             <h3>Call Us</h3>
-            <h3 style={{fontSize:'15px'}}>Punita Gaba <ReactSocialIcon url="https://www.linkedin.com/in/punitagaba/" style={{ height: 30, width: 30, marginLeft: '10px' }} /></h3>
-            <h3 style={{fontSize:'15px'}}>name 2 <ReactSocialIcon url="https://linkedin.com" style={{ height: 30, width: 30, marginLeft: '10px' }} /></h3>
-            <h3 style={{fontSize:'15px'}}>name 3 <ReactSocialIcon url="https://linkedin.com" style={{ height: 30, width: 30, marginLeft: '10px' }} /></h3>
-            <h3 style={{fontSize:'15px'}}>name 4 <ReactSocialIcon url="https://linkedin.com" style={{ height: 30, width: 30, marginLeft: '10px' }} /></h3>
-            <h3 style={{fontSize:'15px'}}>name 5 <ReactSocialIcon url="https://linkedin.com" style={{ height: 30, width: 30, marginLeft: '10px' }} /></h3>
+            <h3 style={{ fontSize: '15px' }}><ReactSocialIcon url="https://www.linkedin.com/in/abhinavaa01/" style={{ height: 30, width: 30, marginLeft: '10px' }} /> Abhinav Agrawal</h3>
+            <h3 style={{ fontSize: '15px' }}><ReactSocialIcon url="https://www.linkedin.com/in/punitagaba/" style={{ height: 30, width: 30, marginLeft: '10px' }} /> Punita Gaba</h3>
+            <h3 style={{ fontSize: '15px' }}><ReactSocialIcon url="https://linkedin.com" style={{ height: 30, width: 30, marginLeft: '10px' }} /> name 3</h3>
+            <h3 style={{ fontSize: '15px' }}><ReactSocialIcon url="https://linkedin.com" style={{ height: 30, width: 30, marginLeft: '10px' }} /> name 4</h3>
+            <h3 style={{ fontSize: '15px' }}><ReactSocialIcon url="https://linkedin.com" style={{ height: 30, width: 30, marginLeft: '10px' }} /> name 5</h3>
           </div>
         </div>
         {/* bottom section  */}
