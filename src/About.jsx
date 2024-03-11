@@ -35,35 +35,35 @@ const About = () => {
     </div>
     <div className='about_why container grid grid-three-column'>
       <div className='why_card'>
-        <h3 class="card-title">Promoting Innovation:</h3>
+        <h3 class="card-title-mine">Promoting Innovation:</h3>
         <ul className='show_description'>
           <li>Explore new possibilities and push boundaries in technology, inspiring forward-thinking solutions.</li>
           <li>Events feature talks and seminars where experts share insights, keeping attendees updated on trends.</li>
         </ul>
       </div>
       <div className='why_card'>
-        <h3 class="card-title">Skill Development:</h3>
+        <h3 class="card-title-mine">Skill Development:</h3>
         <ul className='show_description'>
           <li>Participants in Technova events develop technical skills through workshops, seminars, and hands-on experiences.</li>
           <li>These opportunities prepare attendees for future challenges in the dynamic technological landscape.</li>
         </ul>
       </div>
       <div className='why_card'>
-        <h3 class="card-title">Knowledge Sharing:</h3>
+        <h3 class="card-title-mine">Knowledge Sharing:</h3>
         <ul className='show_description'>
           <li>Technova feature workshops, seminars, and talks where experts share insights and expertise.</li>
           <li>Attendees learn from each other, staying updated on the latest trends and developments in technology.</li>
         </ul>
       </div>
       <div className='why_card'>
-        <h3 class="card-title">Socializing platforms:</h3>
+        <h3 class="card-title-mine">Socializing platforms:</h3>
         <ul className='show_description'>
           <li>Technova unite professionals, students, researchers, and enthusiasts from diverse backgrounds.</li>
           <li>Networking and collaboration at these events create opportunities for new partnerships and professional growth.</li>
         </ul>
       </div>
       <div className='why_card'>
-        <h3 class="card-title">Inspiration:</h3>
+        <h3 class="card-title-mine">Inspiration:</h3>
         <ul className='show_description'>
           <li>Technova events inspire attendees to pursue STEM careers by showcasing exciting possibilities and real-world technology applications.</li>
         </ul>
