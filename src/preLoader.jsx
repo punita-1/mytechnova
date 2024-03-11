@@ -8,7 +8,7 @@ const PreLoader = () => {
   }, []);
   return (
     <div className="preloader">
-      <img src="public/images/technova_logo.png" alt="Logo" className="logo" />
+      <img style={{ height: '200px' }} src="public/images/technova_logo.png" alt="Logo" className="logo" />
       <div className="texts-container">
         <span>TECHNOVA,</span>
         <span>2024</span>

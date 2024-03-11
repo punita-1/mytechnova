@@ -1,5 +1,20 @@
-.bodybill {
-    background-image: url(../src/assets/leon-dewiwje-ldDmTgf89gU-unsplash.jpg);
+/* .bodybill {
+    background-image: url(public/images/signin.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-}
+    margin: 0; 
+    padding: 0;
+} */
+/* .bodybill {
+    background-size: 100% 100% !important;
+} */
+.bg-image {
+    background-image: url(public/images/signin.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .bodybill {
+    position: relative;
+    z-index: 1;
+  }
