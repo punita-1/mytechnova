@@ -9,6 +9,8 @@ import { EffectCoverflow, Autoplay} from 'swiper/modules';
 export default function App() {
   return (
     <>
+    {/* first swiper */}
+    <h2>About Technova</h2>
       <div className="swiper-container">
         <Swiper
           effect={'coverflow'}
@@ -25,39 +27,39 @@ export default function App() {
           modules={[EffectCoverflow, Autoplay]}
           className="mySwiper"
           autoplay={{
-            delay: 2000,
+            delay: 1000,
             disableOnInteraction: true,
           }}
-          
         >
+
+          {/* about Technova */}
           <SwiperSlide>
-            <img src="public/images/technova_gallery/logos/technova_rope.jpg" />
+            <img src="public/images/technova_gallery/logos/thermocol_techno.jpg" />
           </SwiperSlide>
           <SwiperSlide>
             <img src="public/images/technova_gallery/Vc_starting/starting.jpg" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="public/images/technova_gallery/Vc_starting/vc_project_chkecking.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
             <img src="public/images/technova_gallery/Vc_starting/vc_pic.jpg" />
           </SwiperSlide>
+          {/* just adding  */}
           <SwiperSlide>
-            <img src="public/images/dcrust_images/audi_mv_night.jpg" />
+            <img src="public/images/technova_gallery/group_pics/group_pic2.jpg" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="public/images/dcrust_images/auditorium_night.jpg" />
+            <img src="public/images/technova_gallery/logos/technova_rope.jpg" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="public/images/dcrust_images/random_2.jpg" />
+            <img src="public/images/technova_gallery/group_pics/gp_pic4.jpg" />
           </SwiperSlide>
-          <SwiperSlide>
-            <img src="public/images/dcrust_images/random.jpg" />
-          </SwiperSlide>
+         
         </Swiper>
         <div className="swiper-button-prev"></div>
         <div className="swiper-button-next"></div>
       </div>
+
+      {/* second swiper */}
+      <h2>Guest welcoming</h2>
       <div className="swiper-container">
         <Swiper
           effect={'coverflow'}
@@ -75,13 +77,11 @@ export default function App() {
           modules={[EffectCoverflow, Autoplay]}
           className="mySwiper"
           autoplay={{
-            delay: 2000,
+            delay: 1550,
             disableOnInteraction: true,
           }}
         >
-          <SwiperSlide>
-            <img src="public/images/technova_gallery/logos/thermocol_techno.jpg" />
-          </SwiperSlide>
+          {/* Guest welcoming */}
           <SwiperSlide>
             <img src="public/images/technova_gallery/welcomes/flower_welcome.jpg" />
           </SwiperSlide>
@@ -100,11 +100,12 @@ export default function App() {
           <SwiperSlide>
             <img src="public/images/technova_gallery/welcomes/welcome6.jpg" />
           </SwiperSlide>
-          <SwiperSlide>
-            <img src="public/images/dcrust_images/wide_view_cool.jpg" />
-          </SwiperSlide>
+          
         </Swiper>
       </div>
+
+      {/* third swiper */}
+      <h2>Events</h2>
       <div className="swiper-container">
         <Swiper
           effect={'coverflow'}
@@ -126,11 +127,18 @@ export default function App() {
             disableOnInteraction: true,
           }}
         >
+          {/* Events */}
           <SwiperSlide>
             <img src="public/images/technova_gallery/events/cards.jpg" />
           </SwiperSlide>
           <SwiperSlide>
+            <img src="public/images/technova_gallery/group_pics/gp_pic3.jpg" />
+          </SwiperSlide>
+          <SwiperSlide>
             <img src="public/images/technova_gallery/events/hand_sensor.jpg" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="public/images/technova_gallery/events/robo_soccer2.jpg" />
           </SwiperSlide>
           <SwiperSlide>
             <img src="public/images/technova_gallery/events/presentation_cse.jpg" />
@@ -142,9 +150,6 @@ export default function App() {
             <img src="public/images/technova_gallery/events/robo_soccer.jpg" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="public/images/technova_gallery/events/robo_soccer2.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
             <img src="public/images/technova_gallery/events/thinkbots1.jpg" />
           </SwiperSlide>
           <SwiperSlide>
@@ -152,6 +157,9 @@ export default function App() {
           </SwiperSlide>
         </Swiper>
       </div>
+
+      {/*fourth swiper */}
+      <h2>Prize Distribution</h2>
       <div className="swiper-container">
         <Swiper
           effect={'coverflow'}
@@ -169,10 +177,14 @@ export default function App() {
           modules={[EffectCoverflow, Autoplay]}
           className="mySwiper"
           autoplay={{
-            delay: 2000,
+            delay: 1980,
             disableOnInteraction: true,
           }}
         >
+          {/* Prize distribution */}
+          <SwiperSlide>
+            <img src="public/images/technova_gallery/group_pics/group_photo.jpg" />
+          </SwiperSlide>
           <SwiperSlide>
             <img src="public/images/technova_gallery/prize/price2.jpg" />
           </SwiperSlide>
@@ -185,66 +197,6 @@ export default function App() {
           <SwiperSlide>
             <img src="public/images/technova_gallery/prize/prize4.jpg" />
           </SwiperSlide>
-          <SwiperSlide>
-            <img src="public/images/dcrust_images/day_cloud_image_library_wide_view.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="public/images/dcrust_images/IMG_20240207_143133 (1).jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="public/images/dcrust_images/IMG20240207140632.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="public/images/dcrust_images/library_clouds_image.jpg" />
-          </SwiperSlide>
-        </Swiper>
-      </div>
-      <div className="swiper-container">
-        <Swiper
-          effect={'coverflow'}
-          grabCursor={true}
-          // loop={true}
-          centeredSlides={true}
-          slidesPerView={'auto'}
-          coverflowEffect={{
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-          }}
-          modules={[EffectCoverflow, Autoplay]}
-          className="mySwiper"
-          autoplay={{
-            delay: 2000,
-            disableOnInteraction: true,
-          }}
-        >
-          <SwiperSlide>
-            <img src="public/images/technova_gallery/group_pics/gp_pic3.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="public/images/technova_gallery/group_pics/group_photo.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="public/images/technova_gallery/group_pics/gp_pic4.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="public/images/technova_gallery/group_pics/group_pic2.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="public/images/dcrust_images/mv_block_2.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="public/images/dcrust_images/mv_block.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="public/images/dcrust_images/night_Saraswati_library.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="public/images/events_profile_pic/Decoration.jpg" />
-          </SwiperSlide>
-
         </Swiper>
       </div>
      
