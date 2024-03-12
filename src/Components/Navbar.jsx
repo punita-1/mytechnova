@@ -2,9 +2,22 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components';
 import { CgMenu, CgCloseR } from "react-icons/cg";
+import { auth } from '../services/firebase';
+import { onAuthStateChanged } from 'firebase/auth';
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const [user, setUser] = useState(null);
+  // console.log(user.email);
+
+
+  onAuthStateChanged(auth, (userData) => {
+    if (userData) {
+      setUser(userData);
+    } else {
+      setUser(null);
+    }
+  });
 
   const Nav = styled.nav`
   
@@ -116,50 +129,56 @@ const Navbar = () => {
   }
 `;
 
-return (
-  <Nav>
-    <div className={openMenu ? "menuIcon active" : "menuIcon"}>
-      <ul className="navbar-list">
-        <li><NavLink
-          className="navbar-link"
-          onClick={() => setOpenMenu(false)}
-          to="/">
-          Home
-        </NavLink></li>
-        <li> <NavLink
-          className="navbar-link"
-          onClick={() => setOpenMenu(false)}
-          to="/about">
-          About
-        </NavLink></li>
-        <li><NavLink
-          className="navbar-link"
-          onClick={() => setOpenMenu(false)}
-          to="/event">
-          Events
-        </NavLink></li>
-        <li><NavLink
-          className="navbar-link"
-          onClick={() => setOpenMenu(false)}
-          to="/gallery">
-          Gallery
-        </NavLink></li>
-        <li><NavLink
-          className="navbar-link"
-          onClick={() => setOpenMenu(false)}
-          to="/contact">
-          Contact
-        </NavLink></li>
-        <li><NavLink
-          className="navbar-link"
-          onClick={() => setOpenMenu(false)}
-          to="/signup">
-          Signup
-        </NavLink></li>
+  return (
+    <Nav>
+      <div className={openMenu ? "menuIcon active" : "menuIcon"}>
+        <ul className="navbar-list">
+          <li>
+            <NavLink
+              className="navbar-link"
+              onClick={() => setOpenMenu(false)}
+              to="/">
+              Home
+            </NavLink></li>
+          <li>
+            <NavLink
+              className="navbar-link"
+              onClick={() => setOpenMenu(false)}
+              to="/about">
+              About
+            </NavLink></li>
+          <li>
+            <NavLink
+              className="navbar-link"
+              onClick={() => setOpenMenu(false)}
+              to="/event">
+              Events
+            </NavLink></li>
+          <li>
+            <NavLink
+              className="navbar-link"
+              onClick={() => setOpenMenu(false)}
+              to="/gallery">
+              Gallery
+            </NavLink></li>
+          <li>
+            <NavLink
+              className="navbar-link"
+              onClick={() => setOpenMenu(false)}
+              to="/contact">
+              Contact
+            </NavLink></li>
+          <li>
+            <NavLink
+              className="navbar-link"
+              onClick={() => setOpenMenu(false)}
+              to={user?"/profile":"/signup"}>
+              {user?"Profile":"Signup"}
+            </NavLink></li>
 
-      </ul>
-   {/* //nav icon */}
-   <div className="mobile-navbar-btn">
+        </ul>
+        {/* //nav icon */}
+        <div className="mobile-navbar-btn">
           <CgMenu
             name="menu-outline"
             className="mobile-nav-icon"

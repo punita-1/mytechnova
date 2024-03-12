@@ -12,6 +12,7 @@ import Footer from './Components/Footer';
 import Error from './Error';
 import { ThemeProvider } from 'styled-components';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Profile from './Profile';
 
 const App = () => {
   const theme = {
@@ -46,6 +47,7 @@ const App = () => {
           <Route path='/event' element={<Event />} />
           <Route path='/about' element={<About />} />
           <Route path='/signup' element={<Signup />} />
+          <Route path='/profile' element={<Profile />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/gallery' element={<Gallery />} />
           <Route path='/registerform'>
