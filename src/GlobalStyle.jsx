@@ -36,7 +36,13 @@ body::-webkit-scrollbar-thumb {
     background-clip: content-box;
 }
 
-
+.flex{
+  display: flex;
+}
+.absolute-center{
+  justify-content: center;
+  align-items: center;
+}
 h1{
   color:${({ theme }) => theme.colors.heading};
   font-size: 6rem;
@@ -72,7 +78,6 @@ a {
 li {
   list-style: none;
 }
-
 .container {
   max-width: 120rem;
   margin: 0 auto;

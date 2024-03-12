@@ -7,16 +7,16 @@ import Timer from "../timer";
 const HeroSection = ({ name, image }) => {
   return (<Wrapper>
     <div className="fullcontainerpadding container grid grid-two-column">
-      <div className="section-hero-data">
+      <div className="section-hero-data flex absolute-center">
         <p className='hero-top-data'>
           WE ARE BACK
         </p>
         <h1 className='hero-heading'>
           {name}
         </h1>
-        <h3>"5th April - 6th April"</h3>
-        <Timer />
         <p className='hero-para'>"Ignite Your Passion for Innovation: Join Us for a Spectacular Fusion of Technology and Talent!"</p>
+        <h3 className="hero-date">"5th April - 6th April"</h3>
+        {/* <Timer /> */}
         <Button className='btn eventpage-btn'>
           <NavLink to='/event'>Register Now</NavLink>
         </Button>
@@ -41,11 +41,9 @@ padding: 9rem 0;
   padding-top: 0px;
 }
 .section-hero-data {
-  display: flex;
+  width:125%;
   flex-direction: column;
-  align-self: center; 
   padding-left: 70px;
-  justify-content: center;
 }
 .timer {
   justify-content: flex-start;
@@ -56,21 +54,42 @@ padding: 9rem 0;
 }
 
 .hero-top-data {
+  margin-top:40px;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 1.5rem;
-  color: ${({ theme }) => theme.colors.helper};
+  color: #31363F;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 8px;
 }
 
 .hero-heading {
-  text-transform: uppercase;
-  font-size: 5.5rem;
+    letter-spacing: 4px;
+    font-family: fantasy;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 8rem;
 }
-
+.hero-date{
+   font-family: "Paprika", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  font-size: 4rem;
+  // font-weight: 900;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+//   background: black;
+//   color: white;
+}
 .hero-para {
-  margin-top: 1.5rem;
-  margin-bottom: 3.4rem;
-  max-width: 60rem;
+  margin-top: 2rem;
+    max-width: 64rem;
+    font-size: 2.4rem;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    line-height: 28px
 }
 
 .section-hero-image {

@@ -30,8 +30,8 @@ const Nav = styled.nav`
         transition: color 0.3s linear;
 
         &.active {
-          color: ${({ theme }) => theme.colors.helper}; 
-          border-bottom: 6px solid ${({ theme }) => theme.colors.helper}; 
+          color: #9EC8B9; 
+          border-bottom: 6px solid #9EC8B9; 
         }
       }
     }
