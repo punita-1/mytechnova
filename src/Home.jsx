@@ -14,7 +14,7 @@ const Home = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const data = {
     name: "Technova 2k24",
-    image: "./images/home_hero.png"
+    image: "./images/home_hero (2).png"
   };
   const events = [
     {

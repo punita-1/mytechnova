@@ -6,7 +6,7 @@ import Timer from "../timer";
 
 const HeroSection = ({ name, image }) => {
   return (<Wrapper>
-    <div className="fullcontainerpadding container grid grid-two-column">
+    <div className="fullcontainerpadding container">
       <div className="section-hero-data flex absolute-center">
         <p className='hero-top-data'>
           WE ARE BACK
@@ -16,11 +16,10 @@ const HeroSection = ({ name, image }) => {
         </h1>
         <p className='hero-para'>"Ignite Your Passion for Innovation: Join Us for a Spectacular Fusion of Technology and Talent!"</p>
         <h3 className="hero-date">"5th April - 6th April"</h3>
-        {/* <Timer /> */}
+        <Timer />
         <Button className='btn eventpage-btn'>
           <NavLink to='/event'>Register Now</NavLink>
         </Button>
-
       </div>
 
       <div className="section-hero-image">
@@ -35,19 +34,26 @@ const HeroSection = ({ name, image }) => {
 };
 
 const Wrapper = styled.section`
-padding: 9rem 0;
+padding: 4rem 0 6rem;
 
 .fullcontainerpadding{
   padding-top: 0px;
 }
+.section-hero-image{
+      position: absolute;
+      z-index: 99999999;
+      top: 60px;
+      right: 300px;
+}
 .section-hero-data {
-  width:125%;
+  margin-top:30px;
+  // width:125%;
   flex-direction: column;
-  padding-left: 70px;
+  // padding-left: 70px;
 }
 .timer {
   justify-content: flex-start;
-  margin-bottom: 2rem;
+  // margin-top: 2rem;
 }
 .btn {
   max-width: 20rem;
@@ -65,37 +71,39 @@ padding: 9rem 0;
 
 .hero-heading {
     letter-spacing: 4px;
+    color: var(--primary-background-color);
     font-family: fantasy;
     text-align: center;
     text-transform: uppercase;
-    font-size: 8rem;
+    font-size: 12rem;
 }
 .hero-date{
-   font-family: "Paprika", system-ui;
-    font-weight: 400;
-    font-style: normal;
-  font-size: 4rem;
-  // font-weight: 900;
+  margin: 15px 0px 0px;
+  // font-family: fantasy;
+  font-family: "Paprika", system-ui;
+  font-weight: 600;
+  font-size: 2.6rem;
   text-align: center;
   padding: 10px;
   border-radius: 5px;
-//   background: black;
-//   color: white;
+  letter-spacing:3px;
 }
 .hero-para {
-  margin-top: 2rem;
+    font-family: "Sorts Mill Goudy", serif;
+    margin-top: 2rem;
     max-width: 64rem;
     font-size: 2.4rem;
     text-align: center;
-    font-weight: 700;
     letter-spacing: 0.6px;
-    line-height: 28px
+    line-height: 28px;
+    font-style: italic;
+    font-weight: 600;
 }
 
 .section-hero-image {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  // display: flex;
+  // justify-content: flex-end;
+  // align-items: center;
 }
 
 picture {
@@ -103,8 +111,8 @@ picture {
 }
 
 .hero-img {
-  height: 400px;
-  width: 400px;
+  height: 180px;
+  width: 180px;
 }
 @media (max-width: ${({ theme }) => theme.media.mobile}) {
   padding: 1rem 0;
