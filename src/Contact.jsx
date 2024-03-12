@@ -91,9 +91,9 @@ const Contact = () => {
       text-align: center;
       background-color: rgba(226, 218, 218, 0.7);
       border: 1px solid #0a58ca;
-      border-radius: 15px;
+      border-radius: 10px;
       padding: 2rem;
-      max-width: 60rem;
+      max-width: 50rem;
 
       .contact-form {
         margin: auto;
@@ -131,18 +131,19 @@ const Contact = () => {
 
     @media (max-width: 768px) {
       .container {
+        padding: 2rem
         width: 40rem; /* Adjust padding for mobile view */
         height:65rem;
       }
 
       input{
-        width: 30rem;
+        width: 40rem;
         margin: auto;
       border-radius: 4px;
       }
 
       textarea {
-        width: 30rem;
+        width: 40rem;
         margin: auto;
         border-radius: 4px;
       }
@@ -154,7 +155,7 @@ const Contact = () => {
       <GlobalStyle />
       <Wrapper>
         <div className="container">
-          <h2 className="common-heading">Feel Free to Contact us</h2>
+          <h2 style={{color: 'black'}} className="common-heading">Feel Free to Contact us</h2>
           <div className="contact-form">
             <form action="#" method="POST" className="contact-inputs">
               <input type="text" name="Username" placeholder="Username" autoComplete="off" required />

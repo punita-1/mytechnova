@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./signup.css"
+// import backgroundImage from './images/signin.jpg';
 
 const Signup = () => {
   const [signin, setSignin] = useState(false);
@@ -151,7 +152,7 @@ const Signup = () => {
 
   return (
     <div>
-      <div className="bodybill d-flex justify-content-center align-items-center vh-100">
+      <div className="bodybill bg-image">
         <div className="mx-auto col-md-6 col-lg-4 col-xlg-3 col-10 p-4 bg-light rounded-4 shadow border border-1 border-primary bg-opacity-50">
           <div className="text-center fs-1 text-primary mb-4 row">
             <div className="btn btn-outline-primary col-4 offset-1 d-flex justify-content-center align-items-center" onClick={() => setSignin(() => true)}>
