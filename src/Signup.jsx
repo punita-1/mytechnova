@@ -108,7 +108,7 @@ const Signup = () => {
     e.preventDefault();
     if (values.pass === values.confirmpass) {
       authServices.signup(values.email, values.pass).then((res) => {
-        authServices.profile(res.user, values.name, values.phone, values.rollnumber).then((res2) => {
+        authServices.profile(res.user, values.name, values.phone, values.rollnumber, values.organization, values.branch, values.semester).then((res2) => {
           // console.log(res2);
           authServices.verifyEmail(res.user);
         }).catch((errorm) => errorm);
@@ -141,7 +141,7 @@ const Signup = () => {
           <span className="input-group-text fs-2" id="basic-addon4"><i className="bi bi-telephone-fill"></i></span>
           <input type="tel" className="form-control fs-4" value={values.phone} onChange={phoneHandler} placeholder="Phone Number" aria-describedby="basic-addon4" required />
         </div>
-        {/* <div className="input-group mb-3 col-10">
+        <div className="input-group mb-3 col-10">
           <span className="input-group-text fs-2" id="basic-addon5"><i className="bi bi-people-fill"></i></span>
           <input type="text" className="form-control fs-4" value={values.organization} onChange={organizationHandler} placeholder="Organization Name" aria-describedby="basic-addon5" required />
         </div>
@@ -151,8 +151,8 @@ const Signup = () => {
         </div>
         <div className="input-group mb-3 col-10">
           <span className="input-group-text fs-2" id="basic-addon7"><i className="bi bi-journal"></i></span>
-          <input type="text" className="form-control fs-4" value={values.semester} onChange={semesterHandler} placeholder="Semester" aria-describedby="basic-addon7" required />
-        </div> */}
+          <input type="number" className="form-control fs-4" value={values.semester} onChange={semesterHandler} placeholder="Semester" aria-describedby="basic-addon7" required />
+        </div>
         <div className="input-group mb-3 col-10">
           <span className="input-group-text fs-2" id="basic-addon8"><i className="bi bi-lock-fill"></i></span>
           <input type="password" className="form-control fs-4" value={values.pass} onChange={passwordHandler} placeholder="Password" aria-describedby="basic-addon8" required />

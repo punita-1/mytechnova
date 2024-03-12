@@ -30,11 +30,11 @@ export const logout = () => {
     })
 }
 
-export const profile = (user, name, phone, rollno) => {
+export const profile = (user, name, phone, rollno, org, branch, sem) => {
     return updateProfile(user, {
         displayName: name,
         phoneNumber: phone,
-        photoURL: phone + "," + rollno
+        photoURL: phone + "?" + rollno + "?" + org + "?" + branch + "?" + sem
     }).then((res) => {
         return res;
     }).catch((err) => {

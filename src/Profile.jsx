@@ -31,7 +31,7 @@ const Profile = () => {
 
   const updateProfile = (e) => {
     e.preventDefault();
-    authServices.profile(user, "Abhinav", 6395074100, "21001001003").then((res)=> {
+    authServices.profile(user, "Abhinav", 6395074100, "21001001003", "DCRUST", "btech cse", "7").then((res) => {
       console.log(res);
     })
     // console.log(user);
@@ -56,6 +56,41 @@ const Profile = () => {
           <button className='btn btn-danger btn-lg' onClick={logoutHandler}>
             Logout
           </button>
+          <div className="w-100 row my-5">
+            <table className='table table-striped col-md-8 offset-md-2 col-12 mx-2 table-borderless text-break border border-2 border-primary rounded rounded-3'>
+              <tbody>
+                <tr>
+                  <th scope='row' className='text-start'>Roll No</th>
+                  <td className='text-start'>{user.photoURL.split("?")[1]}</td>
+                </tr>
+                <tr>
+                  <th scope='row' className='text-start'>Email</th>
+                  <td className='text-start'>{user.email}</td>
+                </tr>
+                <tr>
+                  <th scope='row' className='text-start'>Email Verified</th>
+                  <td className='text-start'>{user.emailVerified ? "True" : "False"}</td>
+                </tr>
+                <tr>
+                  <th scope='row' className='text-start'>Phone</th>
+                  <td className='text-start'>{user.photoURL.split("?")[0]}</td>
+                </tr>
+                <tr>
+                  <th scope='row' className='text-start'>Organisation</th>
+                  <td className='text-start'>{user.photoURL.split("?")[2]}</td>
+                </tr>
+                <tr>
+                  <th scope='row' className='text-start'>Branch</th>
+                  <td className='text-start'>{user.photoURL.split("?")[3]}</td>
+                </tr>
+                <tr>
+                  <th scope='row' className='text-start'>Semester</th>
+                  <td className='text-start'>{user.photoURL.split("?")[4]}</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
           {/* Show event data */}
           {events.length ?
             <div>
@@ -65,7 +100,16 @@ const Profile = () => {
                   <li key={event.id}>{event.name}</li>
                 ))}
               </ul>
-            </div> : null}
+            </div> :
+            <div className="row justify-content-center align-items-center">
+              <div className='text-center w-100 fw-bold h3'>
+                Not registered any event yet!
+              </div>
+              <div className="w-100 d-flex">
+              <Link to="/event" className='btn btn-primary mx-auto btn-lg'>Register now</Link>
+
+              </div>
+            </div>}
         </div>
       )}
       {/* Login button for unauthenticated users */}
