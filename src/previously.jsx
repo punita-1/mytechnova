@@ -1,5 +1,4 @@
 import React from 'react'
-import './prev.css'
 import CarouselComponent from './Carousel'
 import './previously.css'
 import { NavLink } from 'react-router-dom'
@@ -8,9 +7,10 @@ function Previously() {
   return (
     
     <div className="prev-container">
+      <div>
       <h2>"Moments in Time"</h2>
       <div className="text-container">
-        <div >
+        <div className='prev-container-desc'>
           "Explore the past triumphs and memorable moments that have shaped
           the legacy of our university's innovative spirit."
         </div>
@@ -19,6 +19,7 @@ function Previously() {
             <NavLink to='/gallery'>Visit Gallery</NavLink>
           </Button>
         </div>
+      </div>
       </div>
       <div className="carousel-container">
         <CarouselComponent first="./images/301.jpeg" second="./images/301.jpeg" third="./images/301.jpeg" />

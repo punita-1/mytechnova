@@ -6,21 +6,20 @@ import Timer from "../timer";
 
 const HeroSection = ({ name, image }) => {
   return (<Wrapper>
-    <div className="fullcontainerpadding container grid grid-two-column">
-      <div className="section-hero-data">
+    <div className="fullcontainerpadding container">
+      <div className="section-hero-data flex absolute-center">
         <p className='hero-top-data'>
           WE ARE BACK
         </p>
         <h1 className='hero-heading'>
           {name}
         </h1>
-        <h3>"5th April - 6th April"</h3>
-        <Timer />
         <p className='hero-para'>"Ignite Your Passion for Innovation: Join Us for a Spectacular Fusion of Technology and Talent!"</p>
+        <h3 className="hero-date">"5th April - 6th April"</h3>
+        <Timer />
         <Button className='btn eventpage-btn'>
           <NavLink to='/event'>Register Now</NavLink>
         </Button>
-
       </div>
 
       <div className="section-hero-image">
@@ -35,48 +34,76 @@ const HeroSection = ({ name, image }) => {
 };
 
 const Wrapper = styled.section`
-padding: 9rem 0;
+padding: 4rem 0 6rem;
 
 .fullcontainerpadding{
   padding-top: 0px;
 }
+.section-hero-image{
+      position: absolute;
+      z-index: 99999999;
+      top: 60px;
+      right: 300px;
+}
 .section-hero-data {
-  display: flex;
+  margin-top:30px;
+  // width:125%;
   flex-direction: column;
-  align-self: center; 
-  padding-left: 70px;
-  justify-content: center;
+  // padding-left: 70px;
 }
 .timer {
   justify-content: flex-start;
-  margin-bottom: 2rem;
+  // margin-top: 2rem;
 }
 .btn {
   max-width: 20rem;
 }
 
 .hero-top-data {
+  margin-top:40px;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 1.5rem;
-  color: ${({ theme }) => theme.colors.helper};
+  color: #31363F;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 8px;
 }
 
 .hero-heading {
-  text-transform: uppercase;
-  font-size: 5.5rem;
+    letter-spacing: 4px;
+    color: var(--primary-background-color);
+    font-family: fantasy;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12rem;
 }
-
+.hero-date{
+  margin: 15px 0px 0px;
+  // font-family: fantasy;
+  font-family: "Paprika", system-ui;
+  font-weight: 600;
+  font-size: 2.6rem;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  letter-spacing:3px;
+}
 .hero-para {
-  margin-top: 1.5rem;
-  margin-bottom: 3.4rem;
-  max-width: 60rem;
+    font-family: "Sorts Mill Goudy", serif;
+    margin-top: 2rem;
+    max-width: 64rem;
+    font-size: 2.4rem;
+    text-align: center;
+    letter-spacing: 0.6px;
+    line-height: 28px;
+    font-style: italic;
+    font-weight: 600;
 }
 
 .section-hero-image {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  // display: flex;
+  // justify-content: flex-end;
+  // align-items: center;
 }
 
 picture {
@@ -84,8 +111,8 @@ picture {
 }
 
 .hero-img {
-  height: 400px;
-  width: 400px;
+  height: 180px;
+  width: 180px;
 }
 @media (max-width: ${({ theme }) => theme.media.mobile}) {
   padding: 1rem 0;

@@ -1,6 +1,7 @@
 import Home from './Home';
 import Contact from './Contact';
 import About from './About';
+import'./App.css';
 import Signup from './Signup';
 import Gallery from './Gallery';
 import Event from './Events';
