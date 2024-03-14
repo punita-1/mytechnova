@@ -98,6 +98,16 @@ padding: 7rem 0;
   color: ${({ theme }) => theme.colors.helper};
 }
 
+.hero-top-data {
+  
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #31363F;
+  text-align: center;
+  letter-spacing: 0.2rem;
+}
+
 .hero-heading {
   text-transform: uppercase;
   font-size: 5.0rem;
