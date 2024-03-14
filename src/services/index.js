@@ -1,7 +1,9 @@
 import * as authServices from './auth.service';
+import * as api from './api.service';
 
 export {
-  authServices
+  authServices,
+  api
 };
 
 

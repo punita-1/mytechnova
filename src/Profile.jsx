@@ -31,7 +31,7 @@ const Profile = () => {
 
   const updateProfile = (e) => {
     e.preventDefault();
-    authServices.profile(user, "Abhinav", 6395074100, "21001001003", "DCRUST", "btech cse", "7").then((res) => {
+    authServices.profile(user, "Abhinav", 6395074100, "21001001003", "DCRUST", "btech cse", "6").then((res) => {
       console.log(res);
     })
     // console.log(user);
@@ -61,7 +61,7 @@ const Profile = () => {
               <tbody>
                 <tr>
                   <th scope='row' className='text-start'>Roll No</th>
-                  <td className='text-start'>{user.photoURL.split("?")[1]}</td>
+                  <td className='text-start'>{user.photoURL?.split("?")[1]}</td>
                 </tr>
                 <tr>
                   <th scope='row' className='text-start'>Email</th>
@@ -73,19 +73,19 @@ const Profile = () => {
                 </tr>
                 <tr>
                   <th scope='row' className='text-start'>Phone</th>
-                  <td className='text-start'>{user.photoURL.split("?")[0]}</td>
+                  <td className='text-start'>{user.photoURL?.split("?")[0]}</td>
                 </tr>
                 <tr>
                   <th scope='row' className='text-start'>Organisation</th>
-                  <td className='text-start'>{user.photoURL.split("?")[2]}</td>
+                  <td className='text-start'>{user.photoURL?.split("?")[2]}</td>
                 </tr>
                 <tr>
                   <th scope='row' className='text-start'>Branch</th>
-                  <td className='text-start'>{user.photoURL.split("?")[3]}</td>
+                  <td className='text-start'>{user.photoURL?.split("?")[3]}</td>
                 </tr>
                 <tr>
                   <th scope='row' className='text-start'>Semester</th>
-                  <td className='text-start'>{user.photoURL.split("?")[4]}</td>
+                  <td className='text-start'>{user.photoURL?.split("?")[4]}</td>
                 </tr>
 
               </tbody>
