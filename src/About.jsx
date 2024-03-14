@@ -100,6 +100,16 @@ padding: 5rem 0;
   letter-spacing: 0.2rem;
 }
 
+.hero-top-data {
+  
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #31363F;
+  text-align: center;
+  letter-spacing: 0.2rem;
+}
+
 .hero-heading {
   color: var(--primary-background-color);
   font-family: fantasy;
