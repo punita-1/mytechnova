@@ -127,9 +127,6 @@ const Navbar = () => {
   /* Add your media query styles here */
 `;
 
-  const Navbar = () => {
-    const [openMenu, setOpenMenu] = useState(false);
-
     const handleMenuToggle = () => {
       setOpenMenu(!openMenu);
     };
@@ -203,5 +200,4 @@ const Navbar = () => {
       </Nav>
     );
   };
-};
 export default Navbar;
