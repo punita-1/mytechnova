@@ -2,7 +2,7 @@ import { db } from "./firebase"
 import { addDoc, collection, doc, setDoc } from "firebase/firestore"
 
 export const saveUserData = (userData) => {
-    return addDoc(doc(db, "users/" + userData.rollnumber), {
+    return setDoc(doc(db, "users/" + userData.rollnumber), {
         name: userData.name,
         phone: userData.phone,
         emailUsername: userData.email,
@@ -16,6 +16,15 @@ export const saveUserData = (userData) => {
     });
 }
 
-export const saveEventRegistrations = (teamName, membersCount, memberDetailts) => {
-    addDoc(ref)
+export const saveEventRegistrations = (teamName, eventId, eventName, membersCount, memberDetails) => {
+    const temp = new Date().getMilliseconds();
+    const docRef = doc(db, "registrations", teamName+membersCount+temp);
+    const payLoad = {
+        teamName: teamName,
+        eventId: eventId,
+        eventName: eventName,
+        membersCount: membersCount,
+        members: memberDetails
+    }
+    return setDoc(docRef, payLoad);
 }

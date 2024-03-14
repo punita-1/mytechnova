@@ -111,11 +111,11 @@ const Signup = () => {
         authServices.profile(res.user, values.name, values.phone, values.rollnumber, values.organization, values.branch, values.semester).then((res2) => {
           // console.log(res2);
           authServices.verifyEmail(res.user);
-          // api.saveUserData(values).then((response)=> {
-          //   // console.log(response);
-          // }).catch((erro)=> {
-          //   console.log("error1"+erro);
-          // })
+          api.saveUserData(values).then((response)=> {
+            // console.log(response);
+          }).catch((erro)=> {
+            console.log("error1"+erro);
+          })
         }).catch((errorm) => {
           console.log("error2:"+errorm);
         });

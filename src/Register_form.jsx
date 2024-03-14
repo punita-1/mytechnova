@@ -4,6 +4,7 @@ import data from "./assets/data"
 import './Register_form.css'
 import { auth } from './services/firebase'
 import { onAuthStateChanged } from 'firebase/auth'
+import { api } from './services'
 
 const Register_form = () => {
   // console.log(data);
@@ -244,9 +245,38 @@ const Register_form = () => {
     });
   }
 
+  const memberReturn = (count) => {
+    switch (count) {
+      case 1:
+        return member1;
+      case 2:
+        return member2;
+      case 3:
+        return member3;
+      case 4:
+        return member4;
+      case 5:
+        return member5;
+    }
+  }
+
+  const returnAllMembers = () => {
+    const arr = [];
+    for (let i = 1; i <= memberCount; i++) {
+      arr.push(memberReturn(i));
+    }
+    return arr;
+  }
+
   const register = (e) => {
+    // e.preventDefault();
+    const memberDetails = returnAllMembers();
+    api.saveEventRegistrations(values.teamname, id, data[id - 1].title, memberCount, memberDetails).then((result)=>{
+      console.log(result);
+    }).catch((err)=>{
+      console.log(err);
+    })
     // console.log(e);
-    e.preventDefault();
     // alert("Register");
   }
 
@@ -261,7 +291,7 @@ const Register_form = () => {
               <span className='fs-5'>Minimum team size - {minCount} / Maximimum Team Size - {maxCount}</span>
               <div className='text-danger my-1 fs-4'>{user.emailVerified? "" : <i className='bi bi-exclamation-circle-fill me-2'></i>}{user.emailVerified? "" : "Note: Your Email is not verified. Verify email to register for event."}</div>
             </div>
-            <form onSubmit={register} className={user.emailVerified?"row justify-content-center align-items-center":"d-none"} >
+            <form name='EventRegistration' onSubmit={register} className={user.emailVerified?"row justify-content-center align-items-center":"d-none"} >
               <div className="input-group mb-3 col-12">
                 <span className="input-group-text fs-2" id="basic-addon2"><i className="bi bi-person-lines-fill"></i></span>
                 <input type="text" className="form-control fs-4" value={values.teamname} onChange={teamNameHandler} placeholder="Team Name" aria-describedby="basic-addon2" required />
