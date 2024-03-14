@@ -159,7 +159,7 @@ const Event = () => {
 
       {/* // Add more CardGroup components as needed */}
       {showPopup && (
-        <div className="popup">
+        <div className="popup animate__animated animate__zoomIn animate__faster">
           <div className="popup-content">
             <h5>{selectedEvent.title}</h5>
             <div className="popup-text mb-3">
