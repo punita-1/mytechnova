@@ -8,6 +8,10 @@
   text-align: center;
 }
 
+.fontchange {
+  font-family: "Paprika", system-ui;
+}
+
 .social-icon-heading {
   font-size: 40px;
   font-weight: 600;
@@ -30,12 +34,13 @@
   margin-right: 10px;
   /* Adjust the space between icons as needed */
 }
-.my-social > * {
+
+.my-social>* {
   transform: scale(1);
   transition: transform 0.3s ease-in;
 }
 
-.my-social > *:hover {
+.my-social>*:hover {
   transform: scale(1.2);
 }
 
@@ -79,12 +84,13 @@
     font-weight: 400;
     font-size: 15px;
   }
-  .my-social > * {
+
+  .my-social>* {
     transform: scale(1);
     transition: transform 0.3s ease-in;
   }
-  
-  .my-social > *:hover {
+
+  .my-social>*:hover {
     transform: scale(1.2);
   }
 }
