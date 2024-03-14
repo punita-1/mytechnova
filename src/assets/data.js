@@ -2168,7 +2168,7 @@ const Events = [
   {
     id: 50,
     image: 'https://via.placeholder.com/150',
-    title: 'PROJRCT EXPO',
+    title: 'PROJECT EXPO',
     min: '1',
     max: '5',
     category:'centralized',

@@ -1,15 +1,26 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import { CgMenu, CgCloseR } from 'react-icons/cg';
+import { CgMenu, CgCloseR } from "react-icons/cg";
+import { auth } from '../services/firebase';
+import { onAuthStateChanged } from 'firebase/auth';
 
-// Define styled components outside of the functional component
-const Nav = styled.nav`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white !important;
+const Navbar = () => {
+  const [openMenu, setOpenMenu] = useState(false);
+  const [user, setUser] = useState(null);
+  // console.log(user.email);
 
+
+  onAuthStateChanged(auth, (userData) => {
+    if (userData) {
+      setUser(userData);
+    } else {
+      setUser(null);
+    }
+  });
+
+  const Nav = styled.nav`
+  
   .navbar-list {
     display: flex;
     gap: 1.8rem;
@@ -129,63 +140,53 @@ const Navbar = () => {
 
   return (
     <Nav>
-      <div className={openMenu ? 'menuIcon active' : 'menuIcon'}>
+      <div className={openMenu ? "menuIcon active" : "menuIcon"}>
         <ul className="navbar-list">
           <li>
             <NavLink
-              activeClassName="active" // Apply this class when the link is active
               className="navbar-link"
-              onClick={handleNavLinkClick}
+              onClick={() => setOpenMenu(false)}
               to="/">
               Home
-            </NavLink>
-          </li>
+            </NavLink></li>
           <li>
             <NavLink
-              activeClassName="active" // Apply this class when the link is active
               className="navbar-link"
-              onClick={handleNavLinkClick}
+              onClick={() => setOpenMenu(false)}
               to="/about">
               About
-            </NavLink>
-          </li>
+            </NavLink></li>
           <li>
             <NavLink
-              activeClassName="active" // Apply this class when the link is active
               className="navbar-link"
-              onClick={handleNavLinkClick}
+              onClick={() => setOpenMenu(false)}
               to="/event">
               Events
-            </NavLink>
-          </li>
+            </NavLink></li>
           <li>
             <NavLink
-              activeClassName="active" // Apply this class when the link is active
               className="navbar-link"
-              onClick={handleNavLinkClick}
+              onClick={() => setOpenMenu(false)}
               to="/gallery">
               Gallery
-            </NavLink>
-          </li>
+            </NavLink></li>
           <li>
             <NavLink
-              activeClassName="active" // Apply this class when the link is active
               className="navbar-link"
-              onClick={handleNavLinkClick}
+              onClick={() => setOpenMenu(false)}
               to="/contact">
               Contact
-            </NavLink>
-          </li>
+            </NavLink></li>
           <li>
             <NavLink
-              activeClassName="active" // Apply this class when the link is active
               className="navbar-link"
-              onClick={handleNavLinkClick}
-              to="/signup">
-              Signup
-            </NavLink>
-          </li>
+              onClick={() => setOpenMenu(false)}
+              to={user?"/profile":"/signup"}>
+              {user?"Profile":"Signup"}
+            </NavLink></li>
+
         </ul>
+        {/* //nav icon */}
         <div className="mobile-navbar-btn">
           <CgMenu
             name="menu-outline"
