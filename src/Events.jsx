@@ -40,7 +40,7 @@ const Event = () => {
       <br />
       <br />
 
-      <Tabs>
+      <Tabs className='justify-content-center'>
         <Tab eventKey="centralized" title="Centralized">
           <h2><b>CENTRALIZED EVENTS</b></h2>
           <CardGroup
