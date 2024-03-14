@@ -1,5 +1,5 @@
 import { db } from "./firebase"
-import { addDoc, collection, doc, setDoc } from "firebase/firestore"
+import { addDoc, collection, doc, getDocs, query, setDoc, where } from "firebase/firestore"
 
 export const saveUserData = (userData) => {
     return setDoc(doc(db, "users/" + userData.rollnumber), {
@@ -16,15 +16,22 @@ export const saveUserData = (userData) => {
     });
 }
 
-export const saveEventRegistrations = (teamName, eventId, eventName, membersCount, memberDetails) => {
+export const saveEventRegistrations = (teamName, eventId, eventName, membersCount, memberDetails, memberRollNums, registeredBy) => {
     const temp = new Date().getMilliseconds();
-    const docRef = doc(db, "registrations", teamName+membersCount+temp);
+    const docRef = collection(db, "registrations");
     const payLoad = {
         teamName: teamName,
         eventId: eventId,
         eventName: eventName,
         membersCount: membersCount,
-        members: memberDetails
+        members: memberDetails,
+        memberRollNums: memberRollNums,
+        registeredBy: registeredBy
     }
-    return setDoc(docRef, payLoad);
+    return addDoc(docRef, payLoad);
+}
+
+export const getEventsRegisteredByYou = (rollNumber) => {
+    const q = query(collection(db, "registrations"), where("registeredBy", "==", rollNumber));
+    return getDocs(q);
 }

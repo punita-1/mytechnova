@@ -268,10 +268,20 @@ const Register_form = () => {
     return arr;
   }
 
+  const returnAllMemberRolls = () => {
+    const arr = [];
+    for (let i = 1; i <= memberCount; i++) {
+      arr.push(memberReturn(i).rollnum);
+    }
+    return arr;
+  }
+
   const register = (e) => {
     // e.preventDefault();
     const memberDetails = returnAllMembers();
-    api.saveEventRegistrations(values.teamname, id, data[id - 1].title, memberCount, memberDetails).then((result)=>{
+    const memberRolls = returnAllMemberRolls();
+    const userRollnumber = user.photoURL?.split("?")[1];
+    api.saveEventRegistrations(values.teamname, id, data[id - 1].title, memberCount, memberDetails, memberRolls, userRollnumber).then((result)=>{
       console.log(result);
     }).catch((err)=>{
       console.log(err);
