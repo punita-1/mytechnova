@@ -5,7 +5,7 @@ const Events = [
     title: 'Projectile Precision Challenge',
     min: '1',
     max: '2',
-    category:'civil',
+    category: 'civil',
     description: `
     
     Welcome to the Projectile Precision Challenge, where creativity meets precision in a 
@@ -61,7 +61,7 @@ const Events = [
     title: 'Scale Seekers ',
     min: '1',
     max: '2',
-    category:'civil',
+    category: 'civil',
     description: ` 
     
     Welcome to Scale Seekers, where precision meets creativity in a thrilling two-round challenge! Scale 
@@ -114,7 +114,7 @@ const Events = [
     title: 'Design & Sustain',
     min: '1',
     max: '4',
-    category:'civil',
+    category: 'civil',
     description: `
     
     Design and Sustain invites participants to showcase their ingenuity in two exciting categories: ice cream 
@@ -160,11 +160,11 @@ const Events = [
   },
   {
     id: 4,
-    image: 'public/images/events_profile_pic/clocks.jpg',
+    image: '/images/events_profile_pic/haha.jpg',
     title: 'Haha Hash Hunt',
     min: '1',
-    max: '5',
-    category:'dcrustodc',
+    max: '2',
+    category: 'dcrustodc',
     description: `
     
     Welcome to the Projectile Precision Challenge, where creativity meets precision in a thrilling two-round 
@@ -219,7 +219,7 @@ const Events = [
     title: 'Techtri Wizadry',
     min: '1',
     max: '1',
-    category:'dcrustodc',
+    category: 'dcrustodc',
     description: `
 
     Typing Challenge Rules
@@ -302,21 +302,18 @@ const Events = [
   },
   {
     id: 6,
-    image: 'https://via.placeholder.com/150',
+    image: '/images/events_profile_pic/conecting_brain.avif',
     title: 'Mind Buzz Carnival',
     min: '3',
-    max: '4',
-    category:'biotechnology',
+    max: '3',
+    category: 'biotechnology',
     description: `
 
     Mind Buzz Carnival is an exciting and inclusive competition designed to test participants' knowledge 
     across various scientific disciplines. The event consists of two captivating rounds - Vivid Visions and 
     Bingo Buzz - providing a platform for students from diverse engineering and science backgrounds.
     
-    List of organizers:
-    1.Bhumi
-    2.Palak 
-    3.Mansi
+    
     
     Participant Prerequisites and Eligibility:
     1.The event is open to all students from Engineering and Science Departments.
@@ -372,17 +369,14 @@ const Events = [
   },
   {
     id: 7,
-    image: 'https://via.placeholder.com/150',
+    image: '/images/events_profile_pic/brain_cells.jpg',
     title: 'Neuron Navigator',
     min: '2',
     max: '2',
-    category:'biotechnology',
+    category: 'biotechnology',
     description: `
     
-    List Of Organisers
-    1.Srishti
-    2.Muskan
-    3.Vanshika
+    
 
     Neuron Navigator is an extraordinary event where you Dive into a world of crafting sentences, and sharpen 
     your knowledge. Prepare to be captivated, challenged, and amazed as you unlock the secrets of cognitive 
@@ -423,7 +417,7 @@ const Events = [
     title: 'Biodecode Adventure',
     min: '1',
     max: '1',
-    category:'biotechnology',
+    category: 'biotechnology',
     description: `
     
     BioDecode Adventure: Embark on an exhilarating Biotech Discovery Quest where participants follow clues 
@@ -431,10 +425,7 @@ const Events = [
     in a Chit Challenge, where drawn chits reveal biotechnological terms, sparking discussions or activities 
     related to genes, enzymes, and molecular processes.
     
-    List of organizers:
-    1.Muskan
-    2.Tanya
-    3.Rahul
+    
 
     Participant Prerequisites and Eligibility:
     1. The event is open to all students from Engineering and Science departments.
@@ -487,11 +478,11 @@ const Events = [
   },
   {
     id: 9,
-    image: 'https://via.placeholder.com/150',
+    image: '/images/events_profile_pic/inno.png',
     title: 'Innovation Odyssey Challenge',
     min: '2',
     max: '2',
-    category:'savera',
+    category: 'savera',
     description: `
 
     RULES
@@ -530,7 +521,7 @@ const Events = [
     title: 'Tech Titans Trivia',
     min: '1',
     max: '1',
-    category:'savera',
+    category: 'savera',
     description: `
     
     RULES
@@ -546,11 +537,11 @@ const Events = [
   },
   {
     id: 11,
-    image: 'https://via.placeholder.com/150',
+    image: '/images/events_profile_pic/management-2.jpg',
     title: 'Synergy Crew',
     min: '3',
     max: '3',
-    category:'management',
+    category: 'management',
     description: `
     
     Each team will have three members.
@@ -582,11 +573,11 @@ const Events = [
   },
   {
     id: 12,
-    image: 'https://via.placeholder.com/150',
+    image: '/images/events_profile_pic/project-management.png',
     title: 'Ad-Mad Show',
     min: '3',
     max: '3',
-    category:'management',
+    category: 'management',
     description: `
 
     Bring out the creativity inside you and make an outstanding advertisement of your own. Be it hilarious or 
@@ -608,11 +599,11 @@ const Events = [
   },
   {
     id: 13,
-    image: 'https://via.placeholder.com/150',
+    image: '/images/events_profile_pic/management.jpg',
     title: 'Biz- Entra',
     min: '2',
     max: '2',
-    category:'management',
+    category: 'management',
     description: `
 
     Business Plan Competition 
@@ -652,7 +643,7 @@ const Events = [
     title: 'Student of The Year',
     min: '1',
     max: '1',
-    category:'lisoc',
+    category: 'lisoc',
     description: `
 
     ROUND 1: APTITUDE TEST
@@ -687,7 +678,7 @@ const Events = [
     title: `Let's Discuss`,
     min: '1',
     max: '1',
-    category:'lisoc',
+    category: 'lisoc',
     description: `
 
     ROUND 1: EXTEMPORE
@@ -713,34 +704,32 @@ const Events = [
   },
   {
     id: 16,
-    image: 'https://via.placeholder.com/150',
+    image: '/images/events_profile_pic/quiz2_pic.jpg',
     title: 'Agritech Quiz ',
     min: '3',
     max: '3',
-    category:'agriculture',
+    category: 'agriculture',
     description: `
      
-    TEAM COMPRISES OF 3 CANDIDATES ONLY.
-    
-    QUIZ WILL INVIOVE 3 ROUNDS.
-    MCQ ROUND 
-    BUZZER ROUND.
-    RAPID FIRE ROUND
-    
-    QUESTION AREA “BROAD ARAES OF AGRICULTURE ENGINEERING, ENVIRONMENT AND  CURRENT AFFAIRS “.
-    THE SPECIFIC RULES REGARDING TIME TO REPLAY A PARTICULAR ANSWER AND THE TYPE OF ROUND WILL BE GIVEN BEFORE THE ACTUAL START OF THE COMPETITION.
-    
-     THE DECISION OF THE JUDGES WILL BE FINAL AND NO SORT OF DISPUTES WILL BE ENTERTAINED.
+1.	Team comprises of 3 candidates only.
+2.	Quiz will involve 3 rounds.
+•	Mcq round 
+•	Buzzer round.
+•	Rapid fire round
+3.	Question area “broad areas of agriculture engineering, environment and current affairs “.
+4.	The specific rules regarding time to replay a particular answer and the type of round will be given before the actual start of the competition.
+5.	The decision of the judges will be final and no sort of disputes will be entertained.
+
     
     `,
   },
   {
     id: 17,
-    image: 'https://via.placeholder.com/150',
-    title: 'public/images/events_profile_pic/agriculture.png', //done
+    image: 'public/images/events_profile_pic/agriculture.png',
+    title: 'Talent Mania', //done
     min: '3',
     max: '3',
-    category:'agriculture',
+    category: 'agriculture',
     description: `
 
     TEAM COMPRISES OF THREE CANDIDATES ONLY.
@@ -773,7 +762,7 @@ const Events = [
     title: 'GREEN CANVAS',
     min: '1',
     max: '1',
-    category:'agriculture',
+    category: 'agriculture',
     description: `
     
     Green Canvas: Painting a Sustainable Future
@@ -786,7 +775,7 @@ const Events = [
     title: 'POSTER MAKING COMPETITION',
     min: '1',
     max: '2',
-    category:'biomedical',
+    category: 'biomedical',
     description: `
 
     1. The theme should be the main focus of the poster and should include any of the following:
@@ -824,11 +813,11 @@ const Events = [
   },
   {
     id: 20,
-    image: 'https://via.placeholder.com/150',
+    image: '/images/events_profile_pic/QUIZ-Image-01-01.png',
     title: 'B-Quiz',
-    min: '1',
-    max: '2',
-    category:'biomedical',
+    min: '3',
+    max: '3',
+    category: 'biomedical',
     description: `
 
     1. Team comprises of 3 candidates only. 
@@ -854,7 +843,7 @@ const Events = [
     title: 'Dream project Power point presentation',
     min: '1',
     max: '2',
-    category:'biomedical',
+    category: 'biomedical',
     description: `
 
     1. Qualifying criteria will include three rounds:
@@ -882,7 +871,7 @@ const Events = [
     title: 'Chase The Bid',
     min: '1',
     max: '2',
-    category:'e-cell',
+    category: 'e-cell',
     description: `
      
     "Chase The Bid" is a mock IPL auction where teams display entrepreneurial skills by managing budgets, 
@@ -929,11 +918,11 @@ const Events = [
   },
   {
     id: 23,
-    image: 'https://via.placeholder.com/150',
+    image: '/images/events_profile_pic/studious_girl.jpg',
     title: 'InnoVent Sprint',
-    min: '1',
-    max: '2',
-    category:'e-cell',
+    min: '3',
+    max: '5',
+    category: 'e-cell',
     description: `
 
     "InnoVent Sprint" is an entrepreneurship event where teams of 3 to 5 members compete in challenges that 
@@ -974,11 +963,11 @@ const Events = [
   },
   {
     id: 24,
-    image: 'https://via.placeholder.com/150',
+    image: '/images/events_profile_pic/detective.jpg',
     title: 'Tech- Marathon',
     min: '1',
-    max: '2',
-    category:'electrical',
+    max: '4',
+    category: 'electrical',
     description: `
 
     Tech Marathon is a treasure hunt game where participants follow clues to find a hidden treasure. It's 
@@ -991,11 +980,6 @@ const Events = [
 
     Total team expected: 20
     Member in each team: 4
-    
-    List of Organisers:
-    1.Ishu
-    2.Mahak
-    3.Kirshan
     
     Rules
     Maximum 4 person allowed in teams.
@@ -1014,7 +998,7 @@ const Events = [
     title: 'Circuit Circus',
     min: '1',
     max: '1',
-    category:'electrical',
+    category: 'electrical',
     description: `
                       
     "Join us for an electrifying journey into the realm of electrical engineering at our event! Where we will 
@@ -1043,10 +1027,7 @@ const Events = [
                            Round 3 : CVR - 112
 
     Event Timing: Morning 10 : 00 AM
-    List of Organisers:
-    1.Muskan
-    2.Adarsh Malik
-    3.Surbhi.
+    
     Rules
   
     Round 1:
@@ -1077,11 +1058,11 @@ const Events = [
   },
   {
     id: 26,
-    image: 'https://via.placeholder.com/150',
+    image: '/images/events_profile_pic/lets_discuss.jpg',
     title: 'Tech-Zep',
     min: '1',
     max: '1',
-    category:'electrical',
+    category: 'electrical',
     description: `
 
     Get ready for a whirlwind tour of cutting edge advancements in electrical engineering. Tech-Zep is a 
@@ -1103,11 +1084,7 @@ const Events = [
     
     Event Venue: UCC
     Event Timing: Day 1 2:30 Pm Onwards
-    
-    List of Organisers:
-    1. Ankit
-    2. Abhay Kamboj
-    3. Meghna
+
 
     Rules
 
@@ -1131,11 +1108,11 @@ const Events = [
   },
   {
     id: 27,
-    image: 'https://via.placeholder.com/150',
+    image: '/images/Pencil_robot.jpg',
     title: 'RoboSoccer',
     min: '2',
     max: '2',
-    category:'Thinkbots',
+    category: 'Thinkbots',
     description: `
     
     Rulebook
@@ -1197,7 +1174,7 @@ const Events = [
     title: 'Cozmo Race',
     min: '1',
     max: '1',
-    category:'Thinkbots',
+    category: 'Thinkbots',
     description: `
     
     Rulebook
@@ -1265,7 +1242,7 @@ const Events = [
     title: 'Knowledge Knockout Quiz',
     min: '2',
     max: '2',
-    category:'chemical',
+    category: 'chemical',
     description: `
 
     Quiz - two rounds.
@@ -1283,50 +1260,54 @@ const Events = [
   },
   {
     id: 30,
-    image: 'https://via.placeholder.com/150',
+    image: '/images/events_profile_pic/chemicals.jpg',
     title: 'Get Recognized for Your Personality (GRYP)',
     min: '1',
     max: '1',
-    category:'chemical',
+    category: 'chemical',
     description: `
 
-    20 participants, first-come-first-served basis; list of selected candidates shall be displayed on 
-    department website a day before the event 
-    (https://www.dcrustm.ac.in/department/deptDetails/chemical-engineering).
-    One (6-8 question) interview round, 5-6 mins per participant.
-    Questions assess personality and critical thinking.
-    Business formal attire required.
-    Judges score all interviewees on consistent grading metrics.
+Event:Get Recognized for Your Personality (GRYP)
+
+1.	20 participants, first-come-first-served basis; list of selected candidates shall be displayed on department website a day before the event
+(https://www.dcrustm.ac.in/department/deptDetails/chemical-engineering).
+2.	One (6-8 question) interview round, 5-6 mins per participant.
+3.	Questions assess personality and critical thinking.
+4.	Business formal attire required.
+5.	Judges score all interviewees on consistent grading metrics.
+6.	Highest three scores awarded first, second and third place respectively.
+
     
     `,
   },
   {
     id: 31,
-    image: 'https://via.placeholder.com/150',
+    image: '/images/events_profile_pic/Planet-or-Plastic-Poster-Template.png',
     title: 'Creative Canvas',
     min: '1',
     max: '1',
-    category:'chemical',
+    category: 'chemical',
     description: `
 
-    Theme: Social Issues OR Environmental Issues.
-    Individual entries only, first 25 entrants eligible; list shall be displayed on department website a day 
-    before the event 
-    (https://www.dcrustm.ac.in/department/deptDetails/chemical-engineering).
-    80 minutes to create artwork using provided supplies (white sheet (60 cm x 40 cm approx.), pencil, 
-    eraser, sharpener, scale, oil pastels, and sketch pen).
-    Judges assess artwork based on relevance, creativity, technique.
-    Top 3 finalists displayed on website after event concludes.
+Event:Creative Canvas
+
+1.	Theme: Social Issues OR Environmental Issues.
+2.	Individual entries only, first 25 entrants eligible; list shall be displayed on department website a day before the event 
+(https://www.dcrustm.ac.in/department/deptDetails/chemical-engineering).
+3.	80 minutes to create artwork using provided supplies (white sheet (60 cm x 40 cm approx.), pencil, eraser, sharpener, scale, oil pastels, and sketch pen).
+4.	Judges assess artwork based on relevance, creativity, technique.
+5.	Top 3 finalists displayed on website after event concludes.
+
     
     `,
   },
   {
     id: 32,
-    image: 'https://via.placeholder.com/150',
+    image: '/images/events_profile_pic/serch_bars.jpg',
     title: 'Escape Room Challenge',
     min: '2',
     max: '2',
-    category:'electronics',
+    category: 'electronics',
     description: `
 
     Welcome to Escape Room Challenge where precision meets creativity in a thrilling three-round challenge! 
@@ -1403,7 +1384,7 @@ const Events = [
     title: 'CIRCUITHON',
     min: '2',
     max: '2',
-    category:'electronics',
+    category: 'electronics',
     description: `
 
     Welcome to Circuithon where precision meets creativity in a thrilling two-round challenge! The 
@@ -1450,11 +1431,11 @@ const Events = [
   },
   {
     id: 34,
-    image: 'https://via.placeholder.com/150',
+    image: '/images/events_profile_pic/brain_cells.jpg',
     title: 'Two days skills development workshop on Embedded System',
     min: '1',
     max: '1',
-    category:'electronics',
+    category: 'electronics',
     description: `
 
     Welcome to our Two days skill development workshop on Embedded Systems! In this hands-on session, we'll 
@@ -1491,7 +1472,7 @@ const Events = [
     title: 'Poster Making',
     min: '1',
     max: '1',
-    category:'mathematics',
+    category: 'mathematics',
     description: `
 
     The objective behind organisation of poster making competition is to bring out the creative expression of 
@@ -1538,7 +1519,7 @@ const Events = [
     title: 'Debate',
     min: '2',
     max: '2',
-    category:'mathematics',
+    category: 'mathematics',
     description: `
 
     There will be a team of two, the affirmative (has to speak in the favour) and the negative (has to speak 
@@ -1591,7 +1572,7 @@ const Events = [
     title: 'Quiz',
     min: '2',
     max: '4',
-    category:'mathematics',
+    category: 'mathematics',
     description: ` 
 
     Teams will be either of 2 members or 4 depending on the number of participants
@@ -1640,7 +1621,7 @@ const Events = [
     title: 'Aerovate',
     min: '2',
     max: '4',
-    category:'physics',
+    category: 'physics',
     description: `
 
     Aerovate: The Flight Challenge- This name combines "Aero," referencing aeronautics, with "Elevate," 
@@ -1706,7 +1687,7 @@ const Events = [
     title: 'ElectraCraft',
     min: '2',
     max: '4',
-    category:'physics',
+    category: 'physics',
     description: `
 
     ElectraCraft combines "Electra" for electricity and "craft" for skilled creation, embodying the 
@@ -1778,7 +1759,7 @@ const Events = [
     title: 'TechnoTrek: The Technical Escape',
     min: '2',
     max: '4',
-    category:'physics',
+    category: 'physics',
     description: `
 
     Introduction:
@@ -1829,27 +1810,25 @@ const Events = [
   },
   {
     id: 41,
-    image: 'https://via.placeholder.com/150',
+    image: '/images/events_profile_pic/future-technologies-flat-flowchart-poster-vector.jpg',
     title: 'THINK FUTURE',
     min: '2',
     max: '2',
-    category:'computer',
+    category: 'computer',
     description: `
     
-    RULES:
-    
-    1. No of students - 2
-    2. Minimum slides - 15
-    3. Maximum slides - 25
-    4. The language of presentation shall be English.
-    5. The participants should make their Title headlines.
-    6. The titles used by participants must tell the topics.
-    7. The content of the PPT should not be copied. Any Plagiarism, if detected, will lead to
-    disqualification.
-    8. Presentations must be made by memory; notes may not be used.
-    9. The decision of the jury will be final.
-    10. The participant must complete his/her presentation in the allotted time period(10 minutes) only as 
-    per rules, no extra time will be given and no excuses will be heard.
+Rules:
+1.	No of students - 2
+2.	Minimum slides - 15
+3.	Maximum slides - 25
+4.	The language of presentation shall be English.
+5.	The participants should make their Title headlines.
+6.	The titles used by participants must tell the topics.
+7.	The content of the PPT should not be copied. Any Plagiarism, if detected, will lead todisqualification.
+8.	Presentations must be made by memory; notes may not be used.
+9.	The decision of the jury will be final.
+10.	The participant must complete his/her presentation in the allotted time period (10 minutes) only asper rules, no extra time will be given and no excuses will be heard.
+
     
     `,
   },
@@ -1859,7 +1838,7 @@ const Events = [
     title: 'WEB MASTER',
     min: '1',
     max: '3',
-    category:'computer',
+    category: 'computer',
     description: `
 
     Rules:
@@ -1895,7 +1874,7 @@ const Events = [
     title: 'TECHNICAL TREASURE HUNT',
     min: '1',
     max: '1',
-    category:'computer',
+    category: 'computer',
     description: `
 
     RULES:
@@ -1914,11 +1893,11 @@ const Events = [
   },
   {
     id: 44,
-    image: 'https://via.placeholder.com/150',
+    image: '/images/events_profile_pic/stick.png',
     title: 'Stick Structure Showdown',
     min: '3',
     max: '5',
-    category:'Mechanical',
+    category: 'Mechanical',
     description: `
 
     Description: 
@@ -1979,7 +1958,7 @@ const Events = [
     title: 'Behind The Bars',
     min: '1',
     max: '2',
-    category:'Mechanical',
+    category: 'Mechanical',
     description: ` 
     
     Description: 
@@ -2035,7 +2014,7 @@ const Events = [
     title: 'Gearhead Odyssey ',
     min: '4',
     max: '4',
-    category:'Mechanical',
+    category: 'Mechanical',
     description: `
 
     Description: 
@@ -2110,20 +2089,22 @@ const Events = [
   },
   {
     id: 47,
-    image: 'https://via.placeholder.com/150',
+    image: '/images/events_profile_pic/chemicals.jpg',
     title: 'Rasayan Magic',
     min: '3',
     max: '3',
-    category:'chemistry',
+    category: 'chemistry',
     description: `
 
-    Rules and regulations:
-    There should be team of three members.
-    The participants are required to have experience of handling chemicals and apparatus properly.
-    There will be a definite time limit for performing the experiments.
-    Every participant must wear the safety gears like lab coat and eye protection while performing the 
-    experiment.
-    All safety gears will be provided by the event organizers.
+Event:Rasayan Magic 
+
+Rules and Regulations:
+1.	There should be team of three members.
+2.	The participants are required to have experience of handling chemicals and apparatus properly.
+3.	There will be a definite time limit for performing the experiments.
+4.	Every participant must wear the safety gears like lab coat and eye protection while performing the experiment.
+5.	All safety gears will be provided by the event organizers.
+
     
     `,
   },
@@ -2133,7 +2114,7 @@ const Events = [
     title: 'Science Quiz',
     min: '1',
     max: '3',
-    category:'chemistry',
+    category: 'chemistry',
     description: `
 
     Rules and regulations:
@@ -2151,7 +2132,7 @@ const Events = [
     title: 'Mystical Chemistry',
     min: '2',
     max: '2',
-    category:'chemistry',
+    category: 'chemistry',
     description: `
 
     Rules and regulations:
@@ -2167,30 +2148,75 @@ const Events = [
   },
   {
     id: 50,
-    image: 'https://via.placeholder.com/150',
+    image: '/images/events_profile_pic/project-management.png',
     title: 'PROJECT EXPO',
     min: '1',
-    max: '5',
-    category:'centralized',
+    max: '4',
+    category: 'centralized',
     description: `
+    Project Expo is an organized presentation and display of model/working prototype developed for the solution of a problem. Engineering/Science students are involved in 
+    different projects at different points of their engineering/science life. These project plays an important role in shaping the career of a student. The student applies
+    their learning of engineering/science for developing a practical and innovative model. 
 
-    PROJECT EXPO: 
-    Branch wise for all Branches of Engineering, Architecture, and Sciences
+    Deenbandhu Chhotu Ram University of Science and Technology. Murthal is going to organize a "Project Expo" on the day of Technova [the technical fest of the university).
+    The goal of this project expo is to provide a platform to the students to show their knowledge and skills, to motivate the future generations of engineers to be 
+    innovative and problem solver and to develop interest of the upcoming generation toward science and engineering. This will be a plethora of knowledge for all the 
+    technocrats out there. This year's whole new edition of the exhibition is going to be a perfect blend of innovation and eloquence. Entries for all the engineering/
+    science branches are open. The engineering/science students will be presenting their projects of their particular domain and hence every inquisitive mind is 
+    welcomed to solicit their opinions and ideas on the projects. 
+
+    Rules and regulations:
+        Only Engineering/science students from any institution/University are allowed for participation. 
+  	Every Team can have maximum 4 members. 
+  	Minimum two team entry is required for declaration of winner. 
+  	At least one member must be present during the display of the project. 
+  	The project must be in working. 
+  	Members should have valid ID cards of their college/university. 
+  	One participant can participate with project only. 
+  	Standard laboratory safety rules must be considered. 
+  	Students must supply all equipment I.e. battery, charger, including extension cords etc. Outlets for electricity will be provided ONLY if requested on the entry form. 10. Abstract of the project must be sent to following email id projectexpocoordinator@gmail.com, Detailed format will be provided on the website. 
+
+    Regulations for competition and display of project: 
+
+    1.	The Project will be considered on the basis of branch of the students, and winners will be decided branch wise. 
+    2.	The project for competition must be displayed and team should have printed block diagram of project on A4 size card board which can stand on table. OR a poster may be prepared to explain the working of project which may include introduction, Block diagram, Working principle, advantages and disadvantages of the project. OR students may come with their laptops for ppt presentation. 
+    3.	The poster must be prepared in the given format which will be sent to you in due course. 4. Participants will get 7-10 minutes of time to explain their project to the judges.
+
+    Important Points: 
+    1.	Teams will be given a space to set up their model/design at the venue for exhibition and for judging. 
+    2.	The certificates will be given to all the participants for display of their projects. 
+    3.	Students are solely responsible for the security and safety of their equipment. 
+    4.	All participating Students have to fill the participation form that will be available on the Technova website 
+    5.	The decision of the judges shall be treated as final and binding. 
+    6.	The organizers reserve the rights to change any or all of the above rules as they deem fit. Any change in the rules will be notified to the registered participants. 
+    7.	Do check the website regularly for updates. 
+
     
     `,
   },
   {
     id: 51,
-    image: 'https://via.placeholder.com/150',
+    image: '/images/events_profile_pic/studious_girl.jpg',
     title: 'HOBBY EXPO',
     min: '1',
-    max: '1',
-    category:'centralized',
+    max: '2',
+    category: 'centralized',
     description: `
 
-    HOBBY EXPO:
-    a) Exhibition
-    b) Craftsman
+    Rules And Regulations: 
+    	It is a team event. 
+	Every team can have maximum 2 members. 
+	Members should have valid ID cards of their college/university. 
+	Students have to display/exhibit any collection related to their hobby in a presentable way.  One member can display only one hobby at a time. 
+	Students are solely responsible for the safety and security of their things and the organizers do not take any responsibility for any loss. 
+	Teams will be given a space/allotted one table to set up their hobby collection at the venue for exhibition and judging. 
+	There will be 2 overall positions from all branches and years. 
+	Students have to remain present during the exhibition of their hobby. 
+	All participating students have to À ll the participation form that will be made available to them on the Technova website along with the details of their exhibition. 
+	The best and relevant entries will be selected for the hobby exhibition. 
+	The decision of the judges shall be treated as Final and binding. 
+	The organizers reserve the right to change any of the above rules if necessary and the participants will be noticed about it accordingly.
+
     
     `,
   },
@@ -2200,40 +2226,187 @@ const Events = [
     title: 'POSTER PRESENTATION',
     min: '1',
     max: '1',
-    category:'centralized',
+    category: 'centralized',
     description: `
-    
-    POSTER PRESENTATION:
-    Branch wise for all Branches of Engineering, Architecture, and Sciences
-    
+Student will prepare and present a poster of their research work. Students will have the opportunity to showcase their posters with attendees in person. Posters will be displayed as per specified schedule. 
+
+Who is eligible to participate? 
+UG, PG and Ph.D. students of all disciplines related to Science and Technology are welcome to participate. 
+What will the poster look like? 
+
+The poster size will be 2x3 feet (60x90 cm). 
+Your poster should include: Title, Names of author(s) and affiliated organization(s), Abstract, Background Information, Objectives, Materials and Methods, Results (tables, graphs etc.), Conclusions and Discussion of possible future directions.
+   
+Topics:
+Technical poster presentation topics represent a set of topics that are suitable for posters with a scientific purpose to demonstrate knowledge in technical disciplines:
+1.	High-Performancece Computing 
+2.	Advances in Communication and Networks 
+3.	Image and Multimedia Processing 
+4.	Machine Learning, Deep Learning 
+5.	Data Science 
+6.	Cognitive Computing 
+7.	Artificial Intelligence 
+8.	Data mining and Data Warehouse 
+9.	Cloud computing 
+10.	Big data and Data Analytics 
+11.	Software engineering 
+12.	Information and signal theory 
+13.	Acoustical signal processing 
+14.	IoT 
+15.	Electric vehicles 
+16.	Renewable energy 
+17.	Smart Grid 
+18.	Mobile and Wireless Communications 
+19.	Application of Power Electronics to Power Quality 
+20.	Improvement and Industrial Drives 
+21.	Emerging power semiconductor devices 
+22.	Latest Converters for renewable energies 
+23.	Computer-aided power system protection 
+24.	Robotics 
+25.	Self-Healing concrete & Green Concrete 
+26.	Recent trends in Civil engineering 
+27.	Modern Construction Techniques 
+28.	Emerging topics related to science and technology disciplines 
+
+Registration Fees: 
+There is no registration fees for DCRUST students while outside students need to pay Rs.100/- once per participant at the registration desk.
+
     `,
   },
   {
     id: 53,
-    image: 'https://via.placeholder.com/150',
+    image: '/images/events_profile_pic/jali.jpg',
     title: 'JALI DESIGN',
-    min: '1',
-    max: '1',
-    category:'architecture',
-    description: 'NONE YET',
+    min: '2',
+    max: '2',
+    category: 'architecture',
+    description: `
+
+Welcome to the Jaali Design Competition, where creativity meets precision in an hour-long challenge! Jaali, refers to an intricate pattern or lattice work typically found in 
+architecture, particularly in Islamic art and Indian architecture. In this competition, participants are tasked with designing an original Jaali pattern within the constraints 
+of time and space.
+Participants will unleash their imagination to create stunning designs that capture the essence of Jaali artistry. Whether drawing inspiration from traditional motifs or 
+exploring modern interpretations, contestants are encouraged to push the boundaries of design innovation while adhering to the intricate nature of Jaali patterns.
+Judges will evaluate entries based on factors such as complexity, symmetry, creativity, and adherence to the theme. The competition fosters a dynamic environment 
+where designers can showcase their skills and compete for recognition.
+With only one hour on the clock, participants must channel their focus and ingenuity to produce captivating Jaali designs that captivate the senses and inspire awe.
+Are you ready to embark on this artistic journey and leave your mark on the world of Jaali design? Join us and let your creativity soar!
+Rules:
+Team Composition: Each team consists of 2 members. 
+Making & Presentation: Every team will receive a set of materials to craft their Jali design within the allocated time frame.
+Additionally, participants are welcome to use their own additional materials to showcase their creativity.
+Judging Criteria: 
+1.	Creativity: Originality and inventiveness.
+2.	Complexity: Level of intricacy and detail.
+3.	Symmetry: Balance and harmony in design.
+4.	Adherence to Theme: Reflection of Jaali artistry.
+5.	Technical Execution: Precision and craftsmanship.
+Time Limit: Each team would be given 1 hour to make their Art. They can ask for 30 minutes extra with some point deduction 
+for every 10 minutes past 1 hour.
+Decision of the Judges: The decision of the judging panel is conclusive and obligatory.
+Number of teams: NO limit
+Guidelines:
+•	The competition operates in offline mode and welcoming students from all universities and colleges to participate.
+•	Participants are required to be present at the designated location at the assigned time.
+•	Any delays will result in disqualification.
+•	Prior to the event, team leaders must complete a Google form, providing details for all team members.
+•	The use of any unfair methods is strictly forbidden; discovery will lead to disqualification of the entire team.
+•	Maintaining the event's decorum is of utmost importance.
+
+    `,
   },
   {
     id: 54,
-    image: 'https://via.placeholder.com/150',
+    image: '/images/events_profile_pic/line_follo.jpg',
     title: 'DOME FIBER STRUCTURE',
-    min: '1',
-    max: '1',
-    category:'architecture',
-    description: 'NONE YET',
+    min: '2',
+    max: '2',
+    category: 'architecture',
+    description:`
+Welcome to the Fibre Dome Structure Competition! This competition provides an exciting platform for university-level students to showcase their creativity, engineering prowess, 
+and innovation in designing and constructing dome structures using fibre-based materials. With an emphasis on lightweight, efficient, and durable construction, teams will have 
+the opportunity to demonstrate their skills in structural engineering, material science, and architectural design.Throughout the competition, teams will be challenged to design 
+and build dome structures that not only meet rigorous performance standards but also push the boundaries of what is possible with fiber materials. From concept development to 
+final testing, participants will have the chance to collaborate, problem-solve, and unleash their ingenuity to create structures that are both functional and aesthetically pleasing.
+In this rule book, you will find all the guidelines, specifications, and requirements for participating in the competition. Whether you're a seasoned engineering team or a group of 
+enthusiastic newcomers, we encourage you to embrace the challenge, think outside the box, and strive for excellence in every aspect of your design and construction process.
+Rules:
+Team Composition: Each team consists of 2 members. 
+Making & Presentation: 
+•	Every team will receive a set of materials to make their dome structure within the allocated time frame.
+•	The minimum diameter of the dome should be 500mm.
+•	Only fiber-based materials are allowed for the construction of the dome structure and participants can bring their additional materials according to their innovative ideas .
+Judging Criteria: 
+Dome structures will be judged based on criteria including:
+1.	Structural integrity
+2.	Aesthetic design
+3.	Efficient use of materials
+4.	Load-bearing capacity
+5.	Innovation and creativity
+6.	Judges' decisions will be final and binding.
+Time Limit: Each team would be given 2hours to make their structure. They can ask for 30 minutes extra with some point deduction for every 10 minutes past 2 hours.
+Decision of the Judges: The decision of the judging panel is conclusive and obligatory.
+Number of teams: 6
+Guidelines:
+•	The competition operates in offline mode and welcoming students from all universities and colleges to participate.
+•	Participants are required to be present at the designated location at the assigned time.
+•	Any delays will result in disqualification.
+•	Prior to the event, team leaders must complete a Google form, providing details for all team members.
+•	The use of any unfair methods is strictly forbidden; discovery will lead to disqualification of the entire team.
+•	Maintaining the event's decorum is of utmost importance.
+
+    `,
   },
   {
     id: 55,
-    image: 'https://via.placeholder.com/150',
+    image: '/images/events_profile_pic/mosaic.jpg',
     title: 'MOSAIC ART',
-    min: '1',
-    max: '1',
-    category:'architecture',
-    description: 'NONE YET',
+    min: '3',
+    max: '3',
+    category: 'architecture',
+    description: `
+Welcome to the Mosaic Art, where the vibrant world of mosaic art meets the exhilarating challenge of time. In this captivating competition, participants are tasked with unleashing 
+their creativity and skill within a brisk 1-hour timeframe. Armed with an array of colorful tiles, glass fragments, and boundless imagination, individuals or teams must swiftly 
+translate their artistic visions into stunning mosaic masterpieces.
+When seconds are counting down, every tile placement becomes a challenge of creativity and accuracy. With every passing minute, the pressure mounts, urging participants to blend 
+artistic finesse with efficient execution. The limited time frame adds an electrifying dimension to the creative process, compelling participants to make bold decisions and 
+embrace spontaneity in their designs.
+Amidst the time constraints, each artwork emerges as a testament to the boundless potential of artistic expression and the remarkable feats achievable within a mere hour.
+The Mosaic Art promises an exhilarating journey into the heart of creativity and Skill. Join us for an hour of mosaic magic, where the fusion of time and artistry unveils 
+a kaleidoscope of innovation and inspiration.
+Rules:	
+Team Composition: Each team consists of 3 members. 
+Making & Presentation: Every team will receive a set of materials to craft their mosaic art within the allocated time frame.
+Additionally, participants are welcome to use their own fractured ceramic tile pieces into the creation of a stunning mosaic artwork.
+Judging Criteria: 
+1.	Creativity and Originality:
+•	Uniqueness of the concept and interpretation of the theme.
+•	Innovative use of colors, shapes, and patterns in the mosaic composition.
+2.	Craftsmanship:
+•	Precision and attention to detail in the placement of mosaic pieces.
+•	Skillful arrangement of materials to create a visually appealing and cohesive artwork.
+
+3.	Adherence to Theme:
+•	How well the mosaic artwork aligns with the specified theme.
+•	Clear demonstration of the theme through the artistic choices made in the composition.
+4.	Technical Skill:
+•	Competence in handling and manipulating mosaic materials.
+•	Effective use of various techniques such as cutting, shaping, and arranging tiles.
+5.	Overall Presentation:
+•	Quality of the final presentation, including cleanliness and neatness.
+•	How well the artwork engages viewers and communicates its artistic intent.
+Time Limit: Each team would be given 1 hour to make their Art. They can ask for 30 minutes extra with some point deduction for every 10 minutes past 1 hour.
+Decision of the Judges: The decision of the judging panel is conclusive and obligatory.
+Number of teams: 10
+Guidelines:
+•	The competition operates in offline mode and welcoming students from all universities and colleges to participate.
+•	Participants are required to be present at the designated location at the assigned time.
+•	Any delays will result in disqualification.
+•	Prior to the event, team leaders must complete a Google form, providing details for all team members.
+•	The use of any unfair methods is strictly forbidden; discovery will lead to disqualification of the entire team.
+•	Maintaining the event's decorum is of utmost importance.
+
+    `,
   },
   {
     id: 56,
@@ -2241,7 +2414,7 @@ const Events = [
     title: 'QR SCAVENGER HUNT',
     min: '2',
     max: '4',
-    category:'sunshine',
+    category: 'sunshine',
     description: `
 
     A QR (Quick Response Scavenger Hunt event is with a technical twist, where participants use QR codes to 
@@ -2313,7 +2486,7 @@ const Events = [
     title: 'TECHTONIC BUZZ',
     min: '4',
     max: '4',
-    category:'sunshine',
+    category: 'sunshine',
     description: `
 
     TechTonic Buzz isn't just a quiz; it's a seismic shift in the world of technology challenges. Prepare to 
@@ -2374,4 +2547,4 @@ const Events = [
   // Add more events here
 ];
 
-  export default Events;
+export default Events;
