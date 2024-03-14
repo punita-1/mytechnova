@@ -1,29 +1,25 @@
-.previouly-section-wrapper {
-    /* background-color: white; */
-    display: flex;
-
+.prev-container {
+    padding-top: 30px;
     align-items: center;
-    justify-content: center;
-    padding: 100px;
-}
+  }
 
-.previouly-section-wrapper .home_heading {
-    font-size: 30px;
-    margin-top: 20px;
-}
-
-.previously-section {
-    /* background-color: white; */
-    width: 50%;
+  .carousel-container {
+    padding-top: 150px;
+    width: 100%;
+  }
+  
+  .prev-container-desc {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-}
+  }
 
-.explore-the-past {
-    width: 80%;
-    text-align: center;
-    font-size: 21px;
-    font-weight: 500;
-}
+  .prevpara{
+    font-family: "Paprika", system-ui;
+  }
+
+  .visitgalbtn{
+    max-width: 20rem;
+    align-self: center;
+    margin-top: 2rem;
+  }
