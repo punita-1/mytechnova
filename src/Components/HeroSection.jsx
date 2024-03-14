@@ -39,11 +39,11 @@ padding: 5rem 0;
 .fullcontainerpadding{
   padding-top: 0px;
 }
- .section-hero-image {
-   display: flex;
-   justify-content: flex-end;
-   align-items: center;
- }
+.section-hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
  .section-hero-data {
   display: flex;
   flex-direction: column;
@@ -102,8 +102,8 @@ padding: 5rem 0;
 }
 
 .hero-img {
-  height: 300px;
-  width: 300px;
+  height: 350px;
+  width: 350px;
 }
 @media (max-width: ${({ theme }) => theme.media.mobile}) {
   padding: 1rem 0;
