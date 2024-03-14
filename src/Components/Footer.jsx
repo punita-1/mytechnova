@@ -15,7 +15,7 @@ const Footer = () => {
           </div>
           <div>
             <NavLink to='/contact'>
-              <Button>
+              <Button style={{marginLeft:'150px', borderRadius:'5px'}}>
                 Contact us
               </Button>
             </NavLink>
