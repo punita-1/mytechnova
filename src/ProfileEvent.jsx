@@ -1,13 +1,15 @@
+import Events from "./assets/data";
+
 const ProfileEvent = ({ data, index }) => {
     return (
         <>
             <div className="py-2 mb-5">
-                <h2 className="mb-2">Event {index+1}</h2>
+                <h3 className="mb-2 text-center">Event {index+1}</h3>
                 <table className='table table-striped table-success col-md-8 offset-md-2 col-12 mx-2 text-break rounded rounded-3'>
                     <tbody className="w-100">
                         <tr className="w-100">
                             <th scope='row' className='text-start w-50'>Event Name</th>
-                            <td className='text-start w-50'>{data.eventName}</td>
+                            <td className='text-start w-50'>{Events[data.eventId-1].title}</td>
                         </tr>
                         <tr>
                             <th scope='row' className='text-start w-50'>Team Name</th>

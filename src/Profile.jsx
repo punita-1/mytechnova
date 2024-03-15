@@ -4,10 +4,17 @@ import { auth } from './services/firebase';
 import { api, authServices } from './services';
 import { Link, Navigate } from 'react-router-dom';
 import ProfileEvent from './ProfileEvent';
+import Events from "./assets/data";
 
 const Profile = () => {
+  const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(auth.currentUser);
   const [registrations, setRegistrations] = useState([]);
+  const [filteredregistrations, setFilteredRegistrations] = useState({
+    centralized: [],
+    departmental: [],
+    societal: []
+  });
 
   onAuthStateChanged(auth, (userData) => {
     if (userData) {
@@ -19,6 +26,7 @@ const Profile = () => {
 
   const fetchEvents = (e) => {
     e?.preventDefault();
+    setLoading(true);
     const userRollnumber = user?.photoURL?.split("?")[1];
     api.getEventsRegisteredByYou(userRollnumber).then((response) => {
       const arr = [];
@@ -27,10 +35,19 @@ const Profile = () => {
         arr.push(doc.data());
       });
       setRegistrations(arr);
+      setLoading(() => false);
     }).catch((err) => {
       console.log(err);
     });
   }
+
+  useEffect(() => {
+    setFilteredRegistrations({
+      centralized: registrations.filter((item => Events[item.eventId - 1].catergory2 === "centralized")),
+      departmental: registrations.filter((item => Events[item.eventId - 1].catergory2 === "department")),
+      societal: registrations.filter((item => Events[item.eventId - 1].catergory2 === "society"))
+    })
+  }, [registrations])
 
   useEffect(() => {
     setTimeout(() => {
@@ -53,7 +70,7 @@ const Profile = () => {
 
   const updateProfile = (e) => {
     e.preventDefault();
-    authServices.profile(user, "Abhinav", 6395074100, "21001001003", "DCRUST", "btech cse", "6").then((res) => {
+    authServices.profile(user, "Abhinav", 6395074100, "21001001000", "DCRUST", "btech cse", "6").then((res) => {
       console.log(res);
     });
     // console.log(user);
@@ -117,14 +134,53 @@ const Profile = () => {
             </table>
           </div>
           {/* Show event data */}
+          {loading ? (
+            <div className="text-center">
+              <div
+                className="alert alert-warning text-capitalized d-flex justify-content-center"
+                role="alert"
+              >
+                <span className="spinner-border my-auto"></span>{' '}
+                <div className='ms-3 fs-5'>Loading your registrations...</div>
+                <a className='ms-3' onClick={fetchEvents}>Click here to retry</a>
+              </div>
+            </div>
+          ) : (
+            <></>
+          )}
           {registrations.length ?
             <div>
-              <h2>Registered Events:</h2>
-              <div className=''>
-                {registrations.map((event, index) => (
-                  <ProfileEvent data={event} key={index} index={index} />
-                ))}
-              </div>
+              <h2 className='text-center fw-bold text-decoration-underline'>Registered Events:</h2>
+              {
+                filteredregistrations.centralized.length ?
+                  <div className='w-100'>
+                    <div className='fs-1 text-center fw-bold text-decoration-underline'>Centralized Events</div>
+                    {filteredregistrations.centralized.map((event, index) => (
+                      <ProfileEvent data={event} key={index} index={index} />
+                    ))}
+                  </div>
+                  : null
+              }
+              {
+                filteredregistrations.departmental.length ?
+                  <div className='w-100'>
+                    <div className='fs-1 text-center fw-bold text-decoration-underline'>Deparmental Events</div>
+                    {filteredregistrations.departmental.map((event, index) => (
+                      <ProfileEvent data={event} key={index} index={index} />
+                    ))}
+                  </div>
+                  : null
+              }
+              {
+                filteredregistrations.societal.length ?
+                  <div className='w-100'>
+                    <div className='fs-1 text-center fw-bold text-decoration-underline'>Society Events</div>
+                    {filteredregistrations.societal.map((event, index) => (
+                      <ProfileEvent data={event} key={index} index={index} />
+                    ))}
+                  </div>
+                  : null
+              }
             </div> :
             <div className="row justify-content-center align-items-center">
               <div className='text-center w-100 fw-bold h3'>
