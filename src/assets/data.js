@@ -6,6 +6,7 @@ const Events = [
     min: '1',
     max: '2',
     category: 'civil',
+    catergory2: 'department',
     description: `
     
     Welcome to the Projectile Precision Challenge, where creativity meets precision in a 
@@ -62,6 +63,7 @@ const Events = [
     min: '1',
     max: '2',
     category: 'civil',
+    catergory2: 'department',
     description: ` 
     
     Welcome to Scale Seekers, where precision meets creativity in a thrilling two-round challenge! Scale 
@@ -115,6 +117,7 @@ const Events = [
     min: '1',
     max: '4',
     category: 'civil',
+    catergory2: 'department',
     description: `
     
     Design and Sustain invites participants to showcase their ingenuity in two exciting categories: ice cream 
@@ -165,6 +168,7 @@ const Events = [
     min: '1',
     max: '2',
     category: 'dcrustodc',
+    catergory2: 'Society',
     description: `
     
     Welcome to the Projectile Precision Challenge, where creativity meets precision in a thrilling two-round 
@@ -220,6 +224,7 @@ const Events = [
     min: '1',
     max: '1',
     category: 'dcrustodc',
+    catergory2: 'society',
     description: `
 
     Typing Challenge Rules
@@ -307,6 +312,7 @@ const Events = [
     min: '3',
     max: '3',
     category: 'biotechnology',
+    catergory2: 'department',
     description: `
 
     Mind Buzz Carnival is an exciting and inclusive competition designed to test participants' knowledge 
@@ -374,6 +380,7 @@ const Events = [
     min: '2',
     max: '2',
     category: 'biotechnology',
+    catergory2: 'department',
     description: `
     
     
@@ -418,6 +425,7 @@ const Events = [
     min: '1',
     max: '1',
     category: 'biotechnology',
+    catergory2: 'department',
     description: `
     
     BioDecode Adventure: Embark on an exhilarating Biotech Discovery Quest where participants follow clues 
@@ -483,6 +491,7 @@ const Events = [
     min: '2',
     max: '2',
     category: 'savera',
+    catergory2: 'society',
     description: `
 
     RULES
@@ -522,6 +531,7 @@ const Events = [
     min: '1',
     max: '1',
     category: 'savera',
+    catergory2: 'society',
     description: `
     
     RULES
@@ -542,6 +552,7 @@ const Events = [
     min: '3',
     max: '3',
     category: 'management',
+    catergory2: 'department',
     description: `
     
     Each team will have three members.
@@ -578,6 +589,7 @@ const Events = [
     min: '3',
     max: '3',
     category: 'management',
+    catergory2: 'department',
     description: `
 
     Bring out the creativity inside you and make an outstanding advertisement of your own. Be it hilarious or 
@@ -604,6 +616,7 @@ const Events = [
     min: '2',
     max: '2',
     category: 'management',
+    catergory2: 'department',
     description: `
 
     Business Plan Competition 
@@ -644,6 +657,7 @@ const Events = [
     min: '1',
     max: '1',
     category: 'lisoc',
+    catergory2: 'society',
     description: `
 
     ROUND 1: APTITUDE TEST
@@ -679,6 +693,7 @@ const Events = [
     min: '1',
     max: '1',
     category: 'lisoc',
+    catergory2: 'society',
     description: `
 
     ROUND 1: EXTEMPORE
@@ -709,6 +724,7 @@ const Events = [
     min: '3',
     max: '3',
     category: 'agriculture',
+    catergory2: 'department',
     description: `
      
 1.	Team comprises of 3 candidates only.
@@ -730,6 +746,7 @@ const Events = [
     min: '3',
     max: '3',
     category: 'agriculture',
+    catergory2: 'department',
     description: `
 
     TEAM COMPRISES OF THREE CANDIDATES ONLY.
@@ -763,6 +780,7 @@ const Events = [
     min: '1',
     max: '1',
     category: 'agriculture',
+    catergory2: 'department',
     description: `
     
     Green Canvas: Painting a Sustainable Future
@@ -776,6 +794,7 @@ const Events = [
     min: '1',
     max: '2',
     category: 'biomedical',
+    catergory2: 'department',
     description: `
 
     1. The theme should be the main focus of the poster and should include any of the following:
@@ -818,6 +837,7 @@ const Events = [
     min: '3',
     max: '3',
     category: 'biomedical',
+    catergory2: 'department',
     description: `
 
     1. Team comprises of 3 candidates only. 
@@ -844,6 +864,7 @@ const Events = [
     min: '1',
     max: '2',
     category: 'biomedical',
+    catergory2: 'department',
     description: `
 
     1. Qualifying criteria will include three rounds:
@@ -872,6 +893,7 @@ const Events = [
     min: '1',
     max: '2',
     category: 'e-cell',
+    catergory2: 'society',
     description: `
      
     "Chase The Bid" is a mock IPL auction where teams display entrepreneurial skills by managing budgets, 
@@ -923,6 +945,7 @@ const Events = [
     min: '3',
     max: '5',
     category: 'e-cell',
+    catergory2: 'society',
     description: `
 
     "InnoVent Sprint" is an entrepreneurship event where teams of 3 to 5 members compete in challenges that 
@@ -968,6 +991,7 @@ const Events = [
     min: '1',
     max: '4',
     category: 'electrical',
+    catergory2: 'department',
     description: `
 
     Tech Marathon is a treasure hunt game where participants follow clues to find a hidden treasure. It's 
@@ -999,6 +1023,7 @@ const Events = [
     min: '1',
     max: '1',
     category: 'electrical',
+    catergory2: 'department',
     description: `
                       
     "Join us for an electrifying journey into the realm of electrical engineering at our event! Where we will 
@@ -1063,6 +1088,7 @@ const Events = [
     min: '1',
     max: '1',
     category: 'electrical',
+    catergory2: 'department',
     description: `
 
     Get ready for a whirlwind tour of cutting edge advancements in electrical engineering. Tech-Zep is a 
@@ -1113,6 +1139,7 @@ const Events = [
     min: '2',
     max: '2',
     category: 'Thinkbots',
+    catergory2: 'society',
     description: `
     
     Rulebook
@@ -1175,6 +1202,7 @@ const Events = [
     min: '1',
     max: '1',
     category: 'Thinkbots',
+    catergory2: 'society',
     description: `
     
     Rulebook
@@ -1243,6 +1271,7 @@ const Events = [
     min: '2',
     max: '2',
     category: 'chemical',
+    catergory2: 'department',
     description: `
 
     Quiz - two rounds.
@@ -1265,6 +1294,7 @@ const Events = [
     min: '1',
     max: '1',
     category: 'chemical',
+    catergory2: 'department',
     description: `
 
 Event:Get Recognized for Your Personality (GRYP)
@@ -1287,6 +1317,7 @@ Event:Get Recognized for Your Personality (GRYP)
     min: '1',
     max: '1',
     category: 'chemical',
+    catergory2: 'department',
     description: `
 
 Event:Creative Canvas
@@ -1308,6 +1339,7 @@ Event:Creative Canvas
     min: '2',
     max: '2',
     category: 'electronics',
+    catergory2: 'department',
     description: `
 
     Welcome to Escape Room Challenge where precision meets creativity in a thrilling three-round challenge! 
@@ -1385,6 +1417,7 @@ Event:Creative Canvas
     min: '2',
     max: '2',
     category: 'electronics',
+    catergory2: 'department',
     description: `
 
     Welcome to Circuithon where precision meets creativity in a thrilling two-round challenge! The 
@@ -1436,6 +1469,7 @@ Event:Creative Canvas
     min: '1',
     max: '1',
     category: 'electronics',
+    catergory2: 'department',
     description: `
 
     Welcome to our Two days skill development workshop on Embedded Systems! In this hands-on session, we'll 
@@ -1473,6 +1507,7 @@ Event:Creative Canvas
     min: '1',
     max: '1',
     category: 'mathematics',
+    catergory2: 'department',
     description: `
 
     The objective behind organisation of poster making competition is to bring out the creative expression of 
@@ -1520,6 +1555,7 @@ Event:Creative Canvas
     min: '2',
     max: '2',
     category: 'mathematics',
+    catergory2: 'department',
     description: `
 
     There will be a team of two, the affirmative (has to speak in the favour) and the negative (has to speak 
@@ -1573,6 +1609,7 @@ Event:Creative Canvas
     min: '2',
     max: '4',
     category: 'mathematics',
+    catergory2: 'department',
     description: ` 
 
     Teams will be either of 2 members or 4 depending on the number of participants
@@ -1622,6 +1659,7 @@ Event:Creative Canvas
     min: '2',
     max: '4',
     category: 'physics',
+    catergory2: 'department',
     description: `
 
     Aerovate: The Flight Challenge- This name combines "Aero," referencing aeronautics, with "Elevate," 
@@ -1688,6 +1726,7 @@ Event:Creative Canvas
     min: '2',
     max: '4',
     category: 'physics',
+    catergory2: 'department',
     description: `
 
     ElectraCraft combines "Electra" for electricity and "craft" for skilled creation, embodying the 
@@ -1760,6 +1799,7 @@ Event:Creative Canvas
     min: '2',
     max: '4',
     category: 'physics',
+    catergory2: 'department',
     description: `
 
     Introduction:
@@ -1815,6 +1855,7 @@ Event:Creative Canvas
     min: '2',
     max: '2',
     category: 'computer',
+    catergory2: 'department',
     description: `
     
 Rules:
@@ -1839,6 +1880,7 @@ Rules:
     min: '1',
     max: '3',
     category: 'computer',
+    catergory2: 'department',
     description: `
 
     Rules:
@@ -1875,6 +1917,7 @@ Rules:
     min: '1',
     max: '1',
     category: 'computer',
+    catergory2: 'department',
     description: `
 
     RULES:
@@ -1898,6 +1941,7 @@ Rules:
     min: '3',
     max: '5',
     category: 'Mechanical',
+    catergory2: 'department',
     description: `
 
     Description: 
@@ -1959,6 +2003,7 @@ Rules:
     min: '1',
     max: '2',
     category: 'Mechanical',
+    catergory2: 'department',
     description: ` 
     
     Description: 
@@ -2015,6 +2060,7 @@ Rules:
     min: '4',
     max: '4',
     category: 'Mechanical',
+    catergory2: 'department',
     description: `
 
     Description: 
@@ -2094,6 +2140,7 @@ Rules:
     min: '3',
     max: '3',
     category: 'chemistry',
+    catergory2: 'department',
     description: `
 
 Event:Rasayan Magic 
@@ -2115,6 +2162,7 @@ Rules and Regulations:
     min: '1',
     max: '3',
     category: 'chemistry',
+    catergory2: 'department',
     description: `
 
     Rules and regulations:
@@ -2133,6 +2181,7 @@ Rules and Regulations:
     min: '2',
     max: '2',
     category: 'chemistry',
+    catergory2: 'department',
     description: `
 
     Rules and regulations:
@@ -2153,6 +2202,7 @@ Rules and Regulations:
     min: '1',
     max: '4',
     category: 'centralized',
+    catergory2: 'centralized',
     description: `
     Project Expo is an organized presentation and display of model/working prototype developed for the solution of a problem. Engineering/Science students are involved in 
     different projects at different points of their engineering/science life. These project plays an important role in shaping the career of a student. The student applies
@@ -2201,6 +2251,7 @@ Rules and Regulations:
     min: '1',
     max: '2',
     category: 'centralized',
+    catergory2: 'centralized',
     description: `
 
     Rules And Regulations: 
@@ -2227,6 +2278,7 @@ Rules and Regulations:
     min: '1',
     max: '1',
     category: 'centralized',
+    catergory2: 'centralized',
     description: `
 Student will prepare and present a poster of their research work. Students will have the opportunity to showcase their posters with attendees in person. Posters will be displayed as per specified schedule. 
 
@@ -2280,6 +2332,7 @@ There is no registration fees for DCRUST students while outside students need to
     min: '2',
     max: '2',
     category: 'architecture',
+    catergory2: 'department',
     description: `
 
 Welcome to the Jaali Design Competition, where creativity meets precision in an hour-long challenge! Jaali, refers to an intricate pattern or lattice work typically found in 
@@ -2322,7 +2375,8 @@ Guidelines:
     min: '2',
     max: '2',
     category: 'architecture',
-    description:`
+    catergory2: 'department',
+    description: `
 Welcome to the Fibre Dome Structure Competition! This competition provides an exciting platform for university-level students to showcase their creativity, engineering prowess, 
 and innovation in designing and constructing dome structures using fibre-based materials. With an emphasis on lightweight, efficient, and durable construction, teams will have 
 the opportunity to demonstrate their skills in structural engineering, material science, and architectural design.Throughout the competition, teams will be challenged to design 
@@ -2364,6 +2418,7 @@ Guidelines:
     min: '3',
     max: '3',
     category: 'architecture',
+    catergory2: 'department',
     description: `
 Welcome to the Mosaic Art, where the vibrant world of mosaic art meets the exhilarating challenge of time. In this captivating competition, participants are tasked with unleashing 
 their creativity and skill within a brisk 1-hour timeframe. Armed with an array of colorful tiles, glass fragments, and boundless imagination, individuals or teams must swiftly 
@@ -2415,6 +2470,7 @@ Guidelines:
     min: '2',
     max: '4',
     category: 'sunshine',
+    catergory2: 'society',
     description: `
 
     A QR (Quick Response Scavenger Hunt event is with a technical twist, where participants use QR codes to 
@@ -2487,6 +2543,7 @@ Guidelines:
     min: '4',
     max: '4',
     category: 'sunshine',
+    catergory2: 'society',
     description: `
 
     TechTonic Buzz isn't just a quiz; it's a seismic shift in the world of technology challenges. Prepare to 
