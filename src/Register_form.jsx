@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Navigate, useParams } from 'react-router-dom'
+import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import data from "./assets/data"
 import './Register_form.css'
 import { auth } from './services/firebase'
@@ -7,14 +7,17 @@ import { onAuthStateChanged } from 'firebase/auth'
 import { api } from './services'
 
 const Register_form = () => {
-  // console.log(data);
   const { id } = useParams();
+  const navigate = useNavigate();
   const [memberCount, setMemberCount] = useState(2);
   const [user, setUser] = useState(auth.currentUser);
   const minCount = data[id - 1].min;
   const maxCount = data[id - 1].max;
   const [values, setValues] = useState({
-    teamname: ""
+    teamname: "",
+    loading: false,
+    successmsg: "",
+    errormsg: ""
   });
 
   onAuthStateChanged(auth, (userData) => {
@@ -24,6 +27,37 @@ const Register_form = () => {
       setUser(null);
     }
   });
+
+  const success = (msg) => {
+    setValues({
+      ...values,
+      successmsg: msg,
+      errormsg: ""
+    });
+  }
+
+  const failure = (msg) => {
+    setValues({
+      ...values,
+      loading: false,
+      successmsg: "",
+      errormsg: msg
+    });
+  }
+
+  const loadingHandler = (state) => {
+    setValues({
+      ...values,
+      loading: state
+    });
+  }
+
+  const successThenRedirect = (msg) => {
+    success(msg + "You will be redirected to profile page in 5 seconds to view your registration.");
+    setTimeout(() => {
+      navigate("/profile");
+    }, 5000);
+  }
 
   useEffect(() => {
     // handle minimum and max members count here
@@ -275,17 +309,30 @@ const Register_form = () => {
     }
     return arr;
   }
+  const validateForm = () => {
+    try {
+      // validations
+    } catch (errorCatched) {
+      // if validation fails then the error are pushed here
+    }
+    let validation = true;
+    return true;
+  }
 
   const register = (e) => {
     // e.preventDefault();
-    const memberDetails = returnAllMembers();
-    const memberRolls = returnAllMemberRolls();
-    const userRollnumber = user.photoURL?.split("?")[1];
-    api.saveEventRegistrations(values.teamname, id, data[id - 1].title, memberCount, memberDetails, memberRolls, userRollnumber).then((result)=>{
-      console.log(result);
-    }).catch((err)=>{
-      console.log(err);
-    })
+    loadingHandler(true);
+    if (validateForm()) {
+      const memberDetails = returnAllMembers();
+      const memberRolls = returnAllMemberRolls();
+      const userRollnumber = user.photoURL?.split("?")[1];
+      api.saveEventRegistrations(values.teamname, id, data[id - 1].title, memberCount, memberDetails, memberRolls, userRollnumber).then((result) => {
+        successThenRedirect("Registration Successfull.")
+        console.log(result);
+      }).catch((err) => {
+        console.log(err);
+      })
+    }
     // console.log(e);
     // alert("Register");
   }
@@ -299,9 +346,9 @@ const Register_form = () => {
               <div className="fs-3">TEAM REGISTRATION</div>
               <div className='text-uppercase my-2'>For event - {data[id - 1].title}</div>
               <span className='fs-5'>Minimum team size - {minCount} / Maximimum Team Size - {maxCount}</span>
-              <div className='text-danger my-1 fs-4'>{user.emailVerified? "" : <i className='bi bi-exclamation-circle-fill me-2'></i>}{user.emailVerified? "" : "Note: Your Email is not verified. Verify email to register for event."}</div>
+              <div className='text-danger my-1 fs-4'>{user.emailVerified ? "" : <i className='bi bi-exclamation-circle-fill me-2'></i>}{user.emailVerified ? "" : "Note: Your Email is not verified. Verify email to register for event."}</div>
             </div>
-            <form name='EventRegistration' onSubmit={register} className={user.emailVerified?"row justify-content-center align-items-center":"d-none"} >
+            <form name='EventRegistration' onSubmit={register} className={user.emailVerified ? "row justify-content-center align-items-center mb-3" : "d-none"} >
               <div className="input-group mb-3 col-12">
                 <span className="input-group-text fs-2" id="basic-addon2"><i className="bi bi-person-lines-fill"></i></span>
                 <input type="text" className="form-control fs-4" value={values.teamname} onChange={teamNameHandler} placeholder="Team Name" aria-describedby="basic-addon2" required />
@@ -417,8 +464,48 @@ const Register_form = () => {
                   <button className={memberCount <= minCount ? 'd-none btn btn-lg btn-danger col-4 mx-auto' : 'btn btn-lg btn-danger col-4 mx-auto'} onClick={removeMemberHandler}>REMOVE MEMBER</button>
                 </div>
               </div>
-              <button onClick={register} className="btn btn-primary btn-lg mt-4 fs-3">Register Team</button>
+              <button onClick={register} disabled={values.loading} className="btn btn-primary btn-lg mt-4 fs-3">Register Team</button>
             </form>
+            {values.loading ? (
+              <div className="form-group text-start">
+                <div
+                  className="form-check-label alert alert-warning text-capitalized"
+                  role="alert"
+                >
+                  <span className="spinner-border spinner-border-sm"></span>{' '}
+                  Loading...
+                </div>
+              </div>
+            ) : (
+              <></>
+            )}
+            {values.errormsg ? (
+              <div className="form-group text-start animate__animated animate__pulse">
+                <div
+                  className="form-check-label alert alert-danger text-capitalized"
+                  id="newacerror"
+                >
+                  <i className="bi bi-exclamation-circle-fill"></i>{' '}
+                  {values.errormsg}
+                </div>
+              </div>
+            ) : (
+              <div className="py-2"></div>
+            )}
+            {values.successmsg ? (
+              <div className="form-group text-start">
+                <div
+                  className="form-check-label alert alert-success text-capitalized"
+                  id="newacsuccess"
+                  role="alert"
+                >
+                  <i className="bi bi-check-circle-fill"></i>{' '}
+                  {values.successmsg}
+                </div>
+              </div>
+            ) : (
+              <div className="py-2"></div>
+            )}
           </div>
         </div>
       </div>
