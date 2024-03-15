@@ -1,4 +1,5 @@
 import React from 'react'
+import "./venue.css"
 
 function Venue() {
   return (
@@ -8,7 +9,7 @@ function Venue() {
 
         <div className="venue-text">
 
-          <p>"Deenbandhu Chhotu Ram University of Science & Technology is conveniently located in Murthal, Sonepat, Haryana, with the address: Murthal, Sonepat, Haryana - 131039. You can easily reach us by road via well-connected highways, or by public transport options such as buses or trains. For more detailed directions, please refer to the map or contact us for assistance."</p>
+          <p className='fontchange'>"Deenbandhu Chhotu Ram University of Science & Technology is conveniently located in Murthal, Sonepat, Haryana, with the address: Murthal, Sonepat, Haryana - 131039. You can easily reach us by road via well-connected highways, or by public transport options such as buses or trains. For more detailed directions, please refer to the map or contact us for assistance."</p>
         </div>
 
         <div className="venue-map">

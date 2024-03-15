@@ -34,11 +34,10 @@ const Event = () => {
 
       <br />
 
-      <div style={{ alignItems: 'center', textAlign: 'center' }}> <h1><b>EVENTS</b></h1>
+      <div className='social-icon-heading' style={{ alignItems: 'center', textAlign: 'center' }}> <b>EVENTS</b>
 
       </div>
-      <br />
-      <br />
+
 
       <Tabs className='justify-content-center'>
         <Tab eventKey="centralized" title="Centralized">
