@@ -324,9 +324,8 @@ const Register_form = () => {
     loadingHandler(true);
     if (validateForm()) {
       const memberDetails = returnAllMembers();
-      const memberRolls = returnAllMemberRolls();
       const userRollnumber = user.photoURL?.split("?")[1];
-      api.saveEventRegistrations(values.teamname, id, data[id - 1].title, memberCount, memberDetails, memberRolls, userRollnumber).then((result) => {
+      api.saveEventRegistrations(values.teamname, id, memberCount, memberDetails, userRollnumber).then((result) => {
         successThenRedirect("Registration Successfull.")
         console.log(result);
       }).catch((err) => {

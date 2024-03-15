@@ -16,16 +16,14 @@ export const saveUserData = (userData) => {
     });
 }
 
-export const saveEventRegistrations = (teamName, eventId, eventName, membersCount, memberDetails, memberRollNums, registeredBy) => {
+export const saveEventRegistrations = (teamName, eventId, membersCount, memberDetails, registeredBy) => {
     const temp = new Date().getMilliseconds();
     const docRef = collection(db, "registrations");
     const payLoad = {
         teamName: teamName,
         eventId: eventId,
-        eventName: eventName,
         membersCount: membersCount,
         members: memberDetails,
-        memberRollNums: memberRollNums,
         registeredBy: registeredBy
     }
     return addDoc(docRef, payLoad);
