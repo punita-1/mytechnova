@@ -1,4 +1,4 @@
-// import React from "react";
+import React from "react";
 // import styled from "styled-components";
 
 // const Contact = () => {
@@ -56,13 +56,13 @@
 // };
 
 // export default Contact;
-import React from "react";
+// import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
-import img from 'C:/Users/punit/mytechnova2024project/public/images/contactus.jpg';
+// import img from 'C:/Users/punit/mytechnova2024project/public/images/contactus.jpg';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    background-image: url(${img}); /* Set background image for the entire page */
+    // background-image: url(""); /* Set background image for the entire page */
     background-size: cover; /* Cover the entire viewport */
     background-repeat: no-repeat; 
     margin: 0; /* Reset default margin */

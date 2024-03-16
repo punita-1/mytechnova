@@ -170,11 +170,14 @@ picture {
 
 }
 
-  .grid {
-    display: grid;
-    grid-template-row: repeat(2, 1fr);
-    gap: 2rem;
-  }
+.grid {
+  display: inline-flex;
+  grid-template-row: repeat(2, 1fr);
+  // justify-content: center;
+  padding-left:120px;
+  padding-right:45px;
+  grid-gap:20px 20px;
+}
 `;
 
 export default About
