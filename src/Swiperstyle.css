@@ -103,7 +103,10 @@ h2 {
 height: 300px;
 }
 .grid-item:nth-child(2n+3){
-
+  .grid-item:last-child(){
+    width: 200px;
+    height:400px ;
+  }
   grid-column-start: span 2;
    grid-row-start: span 2;
 }
