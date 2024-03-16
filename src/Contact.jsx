@@ -62,7 +62,7 @@ import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   body {
-    // background-image: url(""); /* Set background image for the entire page */
+    background-image: url(${img}); /* Set background image for the entire page */
     background-size: cover; /* Cover the entire viewport */
     background-repeat: no-repeat; 
     margin: 0; /* Reset default margin */

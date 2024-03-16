@@ -15,7 +15,7 @@ const Span = styled.span`
   transition: color 0.3s;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.helper};
+    color: #9EC8B9;
   }
   @media (max-width: 320px) {
     font-size: 20px;
@@ -38,7 +38,7 @@ const MainHeader = styled.header`
   top: 0;
   z-index: 999;
   padding: 0 4.8rem;
-  background-color: rgb(24 24 29);
+  background-color: #1B4242;
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -14,17 +14,23 @@ const SearchBar = ({ onSearch }) => {
     onSearch("");
   };
 
+  const handleSearchChange = (e) => {
+    // e.preventDefault();
+    setQuery(e.target.value);
+    onSearch(e.target.value);
+  }
+
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='m-3'>
       <input
         type="text"
         id="search-input"
         placeholder="Search here"
         value={query}
-        onChange={(event) => setQuery(event.target.value)}
+        onChange={handleSearchChange}
       />
-      <button id="search-button" type="submit" className='btn btn-primary me-2'>Search</button>
-      <button onClick={handleClear} className='btn btn-primary me-2'>Clear</button>
+      {/* <button id="search-button" type="submit" className='btn btn-primary me-2'>Search</button> */}
+      <button onClick={handleClear} className='btn btn-primary mx-2 btn-lg'>Clear</button>
     </form>
   );
 };

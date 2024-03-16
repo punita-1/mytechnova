@@ -4,7 +4,7 @@ import Card from './Card';
 const CardGroup = ({ heading, events, handleRegisterClick }) => {
   return (
     <div className={events.length? 'my-5 py-5 container':' d-none my-5 py-5 container'}>
-      <h2 style={{fontWeight:400,fontSize:'25px'}}>{heading}</h2>
+      <h2 style={{fontWeight:300}}>{heading}</h2>
       <div className="row justify-content-center align-items-center w-100">
         {events.map((event) => (
           <Card
@@ -14,6 +14,7 @@ const CardGroup = ({ heading, events, handleRegisterClick }) => {
             min={event.min}
             max={event.max}
             catergory={event.catergory}
+            catergory2={event.catergory2}
             handleRegisterClick={() => handleRegisterClick(event)}
           />
         ))}

@@ -14,8 +14,8 @@ const About = () => {
         <h1 className='hero-heading'>
           About Technova
         </h1>
-        <h4>"5th April - 6th April"</h4>
         <p className='hero-para'>"Ignite Your Passion for Innovation:Join Us for a Spectacular Fusion of Technology and Talent!"</p>
+        <h4 className="hero-date">"5th April - 6th April"</h4>
         <Button className='btn eventpage-btn'>
           <NavLink to='/event'>Register Now</NavLink>
         </Button>
@@ -74,7 +74,7 @@ const About = () => {
   </>
 }
 const Wrapper = styled.section`
-padding: 7rem 0;
+padding: 5rem 0;
 
 .fullcontainerpadding{
   padding-top: 0px;
@@ -92,22 +92,54 @@ padding: 7rem 0;
 }
 
 .hero-top-data {
+  margin-top:40px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #31363F;
+  text-align: center;
+  letter-spacing: 0.2rem;
+}
+
+.hero-top-data {
+  
   text-transform: uppercase;
   font-weight: 500;
   font-size: 1.5rem;
-  color: ${({ theme }) => theme.colors.helper};
+  color: #31363F;
+  text-align: center;
+  letter-spacing: 0.2rem;
 }
 
 .hero-heading {
+  color: var(--primary-background-color);
+  font-family: fantasy;
   text-transform: uppercase;
-  font-size: 5.0rem;
+  font-size: 8rem;
+  width: 70rem;
+  text-align: center;
+  letter-spacing: 0.3rem;
+}
+.hero-date{
+  margin: 20px 0px 0px;
+  font-family: "Paprika", system-ui;
+  font-weight: 600;
+  font-size: 2.6rem;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+.hero-para {
+    font-family: "Sorts Mill Goudy", serif;
+    margin-top: 2rem;
+    width: 70rem;
+    font-size: 2.4rem;
+    text-align: center;
+    line-height: 28px;
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
 }
 
-.hero-para {
-  margin-top: 1.5rem;
-  margin-bottom: 3.4rem;
-  max-width: 80rem;
-}
 
 .section-hero-image {
   display: flex;
@@ -115,13 +147,19 @@ padding: 7rem 0;
   align-items: center;
 }
 
+.btn {
+  max-width: 20rem;
+  align-self: center;
+  margin-top: 2rem;
+}
+
 picture {
   text-align: center;
 }
 
 .hero-img {
-  height: 400px;
-  width: 400px;
+  height: 350px;
+  width: 350px;
 }
 
 @media (max-width: ${({ theme }) => theme.media.mobile}) {

@@ -11,7 +11,7 @@
 .card-title-mine {
     position: relative;
     margin-top: -19px;
-    background-color: black;
+    background-color: var(--primary-background-color);
     padding: 10px;
     color: beige;
     margin-inline: -9px;
