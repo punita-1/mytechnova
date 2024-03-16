@@ -1,15 +1,31 @@
 import Events from "./assets/data";
+import { api } from "./services";
 
-const ProfileEvent = ({ data, index }) => {
+const ProfileEvent = ({ data, index, trigger }) => {
+    const deleteEvent = (e) => {
+        if (confirm("Confirm Delete? It will cancel your registration. You can not undo it later.")) {
+            api.deleteEventById(data.id).then((result) => {
+                // update registrations
+                trigger();
+                console.log(result);
+            }).catch((error) => {
+                console.error(error);
+            })
+        }
+        // console.log(data.id);
+    }
     return (
         <>
             <div className="py-2 mb-5">
-                <h3 className="mb-2 text-center">Event {index+1}</h3>
+                <h3 className="mb-2 text-center d-flex justify-content-center">
+                    <div className="me-3">Event {index + 1}</div>
+                    <span type="button" onClick={deleteEvent}><i className="bi bi-trash-fill text-danger"></i></span>
+                </h3>
                 <table className='table table-striped table-success col-md-8 offset-md-2 col-12 mx-2 text-break rounded rounded-3'>
                     <tbody className="w-100">
                         <tr className="w-100">
                             <th scope='row' className='text-start w-50'>Event Name</th>
-                            <td className='text-start w-50'>{Events[data.eventId-1].title}</td>
+                            <td className='text-start w-50'>{Events[data.eventId - 1].title}</td>
                         </tr>
                         <tr>
                             <th scope='row' className='text-start w-50'>Team Name</th>

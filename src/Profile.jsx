@@ -31,8 +31,8 @@ const Profile = () => {
     api.getEventsRegisteredByYou(userRollnumber).then((response) => {
       const arr = [];
       response.docs.map((doc) => {
-        console.log(doc.data());
-        arr.push(doc.data());
+        // console.log(doc.data());
+        arr.push({...doc.data(), id: doc.id});
       });
       setRegistrations(arr);
       setLoading(() => false);
@@ -156,7 +156,7 @@ const Profile = () => {
                   <div className='w-100'>
                     <div className='fs-1 text-center fw-bold text-decoration-underline'>Centralized Events</div>
                     {filteredregistrations.centralized.map((event, index) => (
-                      <ProfileEvent data={event} key={index} index={index} />
+                      <ProfileEvent data={event} key={index} index={index} trigger={fetchEvents} />
                     ))}
                   </div>
                   : null
