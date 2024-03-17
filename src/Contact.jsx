@@ -1,61 +1,3 @@
-// import React from "react";
-// import styled from "styled-components";
-
-// const Contact = () => {
-//   const Wrapper = styled.section`
-//   padding: 9rem 0 5rem 0;
-
-//   .container {
-//     margin-top: 6rem;
-//     text-align: center;
-
-//     .contact-form {
-//       max-width: 50rem;
-//       margin: auto;
-
-//       .contact-inputs input[type="text"],
-//       .contact-inputs input[type="email"],
-//       .contact-inputs textarea {
-//         text-transform: none;
-//       }
-
-//       .contact-inputs {
-//         display: flex;
-//         flex-direction: column;
-//         gap: 3rem;
-
-//         input[type="submit"] {
-//           cursor: pointer;
-//           transition: all 0.2s;
-
-//           &:hover {
-//             background-color: ${({ theme }) => theme.colors.white};
-//             border: 1px solid ${({ theme }) => theme.colors.btn};
-//             color: ${({ theme }) => theme.colors.btn};
-//             transform: scale(0.9);
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
-//   return (<Wrapper>
-//     <h2 className="common-heading">Feel Free to Contact us</h2>
-//     <div className="container">
-//       <div className="contact-form">
-//         <form action="#" method="POST" className="contact-inputs">
-//           <input type="text" name="Username" placeholder="Username" autoComplete="off" required />
-//           <input type="email" name="Email" placeholder="Email" autoComplete="off" required />
-//           <textarea name="message" cols='30' rows='6' autoComplete="off" required></textarea>
-//           <input type="submit" value='send' />
-//         </form>
-//       </div>
-//     </div>
-//   </Wrapper>
-//   );
-// };
-
-// export default Contact;
 import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 // import img from 'C:/Users/punit/mytechnova2024project/public/images/contactus.jpg';
@@ -78,13 +20,17 @@ const Contact = () => {
       width: 40rem;
       margin: auto;
       border-radius: 4px;
+      font-size:14px;
     }
 
-    textarea {
-      width: 40rem;
-      margin: auto;
-      border-radius: 4px;
+    textarea{
+      font-size:14px;
     }
+
+    h2{
+      size:10px;
+    }
+
 
     .container {
       margin-top: -3rem;
@@ -93,7 +39,7 @@ const Contact = () => {
       border: 1px solid #0a58ca;
       border-radius: 10px;
       padding: 2rem;
-      max-width: 50rem;
+      max-width: 35rem;
 
       .contact-form {
         margin: auto;
@@ -129,25 +75,16 @@ const Contact = () => {
       color: white;
     }
 
-    @media (max-width: 768px) {
-      .container {
-        padding: 2rem
-        width: 40rem; /* Adjust padding for mobile view */
-        height:65rem;
-      }
 
-      input{
-        width: 40rem;
-        margin: auto;
-      border-radius: 4px;
-      }
-
-      textarea {
-        width: 40rem;
-        margin: auto;
-        border-radius: 4px;
-      }
+    .input-group-text {
+      font-size: 21px; /* Increase the font size of the icon */
     }
+
+    .form-control::placeholder {
+      font-size: 15px; /* Increase the font size of the placeholder */
+    }
+
+   
   `;
 
   return (
@@ -155,13 +92,27 @@ const Contact = () => {
       <GlobalStyle />
       <Wrapper>
         <div className="container">
-          <h2 style={{color: 'black'}} className="common-heading">Feel Free to Contact us</h2>
+          <h2 style={{ color: '#0d6efd' }} className="common-heading">Feel Free to Contact us</h2>
           <div className="contact-form">
             <form action="#" method="POST" className="contact-inputs">
-              <input type="text" name="Username" placeholder="Username" autoComplete="off" required />
-              <input type="email" name="Email" placeholder="Email" autoComplete="off" required />
-              <textarea name="message" cols="30" rows="6" autoComplete="off" placeholder="Write your message here." required></textarea>
-              <input type="submit" value="send" />
+              <div className="input-group mb-3 col-10" style={{ height: '39px' }}>
+                <div className="input-group-prepend">
+                  <span className="input-group-text" id="basic-addon1" style={{ height: '100%' }}>
+                    <i className="bi bi-person-fill" style={{ lineHeight: '26px' }}></i>
+                  </span>
+                </div>
+                <input type="text" className="form-control" placeholder="Name" aria-describedby="basic-addon1" style={{ height: '100%' }} />
+              </div>
+              <div className="input-group mb-3 col-10" style={{ height: '39px' }}>
+                <div className="input-group-prepend">
+                  <span className="input-group-text" id="basic-addon1" style={{ height: '100%' }}>
+                    <i className="bi bi-envelope-at-fill" style={{ lineHeight: '26px' }}></i>
+                  </span>
+                </div>
+                <input type="email" className="form-control" placeholder="Email" aria-describedby="basic-addon1" style={{ height: '100%' }} />
+              </div>
+              <textarea name="message" cols="30" rows="6" autoComplete="off" placeholder="Write your message here." className="form-control" required></textarea>
+              <input type="submit" value="send" style={{backgroundColor:"#0d6efd"}}/>
             </form>
           </div>
         </div>
