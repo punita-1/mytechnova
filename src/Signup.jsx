@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./signup.css"
 import { api, authServices } from "./services";
 import { auth } from "./services/firebase";
+import { useUserStore } from "./app/eventstorage";
 import { currentUser } from "./services/auth.service";
 import { Navigate } from "react-router-dom";
 import { onAuthStateChanged } from "firebase/auth";
@@ -22,11 +23,69 @@ const Signup = () => {
     confirmpass: ""
   });
 
+  const { setValidationErrors } = useUserStore;
+
+  const validateForm = () => {
+    const errors = {};
+  
+    if (!values.name) {
+      errors.name = "Name is required";
+    }
+  
+    if (!values.rollnumber) {
+      errors.rollnumber = "Roll number is required";
+    } else if (isNaN(values.rollnumber)) {
+      errors.rollnumber = "Roll number must be a number";
+    }
+  
+    if (!values.email) {
+      errors.email = "Email is required";
+    } else if (!/^[^@]+@[^@]+\.[^@]+$/.test(values.email)) {
+      errors.email = "Invalid email address";
+    }
+  
+    if (!values.phone) {
+      errors.phone = "Phone number is required";
+    } else if (isNaN(values.phone)) {
+      errors.phone = "Phone number must be a number";
+    }
+  
+    if (!values.organization) {
+      errors.organization = "Organization is required";
+    }
+  
+    if (!values.branch) {
+      errors.branch = "Branch is required";
+    }
+  
+    if (!values.semester) {
+      errors.semester = "Semester is required";
+    } else if (isNaN(values.semester)) {
+      errors.semester = "Semester must be a number";
+    }
+  
+    if (!values.pass) {
+      errors.pass = "Password is required";
+    } else if (values.pass.length < 6) {
+      errors.pass = "Password must be at least 6 characters long";
+    }
+  
+    if (values.pass !== values.confirmpass) {
+      errors.confirmpass = "Passwords do not match";
+    }
+  
+    setValidationErrors(errors);
+  
+    return Object.keys(errors).length === 0;
+  }
+
   onAuthStateChanged(auth, (userData) => {
     if (userData) {
-      setUser(userData);
+      useUserStore.getState().setUser(userData);
+      useUserStore.getState().setIsLoggedIn(true);
     } else {
-      setUser(null);
+      useUserStore.getState().setUser(null);
+      useUserStore.getState().setIsLoggedIn(false);
     }
   });
 
