@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import SwiperComponent from './Myswiper'
 
 const Gallery = () => {
