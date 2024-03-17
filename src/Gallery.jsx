@@ -1,10 +1,12 @@
 import React from 'react'
-import SwiperComponent from './Myswiper'
+import MyCollage from './collage'
+// import SwiperComponent from './Myswiper'
 
 const Gallery = () => {
   return (
     <>
-    <SwiperComponent/>
+    {/* <SwiperComponent/> */}
+    <MyCollage/>
     </>
   )
 }
