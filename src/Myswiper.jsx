@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 import './Swiperstyle.css';
 
 const photos = [
@@ -7,7 +7,7 @@ const photos = [
   { src: 'public/images/technova_gallery/logos/thermocol_techno.jpg', width: 2 },
   { src: 'public/images/technova_gallery/Vc_starting/vc_pic.jpg', width: 1 },
   { src: 'public/images/technova_gallery/group_pics/group_pic2.jpg', width: 1 },
-  { src: 'public/images/technova_gallery/logos/technova_rope.jpg', width: 2 },
+  // { src: 'public/images/technova_gallery/logos/technova_rope.jpg', width: 2 },
   { src: 'public/images/technova_gallery/group_pics/gp_pic4.jpg', width: 1 },
   { src: 'public/images/technova_gallery/welcomes/flower_welcome.jpg', width: 1 },
   { src: 'public/images/technova_gallery/welcomes/welcome_2.jpg', width: 1 },
@@ -33,22 +33,24 @@ const photos = [
   { src: 'public/images/technova_gallery/events/thinkbots1.jpg', width: 1 },
   { src: 'public/images/technova_gallery/events/thinkbots2.jpg', width: 1 },
   { src: 'public/images/technova_gallery/events/robo_soccer.jpg', width: 1 },
-  {src:'public/images/dcrust_images/night_Saraswati_library.jpg', width:1},
+  // {src:'public/images/dcrust_images/night_Saraswati_library.jpg', width:1},
   {src: 'public/images/technova_gallery/Vc_starting/vc_project_chkecking.jpg', width: 1 },
   
 ];
 
 const Collage = () => {
   return (
-    <div className="collage">
-      {photos.map((photo, index) => (
-        <div key={index} className={`grid-item grid-item-${photo.width}`}>
-          <img src={photo.src} alt="" onError={(e) => console.error("Image load error:", e)} />
-        </div>
-      ))}
+    <div>
+      <h1>Glimpse</h1>
+      <div className="collage">
+        {photos.map((photo, index) => (
+          <div key={index} className={`grid-item grid-item-${photo.width}`}>
+            <img src={photo.src} alt="" onError={(e) => console.error("Image load error:", e)} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
 
 export default Collage;
-
