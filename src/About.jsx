@@ -68,6 +68,12 @@ const About = () => {
           <li>Technova events inspire attendees to pursue STEM careers by showcasing exciting possibilities and real-world technology applications.</li>
         </ul>
       </div>
+      <div className='why_card'>
+        <h3 class="card-title-mine">Inspiration:</h3>
+        <ul className='show_description'>
+          <li>Technova events inspire attendees to pursue STEM careers by showcasing exciting possibilities and real-world technology applications.</li>
+        </ul>
+      </div>
 
     </div>
   </Wrapper>;

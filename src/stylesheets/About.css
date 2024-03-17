@@ -9,6 +9,7 @@
 }
 
 .card-title-mine {
+    /* width:18px; */
     position: relative;
     margin-top: -19px;
     background-color: var(--primary-background-color);
@@ -124,7 +125,7 @@
         background-color: white;
         border-radius: 5px;
         color: black;
-        padding: 10px;
+        padding: 20px;
         width: 300px;
         margin: 10px;
         box-shadow: grey;
