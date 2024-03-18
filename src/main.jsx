@@ -2,7 +2,7 @@ import React from 'react'
 // import ReactDOM from 'react-dom/client'
 import ReactDOM from 'react-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// ReactDOM.render(<App />, document.getElementById('root'));
 
 import App from './App.jsx'
 import './index.css'
@@ -12,7 +12,9 @@ import PreLoader from './preLoader';
 const tl = gsap.timeline();
 
 ReactDOM.render(
-  <PreLoader />,
+  <React.StrictMode>
+    <PreLoader />
+  </React.StrictMode>,
   document.getElementById('root')
 );
 
