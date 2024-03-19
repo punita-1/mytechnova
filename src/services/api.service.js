@@ -16,14 +16,15 @@ export const saveUserData = (userData) => {
     });
 }
 
-export const saveEventRegistrations = (teamName, eventId, membersCount, memberDetails, registeredBy) => {
-    const temp = new Date().getMilliseconds();
+export const saveEventRegistrations = (teamName, eventId, membersCount, memberDetails, memberRolls, registeredBy) => {
+    // const temp = new Date().getMilliseconds();
     const docRef = collection(db, "registrations");
     const payLoad = {
         teamName: teamName,
         eventId: eventId,
         membersCount: membersCount,
         members: memberDetails,
+        memberRolls: memberRolls,
         registeredBy: registeredBy
     }
     return addDoc(docRef, payLoad);
@@ -39,7 +40,7 @@ export const deleteEventById = (id) => {
     return deleteDoc(docRef);
 }
 
-export const getEventsRegisteredByTeamName = (teamName) => {
-    const q = query(collection(db, "registrations"), where("teamName", "===", teamName));
+export const getEventsRegisterationsByEventId = (eventId) => {
+    const q = query(collection(db, "registrations"), where("eventId", "==", eventId));
     return getDocs(q);
 }

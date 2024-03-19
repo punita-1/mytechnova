@@ -81,6 +81,7 @@ const Signup = () => {
 
   onAuthStateChanged(auth, (userData) => {
     if (userData) {
+      setUser(userData);
       useUserStore.getState().setUser(userData);
       useUserStore.getState().setIsLoggedIn(true);
     } else {
@@ -155,8 +156,8 @@ const Signup = () => {
   const login = (e) => {
     e.preventDefault();
     authServices.login(values.email, values.pass).then((res) => {
-      // setUser(()=>res)
-      console.log(res);
+      setUser(()=>res)
+      // console.log(res);
     }).catch((err) => {
       console.log(err.message);
       // alert(err.message);
@@ -263,11 +264,11 @@ const Signup = () => {
         <div className="mx-auto col-md-6 col-lg-4 col-xlg-3 col-10 p-4 bg-light rounded-4 shadow border border-1 border-primary bg-opacity-50">
           <div className="text-center fs-1 text-primary mb-4 row">
             <div className="btn btn-outline-primary col-4 offset-1 d-flex justify-content-center align-items-center" onClick={() => setSignin(() => true)}>
-              <input type="radio" className="mx-2" checked={signin} />
+              <input type="radio" className="mx-2" checked={signin} onChange={() => setSignin(() => false)} />
               <div className="fs-3">LOGIN</div>
             </div>
             <div className="btn btn-outline-primary col-4 offset-1 d-flex justify-content-center align-items-center" onClick={() => setSignin(() => false)}>
-              <input type="radio" className="mx-2" checked={!signin} />
+              <input type="radio" className="mx-2" checked={!signin} onChange={() => setSignin(() => false)} />
               <div className="fs-3">SIGNUP</div>
             </div>
           </div>

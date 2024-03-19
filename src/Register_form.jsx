@@ -15,7 +15,7 @@ const Register_form = () => {
   const maxCount = data[id - 1].max;
   const [values, setValues] = useState({
     teamname: "",
-    loading: false,
+    loading: "",
     successmsg: "",
     errormsg: ""
   });
@@ -37,18 +37,31 @@ const Register_form = () => {
   }
 
   const failure = (msg) => {
+    console.error(msg);
     setValues({
       ...values,
-      loading: false,
+      loading: "",
       successmsg: "",
       errormsg: msg
     });
+    // setTimeout(() => {
+    //   setValues({
+    //     ...values,
+    //     loading: "",
+    //     successmsg: "",
+    //     errormsg: msg
+    // });
+    // }, 500);
   }
 
-  const loadingHandler = (state) => {
+  useEffect(() => {
+    console.log(values.errormsg);
+  }, [values.errormsg])
+
+  const loadingHandler = (msg) => {
     setValues({
       ...values,
-      loading: state
+      loading: msg
     });
   }
 
@@ -309,31 +322,136 @@ const Register_form = () => {
     }
     return arr;
   }
+
+  const validateMemberInputFields = (count) => {
+    let validate = false;
+    switch (count) {
+      case 1:
+        if (member1.name && member1.branch && member1.rollnum && member1.sem) {
+          validate = true;
+        }
+        break;
+      case 2:
+        if (member2.name && member2.branch && member2.rollnum && member2.sem) {
+          validate = true;
+        }
+        break;
+      case 3:
+        if (member3.name && member3.branch && member3.rollnum && member3.sem) {
+          validate = true;
+        }
+        break;
+      case 4:
+        if (member4.name && member4.branch && member4.rollnum && member4.sem) {
+          validate = true;
+        }
+        break;
+      case 5:
+        if (member5.name && member5.branch && member5.rollnum && member5.sem) {
+          validate = true;
+        }
+        break;
+    }
+    return validate;
+  }
+
+
   const validateForm = () => {
+    let returnValidation = false;
+    const allRolls = returnAllMemberRolls();
+    const prevReg = [];
+    // getting prev Registrations
+    return api.getEventsRegisterationsByEventId(id).then((result) => {
+      result.docs.map((reg) => {
+        prevReg.push({ ...reg.data(), id: reg.id });
+      });
+      // check for duplicate team names
+      try {
+        console.log(prevReg);
+        // check for duplicate team names
+        const temp1 = prevReg.filter((reg) => reg.teamName === values.teamname);
+        if (temp1.length) {
+          throw "Team Name already taken! Try something unique";
+        }
+        // check for duplicate roll number registrations
+        const duplicates = [];
+        const temp2 = prevReg.filter((reg) => {
+          return reg.memberRolls.filter((roll) => {
+            const tt = allRolls.includes(roll);
+            if (tt) {
+              duplicates.push(roll);
+            }
+            return tt;
+          }).length
+        });
+        if (duplicates.length || temp2.length) {
+          // const errormsgConstructed = "Duplicate registrations found";
+          const errormsgConstructed = "Duplicate registrations found for following roll number(s): " + duplicates.join(", ");
+          throw errormsgConstructed;
+        }
+        returnValidation = true;
+      } catch (error) {
+        failure(error);
+      }
+      return returnValidation;
+    });
+  }
+
+  const validateInputFields = () => {
+    let returnValidation = false;
     try {
       // validations
-    } catch (errorCatched) {
-      // if validation fails then the error are pushed here
+      // Validate all input fields
+      if (values.teamname) {
+        // validate all member details input field
+        for (let index = 1; index <= memberCount; index++) {
+          if (!validateMemberInputFields(index)) {
+            throw "Member " + index + " details not filled completely";
+          }
+        }
+      } else {
+        throw "Team Name required";
+      }
+      returnValidation = true;
+    } catch (error) {
+      failure(error);
     }
-    let validation = true;
-    return true;
+    return returnValidation;
+  }
+
+  const temp = (e) => {
+    loadingHandler("Please wait...");
+    if (validateInputFields()) {
+      console.log("input fields validated, validating registrations");
+      validateForm().then((res) => {
+        success("Complete")
+        console.log("Form validation for duplications complete! no duplications found! :- "+res);
+      }).catch((err) => {
+        failure(err.message ? err.message : err);
+        console.error(err);
+      })
+    }
   }
 
   const register = (e) => {
     // e.preventDefault();
-    loadingHandler(true);
-    if (validateForm()) {
-      const memberDetails = returnAllMembers();
-      const userRollnumber = user.photoURL?.split("?")[1];
-      api.saveEventRegistrations(values.teamname, id, memberCount, memberDetails, userRollnumber).then((result) => {
-        successThenRedirect("Registration Successfull.")
-        console.log(result);
-      }).catch((err) => {
-        console.log(err);
-      })
+    loadingHandler("Please wait...");
+    if (validateInputFields()) {
+      validateForm().then((res) => {
+        if (res) {
+          const allRolls = returnAllMemberRolls();
+          const memberDetails = returnAllMembers();
+          const userRollnumber = user.photoURL?.split("?")[1];
+          api.saveEventRegistrations(values.teamname, id, memberCount, memberDetails, allRolls, userRollnumber).then((result) => {
+            // success("Registration Successfull." + new Date().getMilliseconds());
+            successThenRedirect("Registration Successfull.")
+            console.log(result);
+          }).catch((err) => {
+            failure(err.message ? err.message : err);
+          })
+        }
+      });
     }
-    // console.log(e);
-    // alert("Register");
   }
 
   if (user) {
@@ -347,10 +465,10 @@ const Register_form = () => {
               <span className='fs-5'>Minimum team size - {minCount} / Maximimum Team Size - {maxCount}</span>
               <div className='text-danger my-1 fs-4'>{user.emailVerified ? "" : <i className='bi bi-exclamation-circle-fill me-2'></i>}{user.emailVerified ? "" : "Note: Your Email is not verified. Verify email to register for event."}</div>
             </div>
-            <form name='EventRegistration' onSubmit={register} className={user.emailVerified ? "row justify-content-center align-items-center mb-3" : "d-none"} >
+            <form name='EventRegistration' onSubmit={temp} className={user.emailVerified ? "row justify-content-center align-items-center mb-3" : "d-none"} >
               <div className="input-group mb-3 col-12">
                 <span className="input-group-text fs-2" id="basic-addon2"><i className="bi bi-person-lines-fill"></i></span>
-                <input type="text" className="form-control fs-4" value={values.teamname} onChange={teamNameHandler} placeholder="Team Name" aria-describedby="basic-addon2" required />
+                <input type="text" className="form-control fs-4" value={values.teamname} onChange={teamNameHandler} placeholder="Team Name" aria-describedby="basic-addon2" disabled={values.loading} required />
               </div>
               <div className='w-100'>
                 <div className={memberCount > 0 ? 'row w-100 my-4' : 'd-none'}>
@@ -358,19 +476,19 @@ const Register_form = () => {
                   <div className='col-8'>
                     <div className="input-group mb-3 w-100">
                       <span className="input-group-text fs-2" id="basic-addon2"><i className="bi bi-person-fill"></i></span>
-                      <input type="text" className="form-control fs-4" value={member1.name} onChange={(e) => memberNameHandler(e, 1)} placeholder="Full Name" aria-describedby="basic-addon2" required />
+                      <input type="text" className="form-control fs-4" value={member1.name} onChange={(e) => memberNameHandler(e, 1)} placeholder="Full Name" aria-describedby="basic-addon2" disabled={values.loading} required />
                     </div>
                     <div className="input-group mb-3 w-100">
                       <span className="input-group-text fs-2" id="basic-addon2"><i className="bi bi-person-lines-fill"></i></span>
-                      <input type="number" className="form-control fs-4" value={member1.rollnum} onChange={(e) => memberRollNumHandler(e, 1)} placeholder="Roll Number" aria-describedby="basic-addon2" required />
+                      <input type="number" className="form-control fs-4" value={member1.rollnum} onChange={(e) => memberRollNumHandler(e, 1)} placeholder="Roll Number" aria-describedby="basic-addon2" disabled={values.loading} required />
                     </div>
                     <div className="input-group mb-3 w-100">
                       <span className="input-group-text fs-2" id="basic-addon2"><i className="bi bi-journals"></i></span>
-                      <input type="text" className="form-control fs-4" value={member1.branch} onChange={(e) => memberBranchHandler(e, 1)} placeholder="Course & Branch" aria-describedby="basic-addon2" required />
+                      <input type="text" className="form-control fs-4" value={member1.branch} onChange={(e) => memberBranchHandler(e, 1)} placeholder="Course & Branch" aria-describedby="basic-addon2" disabled={values.loading} required />
                     </div>
                     <div className="input-group mb-3 w-100">
                       <span className="input-group-text fs-2" id="basic-addon2"><i className="bi bi-journal"></i></span>
-                      <input type="number" className="form-control fs-4" value={member1.sem} onChange={(e) => memberSemesterHandler(e, 1)} placeholder="Semester" aria-describedby="basic-addon2" required />
+                      <input type="number" className="form-control fs-4" value={member1.sem} onChange={(e) => memberSemesterHandler(e, 1)} placeholder="Semester" aria-describedby="basic-addon2" disabled={values.loading} required />
                     </div>
                   </div>
                 </div>
@@ -379,19 +497,19 @@ const Register_form = () => {
                   <div className='col-8'>
                     <div className="input-group mb-3 w-100">
                       <span className="input-group-text fs-2" id="basic-addon2"><i className="bi bi-person-fill"></i></span>
-                      <input type="text" className="form-control fs-4" value={member2.name} onChange={(e) => memberNameHandler(e, 2)} placeholder="Full Name" aria-describedby="basic-addon2" required />
+                      <input type="text" className="form-control fs-4" value={member2.name} onChange={(e) => memberNameHandler(e, 2)} placeholder="Full Name" aria-describedby="basic-addon2" disabled={values.loading} required />
                     </div>
                     <div className="input-group mb-3 w-100">
                       <span className="input-group-text fs-2" id="basic-addon2"><i className="bi bi-person-lines-fill"></i></span>
-                      <input type="number" className="form-control fs-4" value={member2.rollnum} onChange={(e) => memberRollNumHandler(e, 2)} placeholder="Roll Number" aria-describedby="basic-addon2" required />
+                      <input type="number" className="form-control fs-4" value={member2.rollnum} onChange={(e) => memberRollNumHandler(e, 2)} placeholder="Roll Number" aria-describedby="basic-addon2" disabled={values.loading} required />
                     </div>
                     <div className="input-group mb-3 w-100">
                       <span className="input-group-text fs-2" id="basic-addon2"><i className="bi bi-journals"></i></span>
-                      <input type="text" className="form-control fs-4" value={member2.branch} onChange={(e) => memberBranchHandler(e, 2)} placeholder="Course & Branch" aria-describedby="basic-addon2" required />
+                      <input type="text" className="form-control fs-4" value={member2.branch} onChange={(e) => memberBranchHandler(e, 2)} placeholder="Course & Branch" aria-describedby="basic-addon2" disabled={values.loading} required />
                     </div>
                     <div className="input-group mb-3 w-100">
                       <span className="input-group-text fs-2" id="basic-addon2"><i className="bi bi-journal"></i></span>
-                      <input type="number" className="form-control fs-4" value={member2.sem} onChange={(e) => memberSemesterHandler(e, 2)} placeholder="Semester" aria-describedby="basic-addon2" required />
+                      <input type="number" className="form-control fs-4" value={member2.sem} onChange={(e) => memberSemesterHandler(e, 2)} placeholder="Semester" aria-describedby="basic-addon2" disabled={values.loading} required />
                     </div>
                   </div>
                 </div>
@@ -400,19 +518,19 @@ const Register_form = () => {
                   <div className='col-8'>
                     <div className="input-group mb-3 w-100">
                       <span className="input-group-text fs-2" id="basic-addon2"><i className="bi bi-person-fill"></i></span>
-                      <input type="text" className="form-control fs-4" value={member3.name} onChange={(e) => memberNameHandler(e, 3)} placeholder="Full Name" aria-describedby="basic-addon2" required />
+                      <input type="text" className="form-control fs-4" value={member3.name} onChange={(e) => memberNameHandler(e, 3)} placeholder="Full Name" aria-describedby="basic-addon2" disabled={values.loading} required />
                     </div>
                     <div className="input-group mb-3 w-100">
                       <span className="input-group-text fs-2" id="basic-addon2"><i className="bi bi-person-lines-fill"></i></span>
-                      <input type="number" className="form-control fs-4" value={member3.rollnum} onChange={(e) => memberRollNumHandler(e, 3)} placeholder="Roll Number" aria-describedby="basic-addon2" required />
+                      <input type="number" className="form-control fs-4" value={member3.rollnum} onChange={(e) => memberRollNumHandler(e, 3)} placeholder="Roll Number" aria-describedby="basic-addon2" disabled={values.loading} required />
                     </div>
                     <div className="input-group mb-3 w-100">
                       <span className="input-group-text fs-2" id="basic-addon2"><i className="bi bi-journals"></i></span>
-                      <input type="text" className="form-control fs-4" value={member3.branch} onChange={(e) => memberBranchHandler(e, 3)} placeholder="Course & Branch" aria-describedby="basic-addon2" required />
+                      <input type="text" className="form-control fs-4" value={member3.branch} onChange={(e) => memberBranchHandler(e, 3)} placeholder="Course & Branch" aria-describedby="basic-addon2" disabled={values.loading} required />
                     </div>
                     <div className="input-group mb-3 w-100">
                       <span className="input-group-text fs-2" id="basic-addon2"><i className="bi bi-journal"></i></span>
-                      <input type="number" className="form-control fs-4" value={member3.sem} onChange={(e) => memberSemesterHandler(e, 3)} placeholder="Semester" aria-describedby="basic-addon2" required />
+                      <input type="number" className="form-control fs-4" value={member3.sem} onChange={(e) => memberSemesterHandler(e, 3)} placeholder="Semester" aria-describedby="basic-addon2" disabled={values.loading} required />
                     </div>
                   </div>
                 </div>
@@ -421,19 +539,19 @@ const Register_form = () => {
                   <div className='col-8'>
                     <div className="input-group mb-3 w-100">
                       <span className="input-group-text fs-2" id="basic-addon2"><i className="bi bi-person-fill"></i></span>
-                      <input type="text" className="form-control fs-4" value={member4.name} onChange={(e) => memberNameHandler(e, 4)} placeholder="Full Name" aria-describedby="basic-addon2" required />
+                      <input type="text" className="form-control fs-4" value={member4.name} onChange={(e) => memberNameHandler(e, 4)} placeholder="Full Name" aria-describedby="basic-addon2" disabled={values.loading} required />
                     </div>
                     <div className="input-group mb-3 w-100">
                       <span className="input-group-text fs-2" id="basic-addon2"><i className="bi bi-person-lines-fill"></i></span>
-                      <input type="number" className="form-control fs-4" value={member4.rollnum} onChange={(e) => memberRollNumHandler(e, 4)} placeholder="Roll Number" aria-describedby="basic-addon2" required />
+                      <input type="number" className="form-control fs-4" value={member4.rollnum} onChange={(e) => memberRollNumHandler(e, 4)} placeholder="Roll Number" aria-describedby="basic-addon2" disabled={values.loading} required />
                     </div>
                     <div className="input-group mb-3 w-100">
                       <span className="input-group-text fs-2" id="basic-addon2"><i className="bi bi-journals"></i></span>
-                      <input type="text" className="form-control fs-4" value={member4.branch} onChange={(e) => memberBranchHandler(e, 4)} placeholder="Course & Branch" aria-describedby="basic-addon2" required />
+                      <input type="text" className="form-control fs-4" value={member4.branch} onChange={(e) => memberBranchHandler(e, 4)} placeholder="Course & Branch" aria-describedby="basic-addon2" disabled={values.loading} required />
                     </div>
                     <div className="input-group mb-3 w-100">
                       <span className="input-group-text fs-2" id="basic-addon2"><i className="bi bi-journal"></i></span>
-                      <input type="number" className="form-control fs-4" value={member4.sem} onChange={(e) => memberSemesterHandler(e, 4)} placeholder="Semester" aria-describedby="basic-addon2" required />
+                      <input type="number" className="form-control fs-4" value={member4.sem} onChange={(e) => memberSemesterHandler(e, 4)} placeholder="Semester" aria-describedby="basic-addon2" disabled={values.loading} required />
                     </div>
                   </div>
                 </div>
@@ -442,19 +560,19 @@ const Register_form = () => {
                   <div className='col-8'>
                     <div className="input-group mb-3 w-100">
                       <span className="input-group-text fs-2" id="basic-addon2"><i className="bi bi-person-fill"></i></span>
-                      <input type="text" className="form-control fs-4" value={member5.name} onChange={(e) => memberNameHandler(e, 5)} placeholder="Full Name" aria-describedby="basic-addon2" required />
+                      <input type="text" className="form-control fs-4" value={member5.name} onChange={(e) => memberNameHandler(e, 5)} placeholder="Full Name" aria-describedby="basic-addon2" disabled={values.loading} required />
                     </div>
                     <div className="input-group mb-3 w-100">
                       <span className="input-group-text fs-2" id="basic-addon2"><i className="bi bi-person-lines-fill"></i></span>
-                      <input type="number" className="form-control fs-4" value={member5.rollnum} onChange={(e) => memberRollNumHandler(e, 5)} placeholder="Roll Number" aria-describedby="basic-addon2" required />
+                      <input type="number" className="form-control fs-4" value={member5.rollnum} onChange={(e) => memberRollNumHandler(e, 5)} placeholder="Roll Number" aria-describedby="basic-addon2" disabled={values.loading} required />
                     </div>
                     <div className="input-group mb-3 w-100">
                       <span className="input-group-text fs-2" id="basic-addon2"><i className="bi bi-journals"></i></span>
-                      <input type="text" className="form-control fs-4" value={member5.branch} onChange={(e) => memberBranchHandler(e, 5)} placeholder="Course & Branch" aria-describedby="basic-addon2" required />
+                      <input type="text" className="form-control fs-4" value={member5.branch} onChange={(e) => memberBranchHandler(e, 5)} placeholder="Course & Branch" aria-describedby="basic-addon2" disabled={values.loading} required />
                     </div>
                     <div className="input-group mb-3 w-100">
                       <span className="input-group-text fs-2" id="basic-addon2"><i className="bi bi-journal"></i></span>
-                      <input type="number" className="form-control fs-4" value={member5.sem} onChange={(e) => memberSemesterHandler(e, 5)} placeholder="Semester" aria-describedby="basic-addon2" required />
+                      <input type="number" className="form-control fs-4" value={member5.sem} onChange={(e) => memberSemesterHandler(e, 5)} placeholder="Semester" aria-describedby="basic-addon2" disabled={values.loading} required />
                     </div>
                   </div>
                 </div>
@@ -463,7 +581,7 @@ const Register_form = () => {
                   <button className={memberCount <= minCount ? 'd-none btn btn-lg btn-danger col-4 mx-auto' : 'btn btn-lg btn-danger col-4 mx-auto'} onClick={removeMemberHandler}>REMOVE MEMBER</button>
                 </div>
               </div>
-              <button onClick={register} disabled={values.loading} className="btn btn-primary btn-lg mt-4 fs-3">Register Team</button>
+              <button onClick={temp} disabled={values.loading} className="btn btn-primary btn-lg mt-4 fs-3">Register Team</button>
             </form>
             {values.loading ? (
               <div className="form-group text-start">
@@ -471,8 +589,8 @@ const Register_form = () => {
                   className="form-check-label alert alert-warning text-capitalized"
                   role="alert"
                 >
-                  <span className="spinner-border spinner-border-sm"></span>{' '}
-                  Loading...
+                  <span className="spinner-border me-2"></span>
+                  Loading... {values.loading}
                 </div>
               </div>
             ) : (
