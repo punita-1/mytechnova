@@ -40,9 +40,9 @@ const ProfileEvent = ({ data, index, trigger }) => {
                 </table>
                 <div className="h3 text-center">Members Details :</div>
                 <div className="row justify-content-center">
-                    {data.members.map((member) => {
+                    {data.members.map((member, index) => {
                         return (
-                            <div className="bg-success-subtle rounded-2 shadow col-5 mx-auto my-2 h-auto overflow-x-auto py-4">
+                            <div className="bg-success-subtle rounded-2 shadow col-5 mx-auto my-2 h-auto overflow-x-auto py-4" key={index}>
                                 <div className="card-body">
                                     <div className="h4 mb-0">
                                         <i className="bi bi-person-fill"></i> Member Name:
