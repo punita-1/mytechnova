@@ -51,6 +51,16 @@ const Event = () => {
         <Tab eventKey="dep" title="Department">
           <h2><b>DEPARTMENT EVENTS</b></h2>
           <CardGroup
+            heading="Department of COMPUTER SCIENCE ENGINEERING(CSE) #COSMOS"
+            events={searchResults.filter((ev) => ev.category === "computer")}
+            handleRegisterClick={handleRegisterClick}
+          />
+          <CardGroup
+            heading="DEPARTMENT OF ELECTRONICS AND COMMUNICATION ENGINEERING #INTEC"
+            events={searchResults.filter((ev) => ev.category === "electronics")}
+            handleRegisterClick={handleRegisterClick}
+          />
+          <CardGroup
             heading="Biotechnology department #ENGENISIS"
             events={searchResults.filter((ev) => ev.category === "biotechnology")}
             handleRegisterClick={handleRegisterClick}
@@ -81,11 +91,6 @@ const Event = () => {
             handleRegisterClick={handleRegisterClick}
           />
           <CardGroup
-            heading="DEPARTMENT OF ELECTRONICS AND COMMUNICATION ENGINEERING #INTEC"
-            events={searchResults.filter((ev) => ev.category === "electronics")}
-            handleRegisterClick={handleRegisterClick}
-          />
-          <CardGroup
             heading="DEPARTMENT OF Mathematics #MATHEMAGICIANS"
             events={searchResults.filter((ev) => ev.category === "mathematics")}
             handleRegisterClick={handleRegisterClick}
@@ -93,11 +98,6 @@ const Event = () => {
           <CardGroup
             heading="DEPARTMENT OF PHYSICS #RAMAN"
             events={searchResults.filter((ev) => ev.category === "physics")}
-            handleRegisterClick={handleRegisterClick}
-          />
-          <CardGroup
-            heading="Department of COMPUTER SCIENCE ENGINEERING(CSE) #COSMOS"
-            events={searchResults.filter((ev) => ev.category === "computer")}
             handleRegisterClick={handleRegisterClick}
           />
           <CardGroup

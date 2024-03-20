@@ -8,7 +8,6 @@ import Venue from "./venue";
 import { Button } from './styles/Button';
 import { NavLink } from 'react-router-dom';
 import './minorhome.css'
-// import Zust from './zustine';
 
 const Home = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -69,7 +68,6 @@ const Home = () => {
     <>
       <HeroSection {...data} />
       <SocialIcon />
-      {/* <Zust/> */}
       <AboutCard />
       <Previously />
       <div>

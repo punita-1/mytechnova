@@ -61,7 +61,7 @@ const Footer = () => {
 
           {/* 4th column  */}
           <div className="footer-contact">
-            <h3>Call Us</h3>
+            <h3>Contact Us</h3>
             <h3 style={{ fontSize: '15px' }}><ReactSocialIcon url="https://www.linkedin.com/in/abhinavaa01/" style={{ height: 30, width: 30, marginLeft: '10px' }} /> Abhinav Agrawal</h3>
             <h3 style={{ fontSize: '15px' }}><ReactSocialIcon url="https://www.linkedin.com/in/punitagaba/" style={{ height: 30, width: 30, marginLeft: '10px' }} /> Punita Gaba</h3>
             <h3 style={{ fontSize: '15px' }}><ReactSocialIcon url="https://www.linkedin.com/in/vidhi-arora-a0b943225?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" style={{ height: 30, width: 30, marginLeft: '10px' }} /> Vidhi Arora</h3>

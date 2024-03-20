@@ -142,7 +142,7 @@ const Profile = () => {
               >
                 <span className="spinner-border my-auto"></span>{' '}
                 <div className='ms-3 fs-5'>Loading your registrations...</div>
-                <a className='ms-3' onClick={fetchEvents}>Click here to retry</a>
+                <a className='ms-3' role='button' onClick={fetchEvents}>Click here to retry</a>
               </div>
             </div>
           ) : (
@@ -164,7 +164,7 @@ const Profile = () => {
               {
                 filteredregistrations.departmental.length ?
                   <div className='w-100'>
-                    <div className='fs-1 text-center fw-bold text-decoration-underline'>Deparmental Events</div>
+                    <div className='fs-1 text-center fw-bold text-decoration-underline'>Deparment Events</div>
                     {filteredregistrations.departmental.map((event, index) => (
                       <ProfileEvent data={event} key={index} index={index} />
                     ))}
