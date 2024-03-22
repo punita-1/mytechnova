@@ -18,8 +18,8 @@
 } */
 
 .timer-value {
-  height: 70px;
-    width: 70px;
+  height: 60px;
+    width: 60px;
     /* background: #31363F; */
     background-color: var(--primary-background-color);
     margin: 10px;
@@ -29,7 +29,7 @@
     /* font-weight: bold; */
     /* font-style: italic; */
     color: white;
-    border-radius: 9999999px;
+    border-radius: 5px;
     justify-content: center;
     align-items: center;
 }

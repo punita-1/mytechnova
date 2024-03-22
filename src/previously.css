@@ -1,25 +1,25 @@
 .prev-container {
-    padding-top: 30px;
-    align-items: center;
-  }
+  padding-top: 30px;
+  align-items: center;
+}
 
-  .carousel-container {
-    padding-top: 150px;
-    width: 100%;
-  }
-  
-  .prev-container-desc {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.carousel-container {
+  padding-top: 150px;
+  width: 100%;
+}
 
-  .prevpara{
-    font-family: "Paprika", system-ui;
-  }
+.prev-container-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .visitgalbtn{
-    max-width: 20rem;
-    align-self: center;
-    margin-top: 2rem;
-  }
+.prevpara {
+  font-family: "Paprika", system-ui;
+}
+
+.visitgalbtn {
+  max-width: 20rem;
+  align-self: center;
+  margin-top: 2rem;
+}

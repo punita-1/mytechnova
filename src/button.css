@@ -1,0 +1,38 @@
+/* ButtonContainer.css */
+
+/* .button-container:hover .eventpage-btn a {
+    color: #5C8374;
+  } */
+
+/* ButtonContainer.css */
+
+.button-container:hover .visitgalbtn a {
+  color: #5C8374;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  max-width: 20rem;
+}
+
+.btn:hover a {
+  color: #5C8374;
+}
+
+/* ButtonContainer.css */
+
+/* .button-container:hover .btn a {
+  color: #5C8374;
+} */
+
+/* .button-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+} */

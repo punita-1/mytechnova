@@ -5,6 +5,9 @@ import { Button } from "../styles/Button";
 import { SocialIcon as ReactSocialIcon } from 'react-social-icons'
 
 const Footer = () => {
+  const handleButtonClick = () => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
   return (
     <Wrapper>
       <section className="contact-short">
@@ -14,7 +17,7 @@ const Footer = () => {
             <h3>Talk to us today</h3>
           </div>
           <div>
-            <NavLink to='/contact'>
+            <NavLink to='/contact' onClick={handleButtonClick}>
               <Button style={{ marginLeft: '150px', borderRadius: '5px' }}>
                 Contact us
               </Button>
@@ -101,7 +104,7 @@ const Wrapper = styled.section`
 
 footer {
   padding: 14rem 0 9rem 0;
-  background-color: ${({ theme }) => theme.colors.footer_bg};
+  background-color: #092635;
 
   h3 {
     color: ${({ theme }) => theme.colors.hr};

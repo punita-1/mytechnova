@@ -5,6 +5,9 @@ import { Button } from "../styles/Button";
 import Timer from "../timer";
 
 const HeroSection = ({ name, image }) => {
+  const handleButtonClick = () => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
   return (<Wrapper>
     <div className="fullcontainerpadding container grid grid-two-column">
       <div className="section-hero-data">
@@ -17,9 +20,19 @@ const HeroSection = ({ name, image }) => {
         <p className='hero-para'>"Ignite Your Passion for Innovation: Join Us for a Spectacular Fusion of Technology and Talent!"</p>
         <h3 className="hero-date">"5th April - 6th April"</h3>
         <Timer />
-        <Button className='btn'>
-          <NavLink to='/event'>Register Now</NavLink>
-        </Button>
+        {/* <div className="button-container">
+          <Button className='btn'>
+            <NavLink to='/event'>Register Now</NavLink>
+          </Button>
+        </div> */}
+        <div className="button-container">
+          <NavLink to='/event' onClick={handleButtonClick}>
+            <Button className='btn'>
+              Register Now
+            </Button>
+          </NavLink>
+        </div>
+
       </div>
 
       <div className="section-hero-image">
@@ -50,18 +63,26 @@ padding: 5rem 0;
   align-self: center; 
   padding-left: 0px;
   justify-content: center;
-   }
+}
 
-   .btn {
-    max-width: 20rem;
-    align-self: center;
-    margin-top: 2rem;
-  }
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  max-width: 20rem;
+}
+
+.btn:hover a {
+  color: #5C8374;
+}
 
 .timer{
   padding-left: 150px;
   padding-right: 150px;
 }
+
 .hero-top-data {
   margin-top:40px;
   text-transform: uppercase;

@@ -7,7 +7,8 @@ import CardGroup from './Cardgroup';
 import Venue from "./venue";
 import { Button } from './styles/Button';
 import { NavLink } from 'react-router-dom';
-import './minorhome.css'
+import './minorhome.css';
+import './button.css';
 
 const Home = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -64,6 +65,11 @@ const Home = () => {
     setSelectedEvent(event);
     setShowPopup(true);
   };
+
+  const handleViewAllClick = () => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+
   return (
     <>
       <HeroSection {...data} />
@@ -71,18 +77,25 @@ const Home = () => {
       <AboutCard />
       <Previously />
       <div>
-        <h2 style={{ fontWeight: 'bold',paddingTop:'60px' }}>Events</h2>
+        <h2 style={{ fontWeight: 'bold', paddingTop: '60px' }}>Events</h2>
         <CardGroup
           heading="Unite & Ignite: Events for All Students"
           events={events.slice(0, 3)}
           handleRegisterClick={handleRegisterClick}
         />
 
-        <div className="button-container">
-          <Button className='btn eventpage-btn'>
+        {/* <div className="button-container">
+          <Button className='btn eventpage-btn' onClick={handleViewAllClick}>
             <NavLink to='/event'>View all</NavLink>
           </Button>
-        </div>
+        </div> */} <div className="button-container">
+      <NavLink to='/event' onClick={handleViewAllClick}>
+        <Button className='btn eventpage-btn'>
+          View all
+        </Button>
+      </NavLink>
+    </div>
+
         {showPopup && (
           <div className="popup">
             <div className="popup-content">
@@ -90,7 +103,7 @@ const Home = () => {
               <div className="popup-text">
                 <pre>{selectedEvent.description}</pre>
               </div>
-              <a href={`/registerform/`+selectedEvent.id}><button className="btn btn-primary">Register Now</button></a>
+              <a href={`/registerform/` + selectedEvent.id}><button className="btn btn-primary">Register Now</button></a>
               <button className="btn btn-secondary" onClick={() => setShowPopup(false)}>
                 Close
               </button>

@@ -11,22 +11,19 @@ export const Button = styled.button`
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
 
   &:hover,
   &:active {
-    box-shadow: 0 2rem 2rem 0 rgb(132 144 255 / 30%);
-    box-shadow: ${({ theme }) => theme.colors.shadowSupport};
-    border: 2px solid rgb(98 84 243);
-    transform: scale(0.96);
+    box-shadow: 0 1rem 2rem 0 #5C8374;
+    border: 2px solid #5C8374;
+    transform: scale(0.90);
 
   }
 
   a {
     text-decoration: none;
-    color: rgb(255 255 255);
+    color: white;
     font-size: 1.8rem;
   }
+  
 `;
