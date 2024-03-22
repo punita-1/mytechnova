@@ -15,7 +15,7 @@ const Footer = () => {
           </div>
           <div>
             <NavLink to='/contact'>
-              <Button style={{marginLeft:'150px', borderRadius:'5px'}}>
+              <Button style={{marginLeft:'115px', borderRadius:'5px', maxwidth: '150px',fontSize:'12px'}}>
                 Contact us
               </Button>
             </NavLink>
@@ -101,7 +101,7 @@ const Wrapper = styled.section`
 
 footer {
   padding: 14rem 0 9rem 0;
-  background-color: ${({ theme }) => theme.colors.footer_bg};
+  background-color: #143131;
 
   h3 {
     color: ${({ theme }) => theme.colors.hr};
