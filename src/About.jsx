@@ -4,7 +4,9 @@ import "./stylesheets/About.css"
 import { NavLink } from "react-router-dom"
 import { Button } from "./styles/Button"
 const About = () => {
-
+  const handleButtonClick = () => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
   return <> <Wrapper>
     <div className="fullcontainerpadding container grid grid-two-column">
       <div className="section-hero-data">
@@ -16,9 +18,13 @@ const About = () => {
         </h1>
         <p className='hero-para'>"Ignite Your Passion for Innovation:Join Us for a Spectacular Fusion of Technology and Talent!"</p>
         <h4 className="hero-date">"5th April - 6th April"</h4>
-        <Button className='btn eventpage-btn'>
-          <NavLink to='/event'>Register Now</NavLink>
-        </Button>
+        <div className="button-container">
+        <NavLink to='/gallery' onClick={handleButtonClick}>
+          <Button className='btn visitgalbtn eventpage-btn'>
+            Visit Gallery
+          </Button>
+        </NavLink>
+        </div>
       </div>
 
       <div className="section-hero-image">
