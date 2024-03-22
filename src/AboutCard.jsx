@@ -50,9 +50,6 @@ const AboutCard = () => {
               Community engagement and collaboration.
             </p>
           </div>
-
-
-
         </div>
       </div>
       </div>

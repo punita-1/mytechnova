@@ -4,11 +4,11 @@ import MyCollage from './collage'
 
 const Gallery = () => {
   return (
-    <>
-    {/* <SwiperComponent/> */}
-    <MyCollage/>
-    </>
-  )
-}
+    <div>
+      <h1></h1>
+      <MyCollage/>
+    </div>
+  );
+};
 
 export default Gallery

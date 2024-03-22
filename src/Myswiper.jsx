@@ -20,7 +20,6 @@ const photos = [
   { src: 'public/images/technova_gallery/welcomes/welcome_type.jpg', width: 1 },
   { src: 'public/images/technova_gallery/welcomes/welcome5.jpg', width: 1 },
   { src: 'public/images/technova_gallery/prize/Prize1.jpg', width: 1 },
-
   { src: 'public/images/technova_gallery/prize/prize4.jpg', width: 1 },
   { src: 'public/images/technova_gallery/prize/prize3.jpg', width: 2 },
   { src: 'public/images/technova_gallery/events/hand_sensor.jpg', width: 1 },
@@ -34,7 +33,6 @@ const photos = [
   { src: 'public/images/technova_gallery/events/cards.jpg', width: 1 },
   { src: 'public/images/technova_gallery/events/robo_soccer.jpg', width: 1 },
   { src: 'public/images/technova_gallery/group_pics/gp_pic3.jpg', width: 1 },
-
   { src: 'public/images/technova_gallery/events/thinkbots1.jpg', width: 1 },
   { src: 'public/images/technova_gallery/events/thinkbots2.jpg', width: 1 },
   { src: 'public/images/technova_gallery/events/robo_soccer.jpg', width: 1 },
@@ -45,17 +43,43 @@ const photos = [
 
 
 const Collage = () => {
+  const [selectedPhoto, setSelectedPhoto] = useState(null);
+
+  const openPhotoWindow = (src) => {
+    setSelectedPhoto(src);
+  };
+
   return (
     <div className="collage">
       {photos.map((photo, index) => (
-        <div key={index} className={`grid-item grid-item-${photo.width}`}>
+        <div key={index} className={`grid-item grid-item-${photo.width}`} onClick={() => openPhotoWindow(photo.src)}>
           <img src={photo.src} alt="" onError={(e) => console.error("Image load error:", e)} />
         </div>
       ))}
+
+      {selectedPhoto && (
+        <div className="modal-overlay">
+          <div className="modal-img-container">
+            <img src={selectedPhoto} alt="" onError={(e) => console.error("Image load error:", e)} className="modal-img" />
+            <button onClick={() => setSelectedPhoto(null)}>Close</button>
+          </div>
+        </div>
+      )}
     </div>
   );
-}
-export default Collage;
+};
+
+
+
+
+
+
+
+
+
+
+
+
 
 // export default function App() {
 //   return (

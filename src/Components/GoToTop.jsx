@@ -48,7 +48,7 @@ const Wrapper = styled.section`
     width: 6rem;
     height: 6rem;
     color: #fff;
-    background-color: ${({ theme }) => theme.colors.btn};
+    background-color: #032817;
     box-shadow: ${({ theme }) => theme.colors.shadow};
     border-radius: 50%;
     position: fixed;
@@ -77,7 +77,7 @@ const Wrapper = styled.section`
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     .top-btn {
       right: 0;
-      left: 40%;
+      left: 85%;
     }
   }
 `;
