@@ -7,7 +7,7 @@
 /* ButtonContainer.css */
 
 .button-container:hover .visitgalbtn a {
-  color: #5C8374;
+  color: white;
 }
 
 .button-container {
@@ -20,7 +20,7 @@
 }
 
 .btn:hover a {
-  color: #5C8374;
+  color: white;
 }
 
 /* ButtonContainer.css */
@@ -36,3 +36,14 @@
   margin-top: 1rem;
   margin-bottom: 2rem;
 } */
+
+
+
+.getsomebg {
+  height: 100vh;
+}
+
+.getsomebg {
+  height: calc(100vh-100px);
+  background: linear-gradient(180deg, #111132, #0c0c1d);
+}

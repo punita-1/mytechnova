@@ -3,45 +3,112 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { Button } from "../styles/Button";
 import Timer from "../timer";
+import { animate, motion } from 'framer-motion';
+import './doodle.css';
 
-const HeroSection = ({ name, image }) => {
+
+const TextVariants = {
+  initial: {
+    x: -500,
+    opacity: 0,
+
+  },
+  animate: {
+    x: '0',
+    opacity: '1',
+    transition:
+    {
+      duration: 1,
+      staggeredChildren: 0.1,
+
+
+    }
+  }
+}
+
+
+const SliderVariants = {
+  initi: {
+    x: 0,
+
+  },
+  anima: {
+    x: '-200%',
+    transition:
+    {
+      repeat: Infinity,
+      // repeatType: "mirror",
+      duration: 5,
+
+
+    }
+  }
+}
+
+
+
+const HeroSection = () => {
+
   const handleButtonClick = () => {
     window.scrollTo(0, 0); // Scroll to the top of the page
   };
-  return (<Wrapper>
-    <div className="fullcontainerpadding container grid grid-two-column">
-      <div className="section-hero-data">
-        <p className='hero-top-data'>
+  return (<Wrapper className="hero">
+    <div
+      className=" container grid grid-two-column">
+      <motion.div variants={TextVariants} initial='initial' animate='animate'
+
+        className="section-hero-data">
+        <motion.p variants={TextVariants}
+          className='hero-top-data'>
           WE ARE BACK
-        </p>
-        <h1 className='hero-heading'>
-          {name}
-        </h1>
-        <p className='hero-para'>"Ignite Your Passion for Innovation: Join Us for a Spectacular Fusion of Technology and Talent!"</p>
-        <h3 className="hero-date">"5th April - 6th April"</h3>
+        </motion.p>
+        <motion.h1 variants={TextVariants}
+          className='hero-heading'>
+          Technova 2024
+        </motion.h1>
+        <motion.p initial={{ x: -500, opacity: '0' }}
+          animate={{ x: '0', opacity: '1' }}
+          transition={{ delay: '0.3', duration: '1' }}
+          className='hero-para'>"Ignite Your Passion for Innovation: Join Us for a Spectacular Fusion of Technology and Talent!"</motion.p>
+        <motion.h3
+          initial={{ x: -500, opacity: '0' }}
+          animate={{ x: '0', opacity: '1' }}
+          transition={{ delay: '0.4', duration: '1' }}
+          className="hero-date">"5th April - 6th April"</motion.h3>
         <Timer />
-        {/* <div className="button-container">
-          <Button className='btn'>
-            <NavLink to='/event'>Register Now</NavLink>
-          </Button>
-        </div> */}
-        <div className="button-container">
+        <motion.div style={{textAlign:'center', alignItems:'center'}} className="slidingTextContainer fullcontainerpadding"
+          variants={SliderVariants}
+          initial="initi" animate="anima">
+          Technova 2024
+        </motion.div>
+        <motion.div
+          initial={{ x: -500, opacity: '0',scale:'1' }}
+          animate={{ x: '0', opacity: '1',scale:'1.5' }}
+          transition={{ delay: '0.6', duration: '1' }}
+          style={{ zIndex: '9999999999px' }}
+          className="button-container">
           <NavLink to='/event' onClick={handleButtonClick}>
             <Button className='btn'>
               Register Now
             </Button>
           </NavLink>
-        </div>
+        </motion.div>
 
+
+      </motion.div>
+      <div>
+        <motion.div
+        variants={TextVariants} animate='animate' initial='initial'
+          className="section-hero-image">
+          <picture>
+            <img style={{ marginTop: '130px' }} className="hero-img" src="public/images/final.png" alt="Description of the image" />
+          </picture>
+        </motion.div>
       </div>
 
-      <div className="section-hero-image">
-        <picture>
-          <img className="hero-img" src={image} />
-        </picture>
-      </div>
 
     </div>
+
   </Wrapper>
   )
 };
@@ -49,33 +116,36 @@ const HeroSection = ({ name, image }) => {
 const Wrapper = styled.section`
 padding: 5rem 0;
 
-.fullcontainerpadding{
+.fullcontainerpadding {
   padding-top: 0px;
+  // overflow-x: hidden;
+  width: 100%;
 }
-.section-hero-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
  .section-hero-data {
   display: flex;
   flex-direction: column;
+  // overflow-x: hidden;
   align-self: center; 
   padding-left: 0px;
   justify-content: center;
+  padding: 0 2rem;
 }
 
 .button-container {
+  margin-left: 300px;
   display: flex;
+  max-width: 13rem;
   justify-content: center;
 }
 
 .btn {
   max-width: 20rem;
+  z-index:9999;
 }
 
 .btn:hover a {
-  color: #5C8374;
+  color: white;
 }
 
 .timer{
@@ -85,38 +155,39 @@ padding: 5rem 0;
 
 .hero-top-data {
   margin-top:40px;
+  margin-left:15px;
+  width:780px;
   text-transform: uppercase;
   font-weight: 500;
-  color: #31363F;
-  text-align: center;
+  font-size:22px;
+  color: rebeccapurple;
   letter-spacing: 0.2rem;
 }
 
 .hero-heading {
-    color: var(--primary-background-color);
-    font-family: fantasy;
+    color: lightgrey;
+width:780px;
     text-transform: uppercase;
     font-size: 9rem;
-    width: 70rem;
-    text-align: center;
-    letter-spacing: 0.3rem;
 }
 .hero-date{
-  margin: 20px 0px 0px;
-  font-family: "Paprika", system-ui;
+  // margin: 20px 0px 0px;
+  // font-family: "Paprika", system-ui;
   font-weight: 600;
   font-size: 2.6rem;
   padding: 10px;
-  border-radius: 5px;
+  width:780px;
+  // border-radius: 5px;
   text-align: center;
 }
 .hero-para {
-    font-family: "Sorts Mill Goudy", serif;
-    margin-top: 2rem;
-    width: 70rem;
+    // font-family: "Sorts Mill Goudy", serif;
+    // margin-top: 2rem;
+    width:780px;
+    color:lightgrey;
     font-size: 2.4rem;
-    text-align: center;
-    line-height: 28px;
+    // text-align: center;
+    // line-height: 28px;
     font-style: italic;
     font-weight: 600;
     text-align: center;

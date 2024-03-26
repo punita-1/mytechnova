@@ -41,7 +41,7 @@ const Event = () => {
 
       <Tabs className='justify-content-center'>
         <Tab eventKey="centralized" title="Centralized">
-          <h2><b>CENTRALIZED EVENTS</b></h2>
+          <h2 style={{paddingTop:'30px', fontSize:'50px', color:'lightgrey'}}><b>CENTRALIZED EVENTS</b></h2>
           <CardGroup
             heading="Unite & Ignite: Events for All Students"
             events={searchResults.filter((ev) => ev.category === "centralized")}

@@ -36,13 +36,13 @@ const Navbar = () => {
         display: inline-block;
         text-decoration: none;
         font-size: 1.4rem;
+        color: white;
         text-transform: uppercase;
-        color: ${({ theme }) => theme.colors.white};
         transition: color 0.3s linear;
 
         &.active {
-          color: #9EC8B9; 
-          border-bottom: 6px solid #9EC8B9; 
+          color: white; 
+          border-bottom: 6px solid white; 
         }
       }
     }
@@ -59,7 +59,7 @@ const Navbar = () => {
     .mobile-navbar-btn {
       display: inline-block;
       z-index: 999;
-      border: ${({ theme }) => theme.colors.black};
+      
 
       .mobile-nav-icon {
         font-size: 4.2rem;
@@ -91,15 +91,16 @@ const Navbar = () => {
         .navbar-link {
           &:link,
           &:visited {
-            
-            font-size: 2rem;
+            font-size: 2.5rem;
+            color: ${({ theme }) => theme.colors.black};
           }
           color: ${({ theme }) => theme.colors.black};
           &:active {
-            color: ${({ theme }) => theme.colors.helper} !important;
           }
         }
-
+        &.active .navbar-link { /* Add this rule */
+          color: ${({ theme }) => theme.colors.black}; /* Set active link color to black */
+        }
       }
     }
      .active .mobile-nav-icon {
@@ -127,77 +128,77 @@ const Navbar = () => {
   /* Add your media query styles here */
 `;
 
-    const handleMenuToggle = () => {
-      setOpenMenu(!openMenu);
-    };
-
-    const handleNavLinkClick = () => {
-      setOpenMenu(false);
-    };
-
-    return (
-      <Nav>
-        <div className={openMenu ? "menuIcon active" : "menuIcon"}>
-          <ul className="navbar-list">
-            <li>
-              <NavLink
-                className="navbar-link"
-                onClick={() => setOpenMenu(false)}
-                to="/">
-                Home
-              </NavLink></li>
-            <li>
-              <NavLink
-                className="navbar-link"
-                onClick={() => setOpenMenu(false)}
-                to="/about">
-                About
-              </NavLink></li>
-            <li>
-              <NavLink
-                className="navbar-link"
-                onClick={() => setOpenMenu(false)}
-                to="/event">
-                Events
-              </NavLink></li>
-            <li>
-              <NavLink
-                className="navbar-link"
-                onClick={() => setOpenMenu(false)}
-                to="/gallery">
-                Gallery
-              </NavLink></li>
-            <li>
-              <NavLink
-                className="navbar-link"
-                onClick={() => setOpenMenu(false)}
-                to="/contact">
-                Contact
-              </NavLink></li>
-            <li>
-              <NavLink
-                className="navbar-link"
-                onClick={() => setOpenMenu(false)}
-                to={user ? "/profile" : "/signup"}>
-                {user ? "Profile" : "Signup"}
-              </NavLink></li>
-
-          </ul>
-          {/* //nav icon */}
-          <div className="mobile-navbar-btn">
-            <CgMenu
-              name="menu-outline"
-              className="mobile-nav-icon"
-              onClick={handleMenuToggle}
-            />
-            <CgCloseR
-              name="close-outline"
-              className="close-outline mobile-nav-icon"
-              onClick={handleMenuToggle}
-            />
-          </div>
-        </div>
-      </Nav>
-    );
+  const handleMenuToggle = () => {
+    setOpenMenu(!openMenu);
   };
+
+  const handleNavLinkClick = () => {
+    setOpenMenu(false);
+  };
+
+  return (
+    <Nav>
+      <div className={openMenu ? "menuIcon active" : "menuIcon"}>
+        <ul className="navbar-list">
+          <li>
+            <NavLink
+              className="navbar-link"
+              onClick={() => setOpenMenu(false)}
+              to="/">
+              Home
+            </NavLink></li>
+          <li>
+            <NavLink
+              className="navbar-link"
+              onClick={() => setOpenMenu(false)}
+              to="/about">
+              About
+            </NavLink></li>
+          <li>
+            <NavLink
+              className="navbar-link"
+              onClick={() => setOpenMenu(false)}
+              to="/event">
+              Events
+            </NavLink></li>
+          <li>
+            <NavLink
+              className="navbar-link"
+              onClick={() => setOpenMenu(false)}
+              to="/gallery">
+              Gallery
+            </NavLink></li>
+          <li>
+            <NavLink
+              className="navbar-link"
+              onClick={() => setOpenMenu(false)}
+              to="/contact">
+              Contact
+            </NavLink></li>
+          <li>
+            <NavLink
+              className="navbar-link"
+              onClick={() => setOpenMenu(false)}
+              to={user ? "/profile" : "/signup"}>
+              {user ? "Profile" : "Signup"}
+            </NavLink></li>
+
+        </ul>
+        {/* //nav icon */}
+        <div className="mobile-navbar-btn">
+          <CgMenu
+            name="menu-outline"
+            className="mobile-nav-icon"
+            onClick={handleMenuToggle}
+          />
+          <CgCloseR
+            name="close-outline"
+            className="close-outline mobile-nav-icon"
+            onClick={handleMenuToggle}
+          />
+        </div>
+      </div>
+    </Nav>
+  );
+};
 export default Navbar;

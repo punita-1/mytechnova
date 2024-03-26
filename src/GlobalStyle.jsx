@@ -13,28 +13,40 @@ html {
   /* 1rem = 10px */
   overflow-x: hidden;
 }
-
 body {
   overflow-x: hidden;
-   scrollbar-color: rgb(98 84 243);
-    scrollbar-width: thin;
 }
 
-body::-webkit-scrollbar {
-  width: 1.5rem;
+::-webkit-scrollbar {
+  display: none;
 }
 
-body::-webkit-scrollbar-track {
-   background-color: rgb(24 24 29);
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
 }
 
-body::-webkit-scrollbar-thumb {
- 
-  background: #fff;
-    border: 5px solid transparent;
-    border-radius: 9px;
-    background-clip: content-box;
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
 }
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
 
 .flex{
   display: flex;

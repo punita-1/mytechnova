@@ -1,6 +1,26 @@
 import React, { useEffect, useRef } from 'react';
 import './timer.css';
+import { motion } from 'framer-motion';
 
+const TextVariants = {
+  initial: {
+    x: -500,
+    opacity:0,
+
+  },
+  animate: {
+    x: '0',
+    opacity:'1',
+    transition:
+    {
+      delay:'0.5',
+      duration: 1,
+      staggeredChildren:0.1,
+
+
+    }
+  }
+}
 const Timer = () => {
   const daysRef = useRef(null);
   const hoursRef = useRef(null);
@@ -34,7 +54,7 @@ const Timer = () => {
   }, []);
 
   return (
-    <div className="timer-container">
+    <motion.div className="timer-container" variants={TextVariants}>
       <div className="timer">
         <div className="timer-item">
           <span id="days" ref={daysRef} className="timer-value"></span>
@@ -53,7 +73,7 @@ const Timer = () => {
           <span className="timer-label">Seconds</span>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

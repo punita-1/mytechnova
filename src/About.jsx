@@ -3,35 +3,79 @@ import styled from "styled-components"
 import "./stylesheets/About.css"
 import { NavLink } from "react-router-dom"
 import { Button } from "./styles/Button"
+import { motion } from 'framer-motion';
+import './anotherdoodle.css';
+const svgVariants = {
+  hidden: { x: 480 },
+  visible: {
+    x: 0,
+    // scale:1.5,
+    transition: { duration: 0.5, type: 'spring', stiffness: '230' }
+  },
+}
+const pathVarients = {
+  hidden: {
+    opacity: 0,
+    pathLength: 0
+  },
+  visible: {
+    opacity: 1,
+    pathLength: 1,
+    transition: {
+      duration: 2,
+      ease: "easeInOut"
+    }
+
+  }
+}
+
 const About = () => {
   const handleButtonClick = () => {
     window.scrollTo(0, 0); // Scroll to the top of the page
   };
-  return <> <Wrapper>
+  return <> <Wrapper >
     <div className="fullcontainerpadding container grid grid-two-column">
       <div className="section-hero-data">
-        <p className='hero-top-data'>
+        <motion.p
+          initial={{ x: '-600px' }}
+          animate={{ fontSize: '15px', x: '-225px' }}
+          transition={{ delay: '0', duration: '1', type: 'spring', stiffness: '230' }}
+          className='hero-top-data'>
           WE ARE BACK
-        </p>
-        <h1 className='hero-heading'>
+        </motion.p>
+        <motion.h1
+          initial={{ x: '-600px' }}
+          animate={{ fontSize: '80px', x: '0px' }}
+          transition={{ delay: '0', duration: '1', type: 'spring', stiffness: '100' }}
+          className='hero-heading'>
           About Technova
-        </h1>
-        <p className='hero-para'>"Ignite Your Passion for Innovation:Join Us for a Spectacular Fusion of Technology and Talent!"</p>
+        </motion.h1>
+        <motion.p
+          initial={{ x: '-600px' }}
+          animate={{ fontSize: '20px', x: '0px' }}
+          transition={{ delay: '0', duration: '1', type: 'spring', stiffness: '120' }}
+          className='hero-para'>"Ignite Your Passion for Innovation:Join Us for a Spectacular Fusion of Technology and Talent!"</motion.p>
         <h4 className="hero-date">"5th April - 6th April"</h4>
-        <div className="button-container">
-        <NavLink to='/gallery' onClick={handleButtonClick}>
-          <Button className='btn visitgalbtn eventpage-btn'>
-            Visit Gallery
-          </Button>
-        </NavLink>
-        </div>
+        <motion.div
+          initial={{ scale: '1' }}
+          animate={{ scale: '1.5' }}
+          transition={{ duration: '1', delay: '0.2', type: 'spring', stiffness: '130' }}
+          // whileHover={{textShadow:'0 0 8px rgb(225, 225, 225)',boxShadow:'0 0 8px rgb(225, 225, 225)',}}
+          className="button-container">
+          <NavLink to='/gallery' onClick={handleButtonClick}>
+            <Button className='btn visitgalbtn eventpage-btn'>
+              Visit Gallery
+            </Button>
+          </NavLink>
+        </motion.div>
       </div>
 
-      <div className="section-hero-image">
+      <motion.div
+        className="section-hero-image">
         <picture>
-          <img className="hero-img" src="images/about_hero.png" />
+          <img style={{ height: '350px',marginTop:'50px' }} src="public/images/anotherfinal.png" alt="image" />
         </picture>
-      </div>
+      </motion.div>
     </div>
     <div className='why'>
       <h2 style={{ fontWeight: 'bold' }}>Why join us?</h2>
@@ -150,13 +194,6 @@ padding: 5rem 0;
     font-style: italic;
     font-weight: 600;
     text-align: center;
-}
-
-
-.section-hero-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .btn {

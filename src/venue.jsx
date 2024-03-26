@@ -3,8 +3,8 @@ import "./venue.css"
 
 function Venue() {
   return (
-    <div style={{ padding: '40px' }}>
-      <h2 style={{ fontWeight: 'bold' }} className='heading'>VENUE</h2>
+    <div style={{ padding: '40px', paddingTop:'100px' }}>
+      <h2 style={{ fontSize:'50px',fontWeight:"700", color:'lightgrey' }} className='heading'>VENUE</h2>
       <div style={{ paddingTop: '25px' }} className='container grid grid-two-column'>
 
         <div className="venue-text">

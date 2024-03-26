@@ -24,7 +24,6 @@ const Card = ({ image, title, description, handleRegisterClick }) => {
                 </div>
                 <div className="card-body card-body-fixed">
                     <h3 className="card-title mt-2 card-title-truncate">
-                        {/* {title.length > 25 ? title.slice(0, 25) + '...' : title} */}
                         {title}
                     </h3>
                     <p className="card-text">{description}</p>

@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import HeroSection from "./Components/HeroSection";
 import SocialIcon from "./Socialicon";
-import AboutCard from "./AboutCard";
-import Previously from "./previously";
+// import Previously from "./previously";
+import {motion} from 'framer-motion';
 import CardGroup from './Cardgroup';
 import Venue from "./venue";
 import { Button } from './styles/Button';
 import { NavLink } from 'react-router-dom';
 import './minorhome.css';
 import './button.css';
+import HomeAboutCard from './HomeAboutCard';
+import ParalaxNight from './ParalaxNight';
 
 const Home = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -67,34 +69,34 @@ const Home = () => {
   };
 
   const handleViewAllClick = () => {
-    window.scrollTo(0, 0); // Scroll to the top of the page
+    window.scrollTo(0, 0); 
   };
 
   return (
     <>
       <HeroSection {...data} />
       <SocialIcon />
-      <AboutCard />
-      <Previously />
-      <div>
-        <h2 style={{ fontWeight: 'bold', paddingTop: '60px' }}>Events</h2>
+      <HomeAboutCard/>
+      {/* <Previously /> */}
+      <ParalaxNight/>
+      <div className='getsomebg'>
+        <h2 style={{ fontSize:'60px',letterSpacing:'0.5px',fontWeight:"400", color:'lightgrey',paddingTop:'50px' }}><b>Events</b></h2>
         <CardGroup
           heading="Unite & Ignite: Events for All Students"
           events={events.slice(0, 3)}
           handleRegisterClick={handleRegisterClick}
         />
 
-        {/* <div className="button-container">
-          <Button className='btn eventpage-btn' onClick={handleViewAllClick}>
-            <NavLink to='/event'>View all</NavLink>
-          </Button>
-        </div> */} <div className="button-container">
+     <motion.div
+     initial={{scale:'1'}}
+     animate={{scale:1.5}}
+     className="button-container">
       <NavLink to='/event' onClick={handleViewAllClick}>
         <Button className='btn eventpage-btn'>
           View all
         </Button>
       </NavLink>
-    </div>
+    </motion.div>
 
         {showPopup && (
           <div className="popup">

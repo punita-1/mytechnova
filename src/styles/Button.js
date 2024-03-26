@@ -3,10 +3,10 @@ import styled from "styled-components";
 export const Button = styled.button`
   text-decoration: none;
   max-width: auto;
-  background-color: #1B4242;
+  background-color: transparent;
   color: rgb(255 255 255);
   padding: 1.4rem 2.4rem;
-  border: none;
+  border: 1px solid white;
   text-transform: uppercase;
   text-align: center;
   cursor: pointer;
@@ -14,8 +14,8 @@ export const Button = styled.button`
 
   &:hover,
   &:active {
-    box-shadow: 0 1rem 2rem 0 #5C8374;
-    border: 2px solid #5C8374;
+    box-shadow: 0 0.5rem 0.5rem 0 #ffffff50;
+    border: 2px solid lightgrey;
     transform: scale(0.90);
 
   }

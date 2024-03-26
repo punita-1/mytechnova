@@ -24,11 +24,6 @@
 .carousel-wrapper {
   transition: transform 0.3s, box-shadow 0.3s;
 }
-
-.carousel-wrapper:hover {
-  transform: scale(1.05); /* Increase size on hover */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
-}
 @media screen and (max-width: 768px) {
   .Crousel_img {
     height: 250px;
