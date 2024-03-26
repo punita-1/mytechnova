@@ -8,10 +8,10 @@
     overflow: hidden;
 }
 
-
+/* 
 .another {
     height: 80vh;
-}
+} */
 
 .another {
     height: calc(80vh-80px);

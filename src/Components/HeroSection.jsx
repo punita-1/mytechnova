@@ -76,14 +76,14 @@ const HeroSection = () => {
           transition={{ delay: '0.4', duration: '1' }}
           className="hero-date">"5th April - 6th April"</motion.h3>
         <Timer />
-        <motion.div style={{textAlign:'center', alignItems:'center'}} className="slidingTextContainer fullcontainerpadding"
+        <motion.div style={{ textAlign: 'center', alignItems: 'center' }} className="slidingTextContainer fullcontainerpadding"
           variants={SliderVariants}
           initial="initi" animate="anima">
           Technova 2024
         </motion.div>
         <motion.div
-          initial={{ x: -500, opacity: '0',scale:'1' }}
-          animate={{ x: '0', opacity: '1',scale:'1.5' }}
+          initial={{ x: -500, opacity: '0', scale: '1' }}
+          animate={{ x: '0', opacity: '1', scale: '1.5' }}
           transition={{ delay: '0.6', duration: '1' }}
           style={{ zIndex: '9999999999px' }}
           className="button-container">
@@ -98,11 +98,10 @@ const HeroSection = () => {
       </motion.div>
       <div>
         <motion.div
-        variants={TextVariants} animate='animate' initial='initial'
+          variants={TextVariants} animate='animate' initial='initial'
           className="section-hero-image">
-          <picture>
-            <img style={{ marginTop: '130px' }} className="hero-img" src="public/images/final.png" alt="Description of the image" />
-          </picture>
+          <img style={{ marginTop: '130px' }} className="hero-img" src="public/images/final.png" alt="Description of the image" />
+
         </motion.div>
       </div>
 

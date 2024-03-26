@@ -1,7 +1,7 @@
-.myClassForThisDiv {
+/* .myClassForThisDiv {
     padding: 30px;
     height: 60vh;
-}
+} */
 
 .myClassForThisDiv{
     height: calc(60vh-60px);

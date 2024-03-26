@@ -69,8 +69,8 @@ const Navbar = () => {
 
     /* hide the original nav menu  */
     .navbar-list {
-      width: 100vw;
-      height: 100vh;
+      // width: 100vw;
+      // height: 100vh;
       position: absolute;
       top: 0;
       left: 0;
