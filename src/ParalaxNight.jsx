@@ -14,7 +14,7 @@ function ParalaxNight() {
     })
 
     const yBg = useTransform(scrollYProgress, [0, 1], ['0%', '100%'])
-    const ytext = useTransform(scrollYProgress, [0, 1], ['0%', '500%'])
+    // const ytext = useTransform(scrollYProgress, [0, 1], ['0%', '500%'])
 
     const handleVisitGalleryClick = () => {
         window.scrollTo(0, 0);
@@ -26,8 +26,8 @@ function ParalaxNight() {
             {/* <motion.div style={{ y: yBg, height: '500px' }} className="planets"></motion.div> */}
 
             <motion.div className='heading-container'>
-                <motion.h3 className='heading-container morestyle' style={{ y: ytext }}><b>"Moments in Time"</b></motion.h3>
-                <motion.p className='heading-container parastyle' style={{ color: 'lightgray', y: ytext }}> "Explore the past triumphs and memorable moments that have shaped
+                <motion.h3 className='heading-container morestyle' ><b>"Moments in Time"</b></motion.h3>
+                <motion.p className='heading-container parastyle' style={{ color: 'lightgray' }}> "Explore the past triumphs and memorable moments that have shaped
                     the legacy of our university's innovative spirit."
                 </motion.p>
                 <div style={{ paddingBottom: '40px', paddingTop: '10px', zIndex: 999999999 }}>
