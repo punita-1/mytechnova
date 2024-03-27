@@ -79,14 +79,14 @@ const Home = () => {
       <HomeAboutCard/>
       {/* <Previously /> */}
       <ParalaxNight/>
-      <div className='getsomebg'>
-        <h2 style={{ fontSize:'60px',letterSpacing:'0.5px',fontWeight:"400", color:'lightgrey',paddingTop:'50px' }}><b>Events</b></h2>
+      <div >
+        <h2 style={{ fontSize:'60px',letterSpacing:'0.5px',fontWeight:"400", color:'lightgrey',paddingTop:'100px' }}><b>Events</b></h2>
         <CardGroup
           heading="Unite & Ignite: Events for All Students"
           events={events.slice(0, 3)}
           handleRegisterClick={handleRegisterClick}
         />
-
+<div style={{paddingBottom:'100px'}}>
      <motion.div
      initial={{scale:'1'}}
      animate={{scale:1.5}}
@@ -97,6 +97,7 @@ const Home = () => {
         </Button>
       </NavLink>
     </motion.div>
+    </div>
 
         {showPopup && (
           <div className="popup">

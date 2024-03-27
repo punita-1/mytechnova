@@ -6,13 +6,14 @@
     margin-bottom: 2rem;
   }
 
-  .getsomebg {
-    height: 100vh;
+  /* .getsomebg { */
+    /* height: 200vh; */
   
-  }
+  /* } */
   
   
-  .getsomebg {
-    height: calc(100vh-100px);
-    background: linear-gradient(180deg, #111132, #0c0c1d);
-  }
+  /* .getsomebg { */
+    /* height: calc(100vh-100px);
+    background: linear-gradient(180deg, #111132, #0c0c1d); */
+    /* margin: 100px;
+  }  */

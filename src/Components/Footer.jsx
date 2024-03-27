@@ -104,7 +104,7 @@ const Wrapper = styled.section`
 
 footer {
   padding: 14rem 0 9rem 0;
-  background-color: #092635;
+  background-color: #111132;
 
   h3 {
     color: ${({ theme }) => theme.colors.hr};

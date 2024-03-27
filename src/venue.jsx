@@ -2,10 +2,10 @@ import React from 'react'
 import "./venue.css"
 
 function Venue() {
-  return (
-    <div style={{ padding: '40px', paddingTop:'100px' }}>
-      <h2 style={{ fontSize:'50px',fontWeight:"700", color:'lightgrey' }} className='heading'>VENUE</h2>
-      <div style={{ paddingTop: '25px' }} className='container grid grid-two-column'>
+  return ( <div className='yolo'>
+    <div style={{ padding: '40px', paddingTop:'50px' }}>
+      <h2 style={{ fontSize:'50px',fontWeight:"700", color:'lightgrey', paddingBottom:'50px' }} className='heading'>VENUE</h2>
+      <div className='container grid grid-two-column'>
 
         <div className="venue-text">
 
@@ -17,6 +17,7 @@ function Venue() {
 
         </div>
       </div>
+    </div>
     </div>
   )
 }
