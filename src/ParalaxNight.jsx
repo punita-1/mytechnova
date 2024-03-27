@@ -9,7 +9,7 @@ function ParalaxNight() {
     const ref = useRef()
     const { scrollYProgress } = useScroll({
         target: ref,
-        offset: ["start start", "end start"]
+        offset: ["-0.5 start", "end end"]
 
     })
 
@@ -19,10 +19,10 @@ function ParalaxNight() {
     const handleVisitGalleryClick = () => {
         window.scrollTo(0, 0);
     };
-    return (<div style={{paddingTop:'100px'}}>
-        <motion.div className='parallax another' ref={ref} style={{ background: 'linear-gradient(180deg, #111132, #0c0c1d)', borderRadius:'10px' }}>
-            <motion.div style={{ x: yBg, height: '500px' }} className="starts"></motion.div>
-            <motion.div style={{ y: yBg, height: '500px' }} className="mountains"></motion.div>
+    return (<div style={{ paddingTop: '100px' }}>
+        <motion.div className='parallax another' ref={ref} style={{ background: 'linear-gradient(180deg, #111132, #0c0c1d)', borderRadius: '10px' }}>
+            <motion.div style={{ x: yBg, height: '500px', width: '2000px' }} className="starts"></motion.div>
+            {/* <motion.div style={{ y: yBg, height: '500px' }} className="mountains"></motion.div> */}
             {/* <motion.div style={{ y: yBg, height: '500px' }} className="planets"></motion.div> */}
 
             <motion.div className='heading-container'>
@@ -30,21 +30,23 @@ function ParalaxNight() {
                 <motion.p className='heading-container parastyle' style={{ color: 'lightgray', y: ytext }}> "Explore the past triumphs and memorable moments that have shaped
                     the legacy of our university's innovative spirit."
                 </motion.p>
-                <div style={{paddingBottom:'40px', paddingTop:'10px'}}>
-                <motion.div
-                    initial={{ scale: "1" }}
-                    animate={{ scale: 1.5 }}
-                    style={{ y: ytext }} className="button-container">
-                    <NavLink to='/gallery' onClick={handleVisitGalleryClick}>
-                        <Button className='btn visitgalbtn eventpage-btn'>
-                            Visit Gallery
-                        </Button>
-                    </NavLink>
-                </motion.div>
+                <div style={{ paddingBottom: '40px', paddingTop: '10px', zIndex: 999999999 }}>
+                    <motion.div
+                        initial={{ scale: "1" }}
+                        animate={{ scale: 1.5 }}
+                        style={{ zIndex: 999999999 }}
+                        className="button-container"
+                    >
+                        <NavLink to='/gallery'>
+                            <Button className='btn visitgalbtn eventpage-btn' onClick={handleVisitGalleryClick}>
+                                Visit Gallery
+                            </Button>
+                        </NavLink>
+                    </motion.div>
                 </div>
             </motion.div>
         </motion.div>
-        </div>
+    </div>
     )
 }
 

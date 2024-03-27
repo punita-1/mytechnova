@@ -1,9 +1,9 @@
 import Home from './Home';
 import Contact from './Contact';
 import About from './About';
-import'./App.css';
+import './App.css';
 import Signup from './Signup';
-import Gallery from './Gallery';
+import Gallery from './Gallery.jsx';
 import Event from './Events';
 import Register_form from './Register_form';
 import Header from './Components/Header';
@@ -12,7 +12,7 @@ import { GlobalStyle } from "./GlobalStyle";
 import Footer from './Components/Footer';
 import Error from './Error';
 import { ThemeProvider } from 'styled-components';
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Profile from './Profile';
 import Cursor from './Cursor';
 // import { AnimatePresence } from 'framer-motion';
@@ -44,7 +44,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <GoToTop />
-      <Cursor/>
+      <Cursor />
       <BrowserRouter>
         <Header />
         {/* <AnimatePresence> */}
@@ -59,7 +59,7 @@ const App = () => {
           <Route path='/registerform'>
             <Route path=':id' element={<Register_form />} />
           </ Route>
-          
+
           <Route path='/*' element={<Error />} />
         </Routes>
         {/* </AnimatePresence> */}
