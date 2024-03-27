@@ -19,7 +19,7 @@ body {
     color: lightgray;
 }
 
-@mixin mobile {
+/* @mixin mobile {
     @media(max-width:738px){
         @content;
     }
@@ -33,4 +33,4 @@ body {
     @media(max-width:1366px){
         @content;
     }
-}
+} */

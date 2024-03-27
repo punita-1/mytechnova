@@ -126,7 +126,7 @@ padding: 5rem 0;
   align-self: center; 
   padding-left: 0px;
   justify-content: center;
-  padding: 0 2rem;
+  padding: 0 0rem;
 }
 
 .button-container {
