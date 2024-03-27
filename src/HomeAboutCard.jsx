@@ -10,8 +10,8 @@ const scrollToTop = () => {
 const HomeAboutCard = () => {
     const [activeTab, setActiveTab] = useState("Opportunity");
     return (
-        <div style={{ paddingTop: "150px" }}>
-            <div style={{ padding: "50px" }} className='myClassForThisDiv'>
+        <div className='setheight'>
+            <div className='myClassForThisDiv'>
                 <div className='prev-container container grid grid-two-column'>
                     <div> <h3 class="aboutCardHeading"><b>About Technova</b></h3>
 
@@ -27,7 +27,7 @@ const HomeAboutCard = () => {
                             Explore the events
                         </NavLink></div>
                     <div>
-                        <h3 style={{ marginBottom: "30px", fontSize: '30px' }} className="aboutGridHeading ">Why join us</h3>
+                        <h3  className="aboutGridHeading myheading">Why join us</h3>
                         <Tabs defaultActiveKey="Opportunity" onSelect={(key) => setActiveTab(key)}>
                             <Tab eventKey="Opportunity" title="Opportunity">
                                 <p className="aboutGridDescription aboutCardDescription">

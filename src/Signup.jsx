@@ -259,15 +259,15 @@ const Signup = () => {
     return <Navigate to="/profile" />
   }
   return (
-    <div>
-      <div className="bodybill bg-image">
-        <div className="mx-auto col-md-6 col-lg-4 col-xlg-3 col-10 p-4 bg-light rounded-4 shadow border border-1 border-primary bg-opacity-50">
+    <div className="newbg">
+      <div className="bodybill ">
+        <div className="mx-auto col-md-6 col-lg-4 col-xlg-3 col-10 p-4 shadow ">
           <div className="text-center fs-1 text-primary mb-4 row">
-            <div className="btn btn-outline-primary col-4 offset-1 d-flex justify-content-center align-items-center" onClick={() => setSignin(() => true)}>
+            <div style={{borderColor:'white', color:'white'}} className="btn btn-outline-primary col-4 offset-1 d-flex justify-content-center align-items-center" onClick={() => setSignin(() => true)}>
               <input type="radio" className="mx-2" checked={signin} onChange={() => setSignin(() => false)} />
               <div className="fs-3">LOGIN</div>
             </div>
-            <div className="btn btn-outline-primary col-4 offset-1 d-flex justify-content-center align-items-center" onClick={() => setSignin(() => false)}>
+            <div style={{borderColor:'white', color:'white'}} className="btn btn-outline-primary col-4 offset-1 d-flex justify-content-center align-items-center" onClick={() => setSignin(() => false)}>
               <input type="radio" className="mx-2" checked={!signin} onChange={() => setSignin(() => false)} />
               <div className="fs-3">SIGNUP</div>
             </div>

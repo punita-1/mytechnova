@@ -42,3 +42,45 @@
   text-align: center;
   font-weight: 400;
 }
+
+@media screen and (max-width: 768px) {
+/* timer.css */
+
+.timer-container {
+  display: flex;
+  justify-content: center;
+  /* margin-right: 20px; */
+  margin-bottom: 25px;
+  /* margin-top: 20px; */
+
+}
+
+.timer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+/* .timer-item {
+  text-align: left;
+  align-items: left;
+} */
+
+.timer-value {
+  margin: 10px;
+  display: flex;
+  font-size: 2.0rem;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer-label {
+  display: block;
+  font-size: 1.7rem;
+  margin: 1px;
+  /* color: var(--primary-extra-dark); */
+  text-align: center;
+  font-weight: 400;
+}
+}

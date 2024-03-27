@@ -100,7 +100,7 @@ const HeroSection = () => {
         <motion.div
           variants={TextVariants} animate='animate' initial='initial'
           className="section-hero-image">
-          <img style={{ marginTop: '130px' }} className="hero-img" src="public/images/final.png" alt="Description of the image" />
+          <img style={{ marginTop: '130px' }} className="hero-img" src="public/images/newfinal.png" alt="Description of the image" />
 
         </motion.div>
       </div>
@@ -117,14 +117,12 @@ padding: 5rem 0;
 
 .fullcontainerpadding {
   padding-top: 0px;
-  // overflow-x: hidden;
   width: 100%;
 }
 
  .section-hero-data {
   display: flex;
   flex-direction: column;
-  // overflow-x: hidden;
   align-self: center; 
   padding-left: 0px;
   justify-content: center;
@@ -193,55 +191,101 @@ width:780px;
 }
 
 .hero-img {
-  height: 350px;
+  // margin-top: 1000px;
+  height: 250px;
   width: 350px;
 }
 @media (max-width: ${({ theme }) => theme.media.mobile}) {
-  padding: 1rem 0;
-  .section-hero-data {
+  padding: 5rem 0;
 
-    padding-left: 0; 
+  .fullcontainerpadding {
+    padding-top: 0px;
+    // width: 100%;
   }
-
-  .fullcontainerpadding{
-    padding-top: 40px;
+  
+   .section-hero-data {
+    display: flex;
+    flex-direction: column;
+    align-self: center; 
+    padding-left: 0px;
+    justify-content: center;
+    padding: 0 1rem;
   }
+  
+  .button-container {
+    margin-left: 70px;
+    
+    display: flex;
+    max-width: 20rem;
+    justify-content: center;
+  }
+  
   .btn {
     max-width: 20rem;
-  align-self: center;
-  margin-top: 2rem;
+    z-index:9999;
+  }
+  
+  .btn:hover a {
+    color: white;
+  }
+  
+  .timer{
+    padding-left: 0px;
+    padding-right: 0px;
   }
   
   .hero-top-data {
     margin-top:40px;
+    margin-left:9px;
+    width:100%;
     text-transform: uppercase;
     font-weight: 500;
-    color: #31363F;
+    font-size:18px;
+    color: rebeccapurple;
+    letter-spacing: 0.2rem;
+    // text-align:center;
   }
   
   .hero-heading {
-    text-transform: uppercase;
-    font-size: 5.0rem;
+      color: lightgrey;
+      width:100%;
+      text-transform: uppercase;
+      font-size: 4.2rem;
+      text-align: center;
   }
-  
-  .hero-para {
-    margin-top: 1.5rem;
-    margin-bottom: 3.4rem;
-    max-width: 40rem;
-  }
-  .hero-img {
-    height: 400px;
-    width: 400px;
-  }
-  .section-hero-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  picture {
+  .hero-date{
+    // margin: 20px 0px 0px;
+    // font-family: "Paprika", system-ui;
+    font-weight: 600;
+    font-size: 2.6rem;
+    padding: 10px;
+    width:100%;
+    // border-radius: 5px;
     text-align: center;
   }
+  .hero-para {
+      // font-family: "Sorts Mill Goudy", serif;
+      // margin-top: 2rem;
+      width:300px;
+      color:lightgrey;
+      font-size: 2.0rem;
+      // text-align: center;
+      // line-height: 28px;
+      font-style: italic;
+      font-weight: 500;
+      text-align: center;
+  }
+  
+  .hero-img {
+    height: 220px;
+    // align-item: center;
+    width: 320px;
+    // margin-left:60px;
+    // margin-top:-200px;
+    // padding-top: 90px;
+    // transform: rotate(270deg); /* Rotate the image by 45 degrees */
+  }
+  
 }
 
 `;

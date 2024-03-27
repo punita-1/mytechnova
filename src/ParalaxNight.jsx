@@ -26,8 +26,8 @@ function ParalaxNight() {
             {/* <motion.div style={{ y: yBg, height: '500px' }} className="planets"></motion.div> */}
 
             <motion.div className='heading-container'>
-                <motion.h3 className='heading-container' style={{ fontSize: '50px', y: ytext }}><b>"Moments in Time"</b></motion.h3>
-                <motion.p className='heading-container' style={{ color: 'lightgray', width: '600px', y: ytext }}> "Explore the past triumphs and memorable moments that have shaped
+                <motion.h3 className='heading-container morestyle' style={{ y: ytext }}><b>"Moments in Time"</b></motion.h3>
+                <motion.p className='heading-container parastyle' style={{ color: 'lightgray', y: ytext }}> "Explore the past triumphs and memorable moments that have shaped
                     the legacy of our university's innovative spirit."
                 </motion.p>
                 <div style={{paddingBottom:'40px', paddingTop:'10px'}}>

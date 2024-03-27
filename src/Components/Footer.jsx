@@ -11,14 +11,14 @@ const Footer = () => {
   return (
     <Wrapper>
       <section className="contact-short">
-        <div className="grid grid-two-column">
+        <div style={{color:'black'}} className="grid grid-two-column">
           <div>
             <h3> Do you have any querry?</h3>
             <h3>Talk to us today</h3>
           </div>
           <div>
             <NavLink to='/contact' onClick={handleButtonClick}>
-              <Button style={{ marginLeft: '150px', borderRadius: '5px' }}>
+              <Button style={{ marginLeft: '150px', borderRadius: '5px', color:'black', borderColor:'black' }}>
                 Contact us
               </Button>
             </NavLink>
@@ -29,7 +29,7 @@ const Footer = () => {
         <div className="container grid grid-four-column">
           <div className="footer-about">
             <h3>Technova 2024</h3>
-            <p>Join us at Technova, and together, let's embark on a journey of discovery, innovation, and endless opportunities!</p>
+            < p >Join us at Technova, and together, let's embark on a journey of discovery, innovation, and endless opportunities!</p>
           </div>
 
           {/* 2nd column */}
@@ -42,7 +42,7 @@ const Footer = () => {
                 autoComplete="off"
                 placeholder="Email"
               />
-              <input type="submit" value="Submit" />
+              <input style={{backgroundColor:'transparent', borderRadius:'5px', borderColor:'white'}} type="submit" value="Submit" />
             </form>
           </div>
 
@@ -100,6 +100,7 @@ const Wrapper = styled.section`
 .contact-short-btn {
   justify-self: end;
   align-self: center;
+  
 }
 
 footer {
