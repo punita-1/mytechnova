@@ -74,7 +74,8 @@ const About = () => {
   const handleButtonClick = () => {
     window.scrollTo(0, 0); // Scroll to the top of the page
   };
-  const [activeTab, setActiveTab] = useState(0);
+  // const [activeTab, setActiveTab] = useState(0);
+  const [activeTab, setActiveTab] = useState("Opportunity");
   return <> <Wrapper >
     <div className="fullcontainerpadding container grid grid-two-column">
       <motion.div variants={TextVariants} initial='initial' animate='animate'
@@ -88,7 +89,11 @@ const About = () => {
           className='hero-heading'>
           About Technova
         </motion.h1>
-
+        <motion.div style={{ textAlign: 'center', alignItems: 'center' }} className="sliding fullcontainerpadding"
+          variants={SliderVariants}
+          initial="initi" animate="anima">
+          Technova 2024
+        </motion.div>
         <motion.p initial={{ x: -500, opacity: '0' }}
           animate={{ x: '0', opacity: '1' }}
           transition={{ delay: '0.3', duration: '1' }}
@@ -120,21 +125,34 @@ const About = () => {
     </div>
     <div className='wrapup'>
       <h3 className="aboutGridHeading myheading">Why join us?</h3>
-      <Tabs className='forcenter' defaultActiveKey="Opportunity" onSelect={(key) => setActiveTab(key)}>
+      <Tabs 
+      //  defaultActiveKey="Opportunity" onSelect={(key) => setActiveTab(key)}
+       className='forcenter' defaultActiveKey="Opportunity" onSelect={(key) => setActiveTab(key)}
+      >
         <Tab eventKey="Opportunity" title="Opportunity">
-          <p className="aboutGridDescription aboutCardDescription">
-            Opportunity for personal and professional growth. Networking
-            with peers and industry professionals.
-          </p>
+          <AnimatePresence>
+            {activeTab === "Opportunity" && (
+
+              <motion.p
+                initial={{ x: '1000px' }}
+                animate={{ x: '0' }}
+                exit={{ x: '-1000px' }}
+                transition={{ delay: '0', duration: '1', type: 'spring', stiffness: '130', damping: '15' }}
+                className="aboutGridDescription aboutCardDescription">
+                Opportunity for personal and professional growth. Networking
+                with peers and industry professionals.
+              </motion.p>
+            )}
+          </AnimatePresence>
           <AnimatePresence>
             {activeTab === "Opportunity" && (
               <motion.img
                 initial={{ x: '-1000px' }}
                 animate={{ x: '0' }}
                 exit={{ x: '-1000px' }}
-                transition={{ delay: '0', duration: '1', type: 'spring', stiffness: '230' }}
-                style={{ height: '20px' }}
-                src="public/images/technova_gallery/events/robo_soccer.jpg"
+                transition={{ delay: '0', duration: '1', type: 'spring', stiffness: '130', damping: '15' }}
+                style={{ height: '100px' }}
+                src="public/images/myarrow.png"
                 alt="Random Image"
               />
             )}
@@ -161,7 +179,7 @@ const About = () => {
         </Tab>
         <Tab eventKey="Knowledge Sharing" title="Knowledge Sharing">
           <p className="aboutGridDescription aboutCardDescription">
-          Attendees learn from each other, staying updated on the latest trends and developments in technology.
+            Attendees learn from each other, staying updated on the latest trends and developments in technology.
           </p>
           <AnimatePresence>
             {activeTab === "Knowledge Sharing" && (
@@ -233,7 +251,7 @@ const About = () => {
         </Tab>
         <Tab eventKey="Inspiration" title="Inspiration">
           <p className="aboutGridDescription aboutCardDescription">
-          Technova events inspire attendees to pursue STEM careers by showcasing exciting possibilities and real-world technology applications.
+            Technova events inspire attendees to pursue STEM careers by showcasing exciting possibilities and real-world technology applications.
           </p>
           <AnimatePresence>
             {activeTab === "Inspiration" && (

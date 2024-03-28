@@ -11,14 +11,14 @@ const Footer = () => {
   return (
     <Wrapper>
       <section className="contact-short">
-        <div style={{color:'black'}} className="grid grid-two-column">
+        <div style={{ color: 'black' }} className="grid grid-two-column">
           <div>
             <h3> Do you have any querry?</h3>
             <h3>Talk to us today</h3>
           </div>
           <div>
             <NavLink to='/contact' onClick={handleButtonClick}>
-              <Button style={{ marginLeft: '150px', borderRadius: '5px', color:'black', borderColor:'black' }}>
+              <Button style={{ marginLeft: '150px', borderRadius: '5px', color: 'black', borderColor: 'black', border: 'solid 2px', fontSize: '12px' }}>
                 Contact us
               </Button>
             </NavLink>
@@ -42,7 +42,7 @@ const Footer = () => {
                 autoComplete="off"
                 placeholder="Email"
               />
-              <input style={{backgroundColor:'transparent', borderRadius:'5px', borderColor:'white'}} type="submit" value="Submit" />
+              <input style={{ backgroundColor: 'transparent', borderRadius: '5px', borderColor: 'white' }} type="submit" value="Submit" />
             </form>
           </div>
 

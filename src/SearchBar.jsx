@@ -21,17 +21,22 @@ const SearchBar = ({ onSearch }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className='m-3'>
-      <input
-        type="text"
-        id="search-input"
-        placeholder="Search here"
-        value={query}
-        onChange={handleSearchChange}
-      />
-      {/* <button id="search-button" type="submit" className='btn btn-primary me-2'>Search</button> */}
-      <button onClick={handleClear} className='btn btn-primary mx-2 btn-lg'>Clear</button>
-    </form>
+    <div
+      style={{ alignItems: 'end', textAlign: 'end', justifyContent: 'end' }}
+    >
+      <form onSubmit={handleSubmit} className='m-3'>
+        <img style={{ width: '80px' }} src="public\images\searchicon.png" alt="" />
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search here"
+          value={query}
+          onChange={handleSearchChange}
+        />
+        {/* <button id="search-button" type="submit" className='btn btn-primary me-2'>Search</button> */}
+        <button onClick={handleClear} className='btn btn-primary mx-2 btn-lg mymore'>Clear</button>
+      </form>
+    </div>
   );
 };
 

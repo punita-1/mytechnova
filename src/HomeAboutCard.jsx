@@ -27,60 +27,88 @@ const HomeAboutCard = () => {
                             Explore the events
                         </NavLink></div>
                     <div>
-                        <h3  className="aboutGridHeading myheading">Why join us</h3>
+                        <h3  className="aboutGridHeading myheading">Why join us?</h3>
                         <Tabs defaultActiveKey="Opportunity" onSelect={(key) => setActiveTab(key)}>
                             <Tab eventKey="Opportunity" title="Opportunity">
-                                <p className="aboutGridDescription aboutCardDescription">
+                            <AnimatePresence>
+                                    {activeTab === "Opportunity" && (
+                                        
+                                <motion.p
+                                initial={{ x: '1000px' }}
+                                animate={{ x: '0' }}
+                                exit={{ x: '-1000px' }}
+                                transition={{ delay: '0', duration: '1', type: 'spring', stiffness: '130', damping:'15' }}
+                                className="aboutGridDescription aboutCardDescription">
                                     Opportunity for personal and professional growth. Networking
                                     with peers and industry professionals.
-                                </p>
+                                </motion.p>
+                                  )}
+                                  </AnimatePresence>
                                 <AnimatePresence>
                                     {activeTab === "Opportunity" && (
                                         <motion.img
                                             initial={{ x: '-1000px' }}
                                             animate={{ x: '0' }}
                                             exit={{ x: '-1000px' }}
-                                            transition={{ delay: '0', duration: '1', type: 'spring', stiffness: '230' }}
-                                            style={{ height: '20px' }}
-                                            src="public/images/technova_gallery/events/robo_soccer.jpg"
+                                            transition={{ delay: '0', duration: '1', type: 'spring', stiffness: '130', damping:'15' }}
+                                            style={{ height: '100px' }}
+                                            src="public/images/myarrow.png"
                                             alt="Random Image"
                                         />
                                     )}
                                 </AnimatePresence>
                             </Tab>
                             <Tab eventKey="Recognition" title="Recognition">
-                                <p className="aboutGridDescription aboutCardDescription">
-                                    Hands-on experiential learning. Recognition and rewards for
+                            <AnimatePresence>
+                                    {activeTab === "Recognition" && (
+                            <motion.p
+                                initial={{ x: '1000px' }}
+                                animate={{ x: '0' }}
+                                exit={{ x: '-1000px' }}
+                                transition={{ delay: '0', duration: '1', type: 'spring', stiffness: '130', damping:'15' }}
+                                className="aboutGridDescription aboutCardDescription">
+                                   Hands-on experiential learning. Recognition and rewards for
                                     achievements.
-                                </p>
+                                </motion.p>
+                                )}
+                                  </AnimatePresence>
                                 <AnimatePresence>
                                     {activeTab === "Recognition" && (
                                         <motion.img
-                                            initial={{ x: '-1000px' }}
-                                            animate={{ x: '0' }}
-                                            exit={{ x: '-1000px' }}
-                                            transition={{ delay: '0', duration: '1', type: 'spring', stiffness: '230' }}
-                                            style={{ height: '20px' }}
-                                            src="public/images/technova_gallery/events/your_image_for_recognition.jpg"
+                                        initial={{ x: '-1000px' }}
+                                        animate={{ x: '0' }}
+                                        exit={{ x: '-1000px' }}
+                                        transition={{ delay: '0', duration: '1', type: 'spring', stiffness: '130', damping:'15' }}
+                                            style={{ height: '100px' }}
+                                            src="public/images/myarrow.png"
                                             alt="Random Image"
                                         />
                                     )}
                                 </AnimatePresence>
                             </Tab>
                             <Tab eventKey="Education" title="Education">
-                                <p className="aboutGridDescription aboutCardDescription">
+                            <AnimatePresence>
+                                    {activeTab === "Education" && (
+                                <motion.p
+                                initial={{ x: '1000px' }}
+                                animate={{ x: '0' }}
+                                exit={{ x: '-1000px' }}
+                                transition={{ delay: '0', duration: '1', type: 'spring', stiffness: '130', damping:'15' }}
+                                className="aboutGridDescription aboutCardDescription">
                                     Inspiration to think creatively and pursue innovation.
                                     Community engagement and collaboration.
-                                </p>
+                                </motion.p>
+                                  )}
+                                  </AnimatePresence>
                                 <AnimatePresence>
                                     {activeTab === "Education" && (
                                         <motion.img
                                             initial={{ x: '-1000px' }}
                                             animate={{ x: '0' }}
                                             exit={{ x: '-1000px' }}
-                                            transition={{ delay: '0', duration: '1', type: 'spring', stiffness: '230' }}
-                                            style={{ height: '20px' }}
-                                            src="public/images/technova_gallery/events/your_image_for_education.jpg"
+                                            transition={{ delay: '0', duration: '1', type: 'spring', stiffness: '130', damping:'15' }}
+                                            style={{ height: '100px' }}
+                                            src="public/images/myarrow.png"
                                             alt="Random Image"
                                         />
                                     )}

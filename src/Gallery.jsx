@@ -3,140 +3,96 @@ import "./gallery.css";
 
 const Gallery = () => {
   return (<>
-    <div class="scroll" style={{ '--time': '20s' }}>
-    <div>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>ReactJS</span>
-        <span>Figma</span>
-        <span>Photoshop</span>
-        <span>Premiere Pro</span>
-        <span>Figma</span>
-        <span>Angular</span>
-        <span>Node JS</span>
-    </div>
-    <div>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>ReactJS</span>
-        <span>Figma</span>
-        <span>Photoshop</span>
-        <span>Premiere Pro</span>
-        <span>Figma</span>
-        <span>Angular</span>
-        <span>Node JS</span>
-    </div>
-</div>
-<div class="scroll" style={{ '--time': '30s' }}>
-    <div>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>ReactJS</span>
-        <span>Figma</span>
-        <span>Photoshop</span>
-        <span>Premiere Pro</span>
-        <span>Figma</span>
-        <span>Angular</span>
-        <span>Node JS</span>
-    </div>
-    <div>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>ReactJS</span>
-        <span>Figma</span>
-        <span>Photoshop</span>
-        <span>Premiere Pro</span>
-        <span>Figma</span>
-        <span>Angular</span>
-        <span>Node JS</span>
-    </div>
-</div>
-<div class="scroll" style={{ '--time': '25s' }}>
-    <div>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>ReactJS</span>
-        <span>Figma</span>
-        <span>Photoshop</span>
-        <span>Premiere Pro</span>
-        <span>Figma</span>
-        <span>Angular</span>
-        <span>Node JS</span>
-    </div>
-    <div>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>ReactJS</span>
-        <span>Figma</span>
-        <span>Photoshop</span>
-        <span>Premiere Pro</span>
-        <span>Figma</span>
-        <span>Angular</span>
-        <span>Node JS</span>
-    </div>
-</div>
-<div class="scroll" style={{ '--time': '40s' }}>
-    <div>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>ReactJS</span>
-        <span>Figma</span>
-        <span>Photoshop</span>
-        <span>Premiere Pro</span>
-        <span>Figma</span>
-        <span>Angular</span>
-        <span>Node JS</span>
-    </div>
-    <div>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>ReactJS</span>
-        <span>Figma</span>
-        <span>Photoshop</span>
-        <span>Premiere Pro</span>
-        <span>Figma</span>
-        <span>Angular</span>
-        <span>Node JS</span>
-    </div>
-</div>
 
-<div class="scroll imgBox" style={{ '--time': '25s' }}>
-  
     <div>
-        <img src="public/images/technova_gallery/Vc_starting/starting.jpg" alt=""></img>
-        <img src="public/images/technova_gallery/Vc_starting/starting.jpg" alt=""></img>
-        <img src="public/images/technova_gallery/Vc_starting/starting.jpg" alt=""></img>
-        <img src="public/images/technova_gallery/Vc_starting/starting.jpg" alt=""></img>
-        <img src="public/images/technova_gallery/Vc_starting/starting.jpg" alt=""></img>
-        <img src="public/images/technova_gallery/Vc_starting/starting.jpg" alt=""></img>
-        <img src="public/images/technova_gallery/Vc_starting/starting.jpg" alt=""></img>
-        <img src="public/images/technova_gallery/Vc_starting/starting.jpg" alt=""></img>
-        <img src="public/images/technova_gallery/Vc_starting/starting.jpg" alt=""></img>
-        <img src="public/images/technova_gallery/Vc_starting/starting.jpg" alt=""></img>
+      <h2 style={{ color: 'lightgrey' }}><b>Gallery</b></h2>
     </div>
-    <div>
-        <img src="public/images/technova_gallery/Vc_starting/starting.jpg" alt=""></img>
-        <img src="public/images/technova_gallery/Vc_starting/starting.jpg" alt=""></img>
-        <img src="public/images/technova_gallery/Vc_starting/starting.jpg" alt=""></img>
-        <img src="public/images/technova_gallery/Vc_starting/starting.jpg" alt=""></img>
-        <img src="public/images/technova_gallery/Vc_starting/starting.jpg" alt=""></img>
-        <img src="public/images/technova_gallery/Vc_starting/starting.jpg" alt=""></img>
-        <img src="public/images/technova_gallery/Vc_starting/starting.jpg" alt=""></img>
-        <img src="public/images/technova_gallery/Vc_starting/starting.jpg" alt=""></img>
-        <img src="public/images/technova_gallery/Vc_starting/starting.jpg" alt=""></img>
-        <img src="public/images/technova_gallery/Vc_starting/starting.jpg" alt=""></img>
+    <div class="scroll imgBox" style={{ '--time': '170s' }}>
+
+      <div>
+        <img src="public\images\technova_gallery\welcomes\flower_welcome.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\Vc_starting\vc_project_chkecking.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\Vc_starting\vc_pic.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\Vc_starting\starting.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\welcomes\welcome_2.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\welcomes\welcome_thanks.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\welcomes\welcome_type.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\welcomes\welcome5.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\welcomes\welcome6.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\prize\price2.jpg" alt=""></img>
+      </div>
+      <div>
+        <img src="public\images\technova_gallery\welcomes\flower_welcome.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\Vc_starting\vc_project_chkecking.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\Vc_starting\vc_pic.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\Vc_starting\starting.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\welcomes\welcome_2.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\welcomes\welcome_thanks.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\welcomes\welcome_type.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\welcomes\welcome5.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\welcomes\welcome6.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\prize\price2.jpg" alt=""></img>
+      </div>
     </div>
-</div>
-</>
-)
+    <div class="scroll imgBox" style={{ '--time': '180s' }}>
+
+      <div>
+        <img src="public\images\technova_gallery\prize\Prize1.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\prize\prize3.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\prize\prize4.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\logos\technova_rope.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\logos\thermocol_techno.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\group_pics\gp_pic3.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\group_pics\gp_pic4.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\group_pics\group_photo.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\group_pics\group_pic2.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\events\cards.jpg" alt=""></img>
+      </div>
+      <div>
+        <img src="public\images\technova_gallery\prize\Prize1.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\prize\prize3.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\prize\prize4.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\logos\technova_rope.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\logos\thermocol_techno.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\group_pics\gp_pic3.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\group_pics\gp_pic4.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\group_pics\group_photo.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\group_pics\group_pic2.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\events\cards.jpg" alt=""></img>
+      </div>
+    </div>
+    <div class="scroll imgBox" style={{ '--time': '190s' }}>
+
+      <div>
+        <img src="public\images\technova_gallery\events\hand_sensor.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\events\presentation_cse.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\events\Random.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\events\robo_soccer.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\events\robo_soccer2.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\events\thinkbots1.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\events\thinkbots2.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\logos\technova_rope.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\logos\thermocol_techno.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\group_pics\gp_pic4.jpg" alt=""></img>
+      </div>
+      <div>
+        <img src="public\images\technova_gallery\events\hand_sensor.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\events\presentation_cse.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\events\Random.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\events\robo_soccer.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\events\robo_soccer2.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\events\thinkbots1.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\events\thinkbots2.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\logos\technova_rope.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\logos\thermocol_techno.jpg" alt=""></img>
+        <img src="public\images\technova_gallery\group_pics\gp_pic4.jpg" alt=""></img>
+      </div>
+    </div>
+
+
+
+  </>
+  )
 }
 
 export default Gallery

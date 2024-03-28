@@ -30,11 +30,12 @@ const Event = () => {
 
     <div>
 
+      {/* <SearchBar onSearch={handleSearch} /> */}
+
+      <div className='social-icon-heading' 
+      style={{ alignItems: 'center', textAlign: 'center', marginTop:'-90px' }}
+      > <b>EVENTS</b>
       <SearchBar onSearch={handleSearch} />
-
-      <br />
-
-      <div className='social-icon-heading' style={{ alignItems: 'center', textAlign: 'center', marginTop:'-150px' }}> <b>EVENTS</b>
 
       </div>
 
