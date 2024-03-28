@@ -34,12 +34,12 @@ const Event = () => {
 
       <br />
 
-      <div className='social-icon-heading' style={{ alignItems: 'center', textAlign: 'center' }}> <b>EVENTS</b>
+      <div className='social-icon-heading' style={{ alignItems: 'center', textAlign: 'center', marginTop:'-150px' }}> <b>EVENTS</b>
 
       </div>
 
 
-      <Tabs className='justify-content-center'>
+      <Tabs className='justify-content-center ' style={{fontSize:'20px'}}>
         <Tab eventKey="centralized" title="Centralized">
           <h2 style={{paddingTop:'30px', fontSize:'50px', color:'lightgrey'}}><b>CENTRALIZED EVENTS</b></h2>
           <CardGroup
@@ -49,7 +49,7 @@ const Event = () => {
           />
         </Tab>
         <Tab eventKey="dep" title="Department">
-          <h2><b>DEPARTMENT EVENTS</b></h2>
+          <h2 style={{paddingTop:'30px', fontSize:'50px', color:'lightgrey'}}><b>DEPARTMENT EVENTS</b></h2>
           <CardGroup
             heading="Department of COMPUTER SCIENCE ENGINEERING(CSE) #COSMOS"
             events={searchResults.filter((ev) => ev.category === "computer")}
@@ -122,7 +122,7 @@ const Event = () => {
           />
         </Tab>
         <Tab eventKey="Society" title="Society">
-          <h2>SOCIETY EVENTS</h2>
+        <h2 style={{paddingTop:'30px', fontSize:'50px', color:'lightgrey'}}><b>SOCIETY EVENTS</b></h2>
           <CardGroup
             heading="SUNSHINE"
             events={searchResults.filter((ev) => ev.category === "sunshine")}

@@ -18,3 +18,26 @@
     opacity: 0.1; 
     z-index: -1; 
 } */
+
+.wrapup{
+    margin: 200px;
+    align-items: center;
+    text-align: center;
+}
+
+.forcenter{
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapup {
+        margin: 50px; 
+    }
+    
+    .forcenter {
+        font-size: 10px; 
+    }
+}

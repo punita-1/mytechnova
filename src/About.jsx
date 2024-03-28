@@ -118,117 +118,139 @@ const About = () => {
 
       </motion.div>
     </div>
-    <div>
-                        <h3  className="aboutGridHeading myheading">Why join us</h3>
-                        <Tabs defaultActiveKey="Opportunity" onSelect={(key) => setActiveTab(key)}>
-                            <Tab eventKey="Opportunity" title="Opportunity">
-                                <p className="aboutGridDescription aboutCardDescription">
-                                    Opportunity for personal and professional growth. Networking
-                                    with peers and industry professionals.
-                                </p>
-                                <AnimatePresence>
-                                    {activeTab === "Opportunity" && (
-                                        <motion.img
-                                            initial={{ x: '-1000px' }}
-                                            animate={{ x: '0' }}
-                                            exit={{ x: '-1000px' }}
-                                            transition={{ delay: '0', duration: '1', type: 'spring', stiffness: '230' }}
-                                            style={{ height: '20px' }}
-                                            src="public/images/technova_gallery/events/robo_soccer.jpg"
-                                            alt="Random Image"
-                                        />
-                                    )}
-                                </AnimatePresence>
-                            </Tab>
-                            <Tab eventKey="Recognition" title="Recognition">
-                                <p className="aboutGridDescription aboutCardDescription">
-                                    Hands-on experiential learning. Recognition and rewards for
-                                    achievements.
-                                </p>
-                                <AnimatePresence>
-                                    {activeTab === "Recognition" && (
-                                        <motion.img
-                                            initial={{ x: '-1000px' }}
-                                            animate={{ x: '0' }}
-                                            exit={{ x: '-1000px' }}
-                                            transition={{ delay: '0', duration: '1', type: 'spring', stiffness: '230' }}
-                                            style={{ height: '20px' }}
-                                            src="public/images/technova_gallery/events/your_image_for_recognition.jpg"
-                                            alt="Random Image"
-                                        />
-                                    )}
-                                </AnimatePresence>
-                            </Tab>
-                            <Tab eventKey="Education" title="Education">
-                                <p className="aboutGridDescription aboutCardDescription">
-                                    Inspiration to think creatively and pursue innovation.
-                                    Community engagement and collaboration.
-                                </p>
-                                <AnimatePresence>
-                                    {activeTab === "Education" && (
-                                        <motion.img
-                                            initial={{ x: '-1000px' }}
-                                            animate={{ x: '0' }}
-                                            exit={{ x: '-1000px' }}
-                                            transition={{ delay: '0', duration: '1', type: 'spring', stiffness: '230' }}
-                                            style={{ height: '20px' }}
-                                            src="public/images/technova_gallery/events/your_image_for_education.jpg"
-                                            alt="Random Image"
-                                        />
-                                    )}
-                                </AnimatePresence>
-                            </Tab>
-                        </Tabs>
-                    </div>
-    {/* <div className='why'> */}
-      {/* <h2 style={{ fontWeight: 'bold', color: 'lightgray' }}>Why join us?</h2> */}
-      {/* <div class="container"> */}
-      {/* <div class="rectangle"></div> */}
-      {/* </div> */}
-    {/* </div> */}
-    {/* <div className='about_why container grid grid-three-column'> */}
-    {/* <div className='why_card'>
-        <h3 class="card-title-mine">Promoting Innovation:</h3>
-        <ul className='show_description'>
-          <li>Explore new possibilities and push boundaries in technology, inspiring forward-thinking solutions.</li>
-          <li>Events feature talks and seminars where experts share insights, keeping attendees updated on trends.</li>
-        </ul>
-      </div> */}
-    {/* <div className='why_card'>
-        <h3 class="card-title-mine">Skill Development:</h3>
-        <ul className='show_description'>
-          <li>Participants in Technova events develop technical skills through workshops, seminars, and hands-on experiences.</li>
-          <li>These opportunities prepare attendees for future challenges in the dynamic technological landscape.</li>
-        </ul>
-      </div>
-      <div className='why_card'>
-        <h3 class="card-title-mine">Knowledge Sharing:</h3>
-        <ul className='show_description'>
-          <li>Technova feature workshops, seminars, and talks where experts share insights and expertise.</li>
-          <li>Attendees learn from each other, staying updated on the latest trends and developments in technology.</li>
-        </ul>
-      </div> */}
-    {/* <div className='why_card'>
-        <h3 class="card-title-mine">Socializing platforms:</h3>
-        <ul className='show_description'>
-          <li>Technova unite professionals, students, researchers, and enthusiasts from diverse backgrounds.</li>
-          <li>Networking and collaboration at these events create opportunities for new partnerships and professional growth.</li>
-        </ul>
-      </div> */}
-    {/* <div className='why_card'>
-        <h3 class="card-title-mine">Inspiration:</h3>
-        <ul className='show_description'>
-          <li>Technova events inspire attendees to pursue STEM careers by showcasing exciting possibilities and real-world technology applications.</li>
-        </ul>
-      </div>
-      <div className='why_card'>
-        <h3 class="card-title-mine">Inspiration:</h3>
-        <ul className='show_description'>
-          <li>Technova events inspire attendees to pursue STEM careers by showcasing exciting possibilities and real-world technology applications.</li>
-        </ul>
-      </div> */}
-
-    {/* </div> */}
+    <div className='wrapup'>
+      <h3 className="aboutGridHeading myheading">Why join us?</h3>
+      <Tabs className='forcenter' defaultActiveKey="Opportunity" onSelect={(key) => setActiveTab(key)}>
+        <Tab eventKey="Opportunity" title="Opportunity">
+          <p className="aboutGridDescription aboutCardDescription">
+            Opportunity for personal and professional growth. Networking
+            with peers and industry professionals.
+          </p>
+          <AnimatePresence>
+            {activeTab === "Opportunity" && (
+              <motion.img
+                initial={{ x: '-1000px' }}
+                animate={{ x: '0' }}
+                exit={{ x: '-1000px' }}
+                transition={{ delay: '0', duration: '1', type: 'spring', stiffness: '230' }}
+                style={{ height: '20px' }}
+                src="public/images/technova_gallery/events/robo_soccer.jpg"
+                alt="Random Image"
+              />
+            )}
+          </AnimatePresence>
+        </Tab>
+        <Tab eventKey="Recognition" title="Recognition">
+          <p className="aboutGridDescription aboutCardDescription">
+            Hands-on experiential learning. Recognition and rewards for
+            achievements.
+          </p>
+          <AnimatePresence>
+            {activeTab === "Recognition" && (
+              <motion.img
+                initial={{ x: '-1000px' }}
+                animate={{ x: '0' }}
+                exit={{ x: '-1000px' }}
+                transition={{ delay: '0', duration: '1', type: 'spring', stiffness: '230' }}
+                style={{ height: '20px' }}
+                src="public/images/technova_gallery/events/your_image_for_recognition.jpg"
+                alt="Random Image"
+              />
+            )}
+          </AnimatePresence>
+        </Tab>
+        <Tab eventKey="Knowledge Sharing" title="Knowledge Sharing">
+          <p className="aboutGridDescription aboutCardDescription">
+          Attendees learn from each other, staying updated on the latest trends and developments in technology.
+          </p>
+          <AnimatePresence>
+            {activeTab === "Knowledge Sharing" && (
+              <motion.img
+                initial={{ x: '-1000px' }}
+                animate={{ x: '0' }}
+                exit={{ x: '-1000px' }}
+                transition={{ delay: '0', duration: '1', type: 'spring', stiffness: '230' }}
+                style={{ height: '200px', backgroundColor: 'black' }}
+                src="public/images/istockphoto-1465891531-612x612-removebg-preview.png"
+                alt="Random Image"
+              />
+            )}
+          </AnimatePresence>
+        </Tab>
+        <Tab eventKey="Skill Development" title="Skill Development">
+          <p className="aboutGridDescription aboutCardDescription">
+            Participants in Technova events develop technical skills through workshops, seminars, and hands-on experiences.
+          </p>
+          <AnimatePresence>
+            {activeTab === "Skill Development" && (
+              <motion.img
+                initial={{ x: '-1000px' }}
+                animate={{ x: '0' }}
+                exit={{ x: '-1000px' }}
+                transition={{ delay: '0', duration: '1', type: 'spring', stiffness: '230' }}
+                style={{ height: '200px', backgroundColor: 'black' }}
+                src="public/images/istockphoto-1465891531-612x612-removebg-preview.png"
+                alt="Random Image"
+              />
+            )}
+          </AnimatePresence>
+        </Tab>
+        <Tab eventKey="Promoting Innovation" title="Promoting Innovation">
+          <p className="aboutGridDescription aboutCardDescription">
+            Explore new possibilities and push boundaries in technology, inspiring forward-thinking solutions.
+          </p>
+          <AnimatePresence>
+            {activeTab === "Promoting Innovation" && (
+              <motion.img
+                initial={{ x: '-1000px' }}
+                animate={{ x: '0' }}
+                exit={{ x: '-1000px' }}
+                transition={{ delay: '0', duration: '1', type: 'spring', stiffness: '230' }}
+                style={{ height: '200px', backgroundColor: 'black' }}
+                src="public/images/istockphoto-1465891531-612x612-removebg-preview.png"
+                alt="Random Image"
+              />
+            )}
+          </AnimatePresence>
+        </Tab>
+        <Tab eventKey="Socializing platforms" title="Socializing platforms">
+          <p className="aboutGridDescription aboutCardDescription">
+            Networking and collaboration at these events create opportunities for new partnerships and professional growth.
+          </p>
+          <AnimatePresence>
+            {activeTab === "Socializing platforms" && (
+              <motion.img
+                initial={{ x: '-1000px' }}
+                animate={{ x: '0' }}
+                exit={{ x: '-1000px' }}
+                transition={{ delay: '0', duration: '1', type: 'spring', stiffness: '230' }}
+                style={{ height: '200px', backgroundColor: 'black' }}
+                src="public/images/istockphoto-1465891531-612x612-removebg-preview.png"
+                alt="Random Image"
+              />
+            )}
+          </AnimatePresence>
+        </Tab>
+        <Tab eventKey="Inspiration" title="Inspiration">
+          <p className="aboutGridDescription aboutCardDescription">
+          Technova events inspire attendees to pursue STEM careers by showcasing exciting possibilities and real-world technology applications.
+          </p>
+          <AnimatePresence>
+            {activeTab === "Inspiration" && (
+              <motion.img
+                initial={{ x: '-1000px' }}
+                animate={{ x: '0' }}
+                exit={{ x: '-1000px' }}
+                transition={{ delay: '0', duration: '1', type: 'spring', stiffness: '230' }}
+                style={{ height: '200px', backgroundColor: 'black' }}
+                src="public/images/istockphoto-1465891531-612x612-removebg-preview.png"
+                alt="Random Image"
+              />
+            )}
+          </AnimatePresence>
+        </Tab>
+      </Tabs>
+    </div>
   </Wrapper>;
   </>
 }
