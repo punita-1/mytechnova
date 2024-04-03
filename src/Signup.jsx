@@ -27,55 +27,55 @@ const Signup = () => {
 
   const validateForm = () => {
     const errors = {};
-  
+
     if (!values.name) {
       errors.name = "Name is required";
     }
-  
+
     if (!values.rollnumber) {
       errors.rollnumber = "Roll number is required";
     } else if (isNaN(values.rollnumber)) {
       errors.rollnumber = "Roll number must be a number";
     }
-  
+
     if (!values.email) {
       errors.email = "Email is required";
     } else if (!/^[^@]+@[^@]+\.[^@]+$/.test(values.email)) {
       errors.email = "Invalid email address";
     }
-  
+
     if (!values.phone) {
       errors.phone = "Phone number is required";
     } else if (isNaN(values.phone)) {
       errors.phone = "Phone number must be a number";
     }
-  
+
     if (!values.organization) {
       errors.organization = "Organization is required";
     }
-  
+
     if (!values.branch) {
       errors.branch = "Branch is required";
     }
-  
+
     if (!values.semester) {
       errors.semester = "Semester is required";
     } else if (isNaN(values.semester)) {
       errors.semester = "Semester must be a number";
     }
-  
+
     if (!values.pass) {
       errors.pass = "Password is required";
     } else if (values.pass.length < 6) {
       errors.pass = "Password must be at least 6 characters long";
     }
-  
+
     if (values.pass !== values.confirmpass) {
       errors.confirmpass = "Passwords do not match";
     }
-  
+
     setValidationErrors(errors);
-  
+
     return Object.keys(errors).length === 0;
   }
 
@@ -156,7 +156,7 @@ const Signup = () => {
   const login = (e) => {
     e.preventDefault();
     authServices.login(values.email, values.pass).then((res) => {
-      setUser(()=>res)
+      setUser(() => res)
       // console.log(res);
     }).catch((err) => {
       console.log(err.message);
@@ -171,17 +171,17 @@ const Signup = () => {
         authServices.profile(res.user, values.name, values.phone, values.rollnumber, values.organization, values.branch, values.semester).then((res2) => {
           // console.log(res2);
           authServices.verifyEmail(res.user);
-          api.saveUserData(values).then((response)=> {
+          api.saveUserData(values).then((response) => {
             // console.log(response);
-          }).catch((erro)=> {
-            console.log("error1"+erro);
+          }).catch((erro) => {
+            console.log("error1" + erro);
           })
         }).catch((errorm) => {
-          console.log("error2:"+errorm);
+          console.log("error2:" + errorm);
         });
         // console.log(res);
       }).catch((err) => {
-        console.log("error3"+err.message);
+        console.log("error3" + err.message);
         // alert(err.message);
       });
     } else {
@@ -263,11 +263,11 @@ const Signup = () => {
       <div className="bodybill ">
         <div className="mx-auto col-md-6 col-lg-4 col-xlg-3 col-10 p-4 shadow ">
           <div className="text-center fs-1 text-primary mb-4 row">
-            <div style={{borderColor:'white', color:'white'}} className="btn btn-outline-primary col-4 offset-1 d-flex justify-content-center align-items-center" onClick={() => setSignin(() => true)}>
+            <div style={{ borderColor: 'white', color: 'white' }} className="btn btn-outline-primary col-4 offset-1 d-flex justify-content-center align-items-center" onClick={() => setSignin(() => true)}>
               <input type="radio" className="mx-2" checked={signin} onChange={() => setSignin(() => false)} />
               <div className="fs-3">LOGIN</div>
             </div>
-            <div style={{borderColor:'white', color:'white'}} className="btn btn-outline-primary col-4 offset-1 d-flex justify-content-center align-items-center" onClick={() => setSignin(() => false)}>
+            <div style={{ borderColor: 'white', color: 'white' }} className="btn btn-outline-primary col-4 offset-1 d-flex justify-content-center align-items-center" onClick={() => setSignin(() => false)}>
               <input type="radio" className="mx-2" checked={!signin} onChange={() => setSignin(() => false)} />
               <div className="fs-3">SIGNUP</div>
             </div>
